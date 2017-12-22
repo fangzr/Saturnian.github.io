@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。  multiprocessing模块是跨平台版本的多进程模块。 multiprocessing模块提供了一个Process类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：1234567891011121314from multiprocessin">
+<meta name="description" content="线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。  multiprocessing模块是跨平台版本的多进程模块。 multiprocessing模块提供了一个Process类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束： 1234567891011121314from multiprocessi">
 <meta name="keywords" content="Python,进程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python学习-进程">
 <meta property="og:url" content="http://hust.life/2017/12/19/tech-2017-12-19-python-process-thread/index.html">
 <meta property="og:site_name" content="Saturnian&#39;s Blog">
-<meta property="og:description" content="线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。  multiprocessing模块是跨平台版本的多进程模块。 multiprocessing模块提供了一个Process类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：1234567891011121314from multiprocessin">
+<meta property="og:description" content="线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。  multiprocessing模块是跨平台版本的多进程模块。 multiprocessing模块提供了一个Process类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束： 1234567891011121314from multiprocessi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-21T16:15:08.844Z">
+<meta property="og:updated_time" content="2017-12-22T16:58:50.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习-进程">
-<meta name="twitter:description" content="线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。  multiprocessing模块是跨平台版本的多进程模块。 multiprocessing模块提供了一个Process类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：1234567891011121314from multiprocessin">
+<meta name="twitter:description" content="线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。  multiprocessing模块是跨平台版本的多进程模块。 multiprocessing模块提供了一个Process类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束： 1234567891011121314from multiprocessi">
 
 
 
@@ -359,7 +359,9 @@
 <p>线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。</p>
 </blockquote>
 <p><code>multiprocessing</code>模块是跨平台版本的多进程模块。</p>
-<p><code>multiprocessing</code>模块提供了一个<code>Process</code>类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">from multiprocessing import Process</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line"><span class="comment">#子进程要执行的代码</span></span><br><span class="line">def run_proc(name):</span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Run child process %s (%s)...'</span>%(name, os.getpid()))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Parent process %s.'</span>% os.getpid())<span class="comment">#getpid()是获取进程的id号</span></span><br><span class="line">   p = Process(target=run_proc,args=(<span class="string">'test'</span>,))</span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Child process will start.'</span>)</span><br><span class="line">   p.start()<span class="comment">#开始进程</span></span><br><span class="line">   p.join()<span class="comment">#等待子进程结束再往下运行，通常用于进程间的同步</span></span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Child process end'</span>)</span><br></pre></td></tr></table></figure></p>
+<p><code>multiprocessing</code>模块提供了一个<code>Process</code>类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">from multiprocessing import Process</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line"><span class="comment">#子进程要执行的代码</span></span><br><span class="line">def run_proc(name):</span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Run child process %s (%s)...'</span>%(name, os.getpid()))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Parent process %s.'</span>% os.getpid())<span class="comment">#getpid()是获取进程的id号</span></span><br><span class="line">   p = Process(target=run_proc,args=(<span class="string">'test'</span>,))</span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Child process will start.'</span>)</span><br><span class="line">   p.start()<span class="comment">#开始进程</span></span><br><span class="line">   p.join()<span class="comment">#等待子进程结束再往下运行，通常用于进程间的同步</span></span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Child process end'</span>)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="进程直接通信"><a href="#进程直接通信" class="headerlink" title="进程直接通信"></a>进程直接通信</h3><blockquote>
 <p><code>Process</code>之间肯定是需要通信的，操作系统提供了很多机制来实现进程间的通信。Python的<code>multiprocessing</code>模块包装了底层的机制，提供了<code>Queue</code>、<code>Pipes</code>等多种方式来交换数据。</p>
 </blockquote>

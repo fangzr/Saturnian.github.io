@@ -187,6 +187,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -234,7 +254,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -387,7 +407,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -539,7 +559,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -689,169 +709,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/18/tech-2017-12-18-python-try-finally-except/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/18/tech-2017-12-18-python-try-finally-except/" itemprop="url">Python学习-try/except/else/finally语句</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-18T16:00:00+08:00">
-                2017-12-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；</p>
-<p>而try/finally语句则主要用于在无论是否发生异常情况，都需要执行一些清理工作的场合，如在通信过程中，无论通信是否发生错误，都需要在通信完成或者发生错误时关闭网络连接。</p>
-<p>尽管try/except和try/finally的作用不同，但是在编程实践中通常可以把它们组合在一起使用try/except/else/finally的形式来实现稳定性和灵活性更好的设计。</p>
-<p>默认情况下，在程序段的执行过程中，如果没有提供try/except的处理，脚本文件执行过程中所产生的异常消息会自动发送给程序调用端，如python shell，而python shell对异常消息的默认处理则是终止程序的执行并打印具体的出错信息。</p>
-<p>这也是在python shell中执行程序错误后所出现的出错打印信息的由来。</p>
-<p>python中try/except/else/finally语句的完整格式如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">     Normal execution block</span><br><span class="line">except A:</span><br><span class="line">     Exception A handle</span><br><span class="line">except B:</span><br><span class="line">     Exception B handle</span><br><span class="line">except:</span><br><span class="line">     Other exception handle</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">if</span> no exception,get here</span><br><span class="line">finally:</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">"finally"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>说明：</p>
-<p>正常执行的程序在try下面的Normal execution block执行块中执行，在执行过程中如果发生了异常，则中断当前在Normal execution block中的执行跳转到对应的异常处理块中开始执行；</p>
-<p>python从第一个except X处开始查找，如果找到了对应的exception类型则进入其提供的exception handle中进行处理，如果没有找到则直接进入except块处进行处理。except块是可选项，如果没有提供，该exception将会被提交给python进行默认处理，处理方式则是终止应用程序并打印提示信息；</p>
-<p>如果在Normal execution block执行块中执行过程中没有发生任何异常，则在执行完Normal execution block后会进入else执行块中（如果存在的话）执行。</p>
-<p>无论是否发生了异常，只要提供了finally语句，以上try/except/else/finally代码块执行的最后一步总是执行finally所对应的代码块。</p>
-<p><strong>需要注意的是：</strong></p>
-<p>1.在上面所示的完整语句中try/except/else/finally所出现的顺序必须是try–&gt;except X–&gt;except–&gt;else–&gt;finally，即所有的except必须在else和finally之前，else（如果有的话）必须在finally之前，而except X必须在except之前。否则会出现语法错误。</p>
-<p>2.对于上面所展示的try/except完整格式而言，else和finally都是可选的，而不是必须的，但是如果存在的话else必须在finally之前，finally（如果存在的话）必须在整个语句的最后位置。</p>
-<p>3.在上面的完整语句中，else语句的存在必须以except X或者except语句为前提，如果在没有except语句的try block中使用else语句会引发语法错误。也就是说else不能与try/finally配合使用。</p>
-<p>4.except的使用要非常小心，慎用。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/18/tech-2017-12-18-python-io/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -995,12 +858,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/">
+    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/18/tech-2017-12-18-python-try-finally-except/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1014,7 +877,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/" itemprop="url">Python学习-面向对象高级编程</a></h1>
+                <a class="post-title-link" href="/2017/12/18/tech-2017-12-18-python-try-finally-except/" itemprop="url">Python学习-try/except/else/finally语句</a></h1>
         
 
         <div class="post-meta">
@@ -1026,8 +889,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-17T16:00:00+08:00">
-                2017-12-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-18T16:00:00+08:00">
+                2017-12-18
               </time>
             
 
@@ -1088,636 +951,22 @@
       
         
           
-            <h3 id="使用-slots"><a href="#使用-slots" class="headerlink" title="使用 slots"></a>使用 <strong>slots</strong></h3><blockquote>
-<p>如果我们想要限制实例的属性怎么办？比如，只允许对Student实例添加name和age属性。<br>为了达到限制的目的，Python允许在定义class的时候，定义一个特殊的<strong>slots</strong>变量，<br>来限制该class实例能添加的属性：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; class Student(object):</span><br><span class="line">	__slots__ = (<span class="string">'name'</span>,<span class="string">'age'</span>)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; s = Student()</span><br><span class="line">&gt;&gt;&gt; s.name = <span class="string">'Michael'</span></span><br><span class="line">&gt;&gt;&gt; s.age = 25</span><br><span class="line">&gt;&gt;&gt; s.score = 99</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#6&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    s.score = 99</span><br><span class="line">AttributeError: <span class="string">'Student'</span> object has no attribute <span class="string">'score'</span></span><br></pre></td></tr></table></figure>
-<h3 id="使用property"><a href="#使用property" class="headerlink" title="使用property"></a>使用property</h3><blockquote>
-<p>@property广泛应用在类的定义中，可以让调用者写出简短的代码，同时保证对参数进行必要的检查，这样，程序运行时就减少了出错的可能性。</p>
-</blockquote>
-<p><strong>请利用@property给一个Screen对象加上width和height属性，以及一个只读属性resolution:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Screen(object):</span><br><span class="line">    @property</span><br><span class="line">    def width(self):</span><br><span class="line">        <span class="built_in">return</span> self._width</span><br><span class="line"></span><br><span class="line">    @width.setter</span><br><span class="line">    def width(self,value):</span><br><span class="line">        self._width = value</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def height(self):</span><br><span class="line">        <span class="built_in">return</span> self._height</span><br><span class="line"></span><br><span class="line">    @height.setter</span><br><span class="line">    def height(self,value):</span><br><span class="line">        self._height = value</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def resolution(self):</span><br><span class="line">        <span class="built_in">return</span> self._width*self._height</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试:</span></span><br><span class="line">s = Screen()</span><br><span class="line">s.width = 1024</span><br><span class="line">s.height = 768</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'resolution ='</span>, s.resolution)</span><br><span class="line"><span class="keyword">if</span> s.resolution == 786432:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试通过!'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/16/tech-2017-12-16-python-Object-oriented/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/16/tech-2017-12-16-python-Object-oriented/" itemprop="url">Python学习-面向对象编程概念&Codes</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-16T16:00:00+08:00">
-                2017-12-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="类和实例"><a href="#类和实例" class="headerlink" title="类和实例"></a>类和实例</h3><ul>
-<li><p>面向对象最重要的概念就是类（Class）和实例（Instance），必须牢记类是抽象的模板，<br>比如Student类，而实例是根据类创建出来的一个个具体的“对象”，每个对象都拥有相同的方法，但各自的数据可能不同。</p>
-</li>
-<li><p>由于类可以起到模板的作用，因此，可以在创建实例的时候，把一些我们认为必须绑定的属性强制填写进去。通过定义一个特殊的<strong>init</strong>方法，在创建实例的时候，就把name，score等属性绑上去：</p>
-</li>
-<li><p>特殊方法“<strong>init</strong>”前后分别有两个下划线！！！</p>
-</li>
-</ul>
-<blockquote>
-<p>类是创建实例的模板，而实例则是一个一个具体的对象，各个实例拥有的数据都互相独立，互不影响；<br>方法就是与实例绑定的函数，和普通函数不同，方法可以直接访问实例的数据；<br>通过在实例上调用方法，我们就直接操作了对象内部的数据，但无需知道方法内部的实现细节。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self,name,score):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.score = score</span><br><span class="line"></span><br><span class="line">    def print_score(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'%s:%s'</span>%(self.name,self.score))</span><br><span class="line"></span><br><span class="line">    def get_grad(self):</span><br><span class="line">        <span class="keyword">if</span> self.score &gt;=90:</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'A'</span></span><br><span class="line">        <span class="keyword">if</span> self.score &gt;= 60:</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'B'</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'C'</span></span><br><span class="line">bart = Student(<span class="string">'Jack'</span>,99)</span><br><span class="line">bart.print_score()</span><br><span class="line"><span class="built_in">print</span>(bart.get_grad())</span><br></pre></td></tr></table></figure>
-<h3 id="访问限制"><a href="#访问限制" class="headerlink" title="访问限制"></a>访问限制</h3><blockquote>
-<p>这样就确保了外部代码不能随意修改对象内部的状态，这样通过访问限制的保护，代码更加健壮。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name, gender):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.__gender = gender</span><br><span class="line"></span><br><span class="line">    def set_gender(self,gender):</span><br><span class="line">        self.__gender = gender</span><br><span class="line"></span><br><span class="line">    def get_gender(self):</span><br><span class="line">        <span class="built_in">return</span> self.__gender</span><br><span class="line"></span><br><span class="line">bart = Student(<span class="string">'Bart'</span>, <span class="string">'male'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> bart.get_gender() != <span class="string">'male'</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    bart.set_gender(<span class="string">'female'</span>)</span><br><span class="line">    <span class="keyword">if</span> bart.get_gender() != <span class="string">'female'</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'测试成功!'</span>)</span><br></pre></td></tr></table></figure>
-<p><code>results:</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">测试成功</span><br></pre></td></tr></table></figure></p>
-<h3 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h3><p><strong>鸭子类型</strong></p>
-<blockquote>
-<p>“当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”</p>
-</blockquote>
-<p>对于静态语言（例如Java）来说，如果需要传入Animal类型，则传入的对象必须是Animal类型或者它的子类，否则，将无法调用run()方法。</p>
-<p>对于Python这样的动态语言来说，则不一定需要传入Animal类型。我们只需要保证传入的对象有一个run()方法就可以了：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Aminal(object):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Animal is running...'</span>)</span><br><span class="line">class Dog(Aminal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Dog is running...'</span>)</span><br><span class="line">class Cat(Aminal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Cat is running...'</span>)</span><br><span class="line">class Tortoise(Aminal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Tortoise is running slowly...'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#鸭子类型</span></span><br><span class="line">class Duck(object):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'这是鸭子类型'</span>)</span><br><span class="line"></span><br><span class="line">def run_twice(Aminal):</span><br><span class="line">    Aminal.run()</span><br><span class="line">    Aminal.run()</span><br><span class="line"><span class="comment">#pass 用法：http://www.cnpythoner.com/post/286.html</span></span><br><span class="line">run_twice(Cat())</span><br><span class="line">run_twice(Tortoise())</span><br><span class="line">run_twice(Duck())</span><br></pre></td></tr></table></figure>
-<p><code>results:</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Cat is running...</span><br><span class="line">Cat is running...</span><br><span class="line">Tortoise is running slowly...</span><br><span class="line">Tortoise is running slowly...</span><br><span class="line">这是鸭子类型</span><br><span class="line">这是鸭子类型</span><br></pre></td></tr></table></figure></p>
-<h3 id="获取对象的信息"><a href="#获取对象的信息" class="headerlink" title="获取对象的信息"></a>获取对象的信息</h3><p>1.Type函数用法</p>
-<p>2.isinstance（）</p>
-<p>3.hasattr() 函数、setattr函数、getattr函数</p>
-<p>仅仅把属性和方法列出来是不够的，配合getattr()、setattr()以及hasattr()，我们可以直接操作一个对象的状态：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; class MyObject(object):</span><br><span class="line">...     def __init__(self):</span><br><span class="line">...         self.x = 9</span><br><span class="line">...     def power(self):</span><br><span class="line">...         <span class="built_in">return</span> self.x * self.x</span><br><span class="line">...</span><br><span class="line">&gt;&gt;&gt; obj = MyObject()</span><br><span class="line">紧接着，可以测试该对象的属性：</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; hasattr(obj, <span class="string">'x'</span>) <span class="comment"># 有属性'x'吗？</span></span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; obj.x</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; hasattr(obj, <span class="string">'y'</span>) <span class="comment"># 有属性'y'吗？</span></span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; setattr(obj, <span class="string">'y'</span>, 19) <span class="comment"># 设置一个属性'y'</span></span><br><span class="line">&gt;&gt;&gt; hasattr(obj, <span class="string">'y'</span>) <span class="comment"># 有属性'y'吗？</span></span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; getattr(obj, <span class="string">'y'</span>) <span class="comment"># 获取属性'y'</span></span><br><span class="line">19</span><br><span class="line">&gt;&gt;&gt; obj.y <span class="comment"># 获取属性'y'</span></span><br><span class="line">19</span><br></pre></td></tr></table></figure></p>
-<h3 id="实例属性和类属性"><a href="#实例属性和类属性" class="headerlink" title="实例属性和类属性"></a>实例属性和类属性</h3><blockquote>
-<p>在编写程序的时候，千万不要对实例属性和类属性使用相同的名字，因为相同名称的实例属性将屏蔽掉类属性，但是当你删除实例属性后，再使用相同的名称，访问到的将是类属性。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/14/tech-2017-12-14-python-learn-return-func/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/14/tech-2017-12-14-python-learn-return-func/" itemprop="url">Python学习-返回函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-14T16:00:00+08:00">
-                2017-12-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
-<p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p>
-<p>结果为25</p>
-<blockquote>
-<p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/14/tech-2017-12-14-python-generator/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/14/tech-2017-12-14-python-generator/" itemprop="url">Python学习-生成器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-14T16:00:00+08:00">
-                2017-12-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Python使用生成器对延迟操作提供了支持。</p>
-<p>所谓延迟操作，是指在需要的时候才产生结果，而不是立即产生结果。这也是生成器的主要好处。</p>
-<p>生成器函数：常规函数定义，但是，使用yield语句而不是return语句返回结果。yield语句一次返回一个结果，在每个结果中间，挂起函数的状态，以便下次重它离开的地方继续执行</p>
-<p>生成器表达式：类似于列表推导，但是，生成器返回按需产生结果的一个对象，而不是一次构建一个结果列表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成器例子1</span></span><br><span class="line">def gensquares(N):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">        yield i**2</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> gensquares(5):</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br></pre></td></tr></table></figure>
-<p>将推导列表括号换为圆括号，形成生成器表达式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object &lt;genexpr&gt; at 0x042372D0&gt;</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">16</span><br><span class="line">&gt;&gt;&gt; list(sq)</span><br><span class="line">[]</span><br><span class="line">&gt;&gt;&gt; sq = (x**2 <span class="keyword">for</span> x <span class="keyword">in</span> range(5))</span><br><span class="line">&gt;&gt;&gt; list(sq)</span><br><span class="line">[0, 1, 4, 9, 16]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>生成器唯一要注意的就是，生成器只能遍历一次</strong></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/14/life-2017-12-14-painting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/14/life-2017-12-14-painting/" itemprop="url">圆脸少女们</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-14T16:00:00+08:00">
-                2017-12-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/绘画/" itemprop="url" rel="index">
-                    <span itemprop="name">绘画</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,<br>但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活<br>反而会变得豁然开朗。</p>
-</blockquote>
-<p>我从小喜爱绘画，尤其是喜爱漫画。也曾经上过几年素描培训班，但是上了初中之后，兴趣与学业发生冲突，不得不放弃漫画。</p>
-<p>与其让自己沉迷游戏、无聊的娱乐视频。不如用编程学习、体育锻炼、绘画来充实自己。看到自己画的人物栩栩如生地出现在画纸，颇有一番得意呢。</p>
-<p>当然，我不能忘记，自己的主要任务还是学习。周六就要考六级英语了，这次听力要多加练习，多背几篇作文。Python也要加把劲，早日完成课程设计。</p>
-<h2 id="一个活泼的少女像"><a href="#一个活泼的少女像" class="headerlink" title="一个活泼的少女像"></a>一个活泼的少女像</h2><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/57536313.jpg" alt=""></p>
-<h2 id="圆脸可爱少女（1）"><a href="#圆脸可爱少女（1）" class="headerlink" title="圆脸可爱少女（1）"></a>圆脸可爱少女（1）</h2><blockquote>
-<p>圆脸的线条平滑柔和，使角色看起来年级较小，给人单纯、可爱的印象。圆脸一般用来塑造性格纯朴开朗的萌美少女角色。</p>
-</blockquote>
-<p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/73290488.jpg" alt=""></p>
-<h2 id="圆脸少女（2）"><a href="#圆脸少女（2）" class="headerlink" title="圆脸少女（2）"></a>圆脸少女（2）</h2><p> 这是我喜欢的女生发型之一，给人一种活泼却不失成熟的感觉</p>
-<p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-17/38310361.jpg" alt=""></p>
+            <p>与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；</p>
+<p>而try/finally语句则主要用于在无论是否发生异常情况，都需要执行一些清理工作的场合，如在通信过程中，无论通信是否发生错误，都需要在通信完成或者发生错误时关闭网络连接。</p>
+<p>尽管try/except和try/finally的作用不同，但是在编程实践中通常可以把它们组合在一起使用try/except/else/finally的形式来实现稳定性和灵活性更好的设计。</p>
+<p>默认情况下，在程序段的执行过程中，如果没有提供try/except的处理，脚本文件执行过程中所产生的异常消息会自动发送给程序调用端，如python shell，而python shell对异常消息的默认处理则是终止程序的执行并打印具体的出错信息。</p>
+<p>这也是在python shell中执行程序错误后所出现的出错打印信息的由来。</p>
+<p>python中try/except/else/finally语句的完整格式如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">     Normal execution block</span><br><span class="line">except A:</span><br><span class="line">     Exception A handle</span><br><span class="line">except B:</span><br><span class="line">     Exception B handle</span><br><span class="line">except:</span><br><span class="line">     Other exception handle</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">if</span> no exception,get here</span><br><span class="line">finally:</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">"finally"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>说明：</p>
+<p>正常执行的程序在try下面的Normal execution block执行块中执行，在执行过程中如果发生了异常，则中断当前在Normal execution block中的执行跳转到对应的异常处理块中开始执行；</p>
+<p>python从第一个except X处开始查找，如果找到了对应的exception类型则进入其提供的exception handle中进行处理，如果没有找到则直接进入except块处进行处理。except块是可选项，如果没有提供，该exception将会被提交给python进行默认处理，处理方式则是终止应用程序并打印提示信息；</p>
+<p>如果在Normal execution block执行块中执行过程中没有发生任何异常，则在执行完Normal execution block后会进入else执行块中（如果存在的话）执行。</p>
+<p>无论是否发生了异常，只要提供了finally语句，以上try/except/else/finally代码块执行的最后一步总是执行finally所对应的代码块。</p>
+<p><strong>需要注意的是：</strong></p>
+<p>1.在上面所示的完整语句中try/except/else/finally所出现的顺序必须是try–&gt;except X–&gt;except–&gt;else–&gt;finally，即所有的except必须在else和finally之前，else（如果有的话）必须在finally之前，而except X必须在except之前。否则会出现语法错误。</p>
+<p>2.对于上面所展示的try/except完整格式而言，else和finally都是可选的，而不是必须的，但是如果存在的话else必须在finally之前，finally（如果存在的话）必须在整个语句的最后位置。</p>
+<p>3.在上面的完整语句中，else语句的存在必须以except X或者except语句为前提，如果在没有except语句的try block中使用else语句会引发语法错误。也就是说else不能与try/finally配合使用。</p>
+<p>4.except的使用要非常小心，慎用。</p>
 
           
         
@@ -1757,7 +1006,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1792,6 +1041,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="http://p0xt50lze.bkt.clouddn.com/avatar.gif"
+                alt="Peter" />
+            
               <p class="site-author-name" itemprop="name">Peter</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -1824,10 +1077,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 

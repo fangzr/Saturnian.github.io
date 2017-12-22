@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="fpga,gpio" />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,25 +79,13 @@
 
 
 
-<meta name="description" content="GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。  GPIO控制器的基本结构如图1所示。 总线接口模块实现地址译码，并将特定总线信号转化为内部总线；中断逻辑模块，根据中断控制以及中断产生条件产生中断请求信号。输入/输出控制模块将内部总线信号转化为基本的输入/输出引线，并实现输出数据锁定,输入数据暂存的功能。 图中只画出1位">
-<meta name="keywords" content="fpga,gpio">
-<meta property="og:type" content="article">
-<meta property="og:title" content="GPIO Product Guide笔记（Xilinx）">
-<meta property="og:url" content="https://fangzr.github.io/2017/01/03/tech-2017-1-30-gpio-product/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Saturnian&#39;s Blog">
+<meta property="og:url" content="https://fangzr.github.io/page/4/index.html">
 <meta property="og:site_name" content="Saturnian&#39;s Blog">
-<meta property="og:description" content="GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。  GPIO控制器的基本结构如图1所示。 总线接口模块实现地址译码，并将特定总线信号转化为内部总线；中断逻辑模块，根据中断控制以及中断产生条件产生中断请求信号。输入/输出控制模块将内部总线信号转化为基本的输入/输出引线，并实现输出数据锁定,输入数据暂存的功能。 图中只画出1位">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.blog.csdn.net/20170130211925026?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170130211957573?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170130212013729?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170130212032636?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170130212128355?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170130212153261?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-12-21T16:16:35.763Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GPIO Product Guide笔记（Xilinx）">
-<meta name="twitter:description" content="GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。  GPIO控制器的基本结构如图1所示。 总线接口模块实现地址译码，并将特定总线信号转化为内部总线；中断逻辑模块，根据中断控制以及中断产生条件产生中断请求信号。输入/输出控制模块将内部总线信号转化为基本的输入/输出引线，并实现输出数据锁定,输入数据暂存的功能。 图中只画出1位">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20170130211925026?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="Saturnian&#39;s Blog">
 
 
 
@@ -127,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="https://fangzr.github.io/2017/01/03/tech-2017-1-30-gpio-product/"/>
+  <link rel="canonical" href="https://fangzr.github.io/page/4/"/>
 
 
 
 
 
-  <title>GPIO Product Guide笔记（Xilinx） | Saturnian's Blog</title>
+  <title>Saturnian's Blog</title>
   
 
 
@@ -152,7 +140,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,9 +234,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -277,7 +266,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">GPIO Product Guide笔记（Xilinx）</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/01/03/tech-2017-1-30-gpio-product/" itemprop="url">GPIO Product Guide笔记（Xilinx）</a></h1>
         
 
         <div class="post-meta">
@@ -349,7 +340,9 @@
       
 
       
-        <blockquote>
+        
+          
+            <blockquote>
 <p>GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。</p>
 </blockquote>
 <p>GPIO控制器的基本结构如图1所示。</p>
@@ -387,6 +380,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;xparameters.h&gt;</span><br><span class="line">#include &lt;xgpio.h&gt;</span><br><span class="line">#include &lt;xintc.h&gt;</span><br><span class="line">#include &lt;xtmrctr.h&gt;</span><br><span class="line">#include &lt;xuartlite.h&gt;</span><br><span class="line">#include &quot;platform.h&quot;</span><br><span class="line">#include &quot;keys/keys.h&quot;</span><br><span class="line">#include &quot;queue/queue.h&quot;</span><br><span class="line">#include &lt;microblaze_sleep.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">       int sts;</span><br><span class="line">       int i;</span><br><span class="line"></span><br><span class="line">    init_platform();</span><br><span class="line"></span><br><span class="line">    sts=XGpio_Initialize (&amp;gpioLed, XPAR_HIER_PERIPH_GPIO_LEDS_DEVICE_ID);</span><br><span class="line">    if(sts != XST_SUCCESS) printf(&quot;pgio led init error!\n&quot;);</span><br><span class="line">    while(1)</span><br><span class="line">    &#123;</span><br><span class="line">           for( i=0x01;i&lt;=0x80;i=i&lt;&lt;1)</span><br><span class="line">             &#123;</span><br><span class="line">              XGpio_DiscreteWrite (&amp;gpioLed, 1, i);//led hign is effective</span><br><span class="line">              MB_Sleep(500);</span><br><span class="line">             &#125;</span><br><span class="line">           i=0x01;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>反思：学习FPGA不自己去阅读英文文档是不行的，有问题可以去Xilinx英文论坛讨论。总而言之，官方的文档还是比较重要的第一手资料吧（By华科Peter）</p>
 
+          
+        
       
     </div>
     
@@ -401,40 +396,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/FPGA/" rel="tag"># FPGA</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/12/31/tech-2012-12-31-python-development-of-sae/" rel="next" title="sae下的python开发部署和一个简单例子">
-                <i class="fa fa-chevron-left"></i> sae下的python开发部署和一个简单例子
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/13/tech-2017-1-13-union/" rel="prev" title="C学习-Union联合的妙用">
-                C学习-Union联合的妙用 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -444,11 +413,306 @@
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2016/12/31/tech-2012-12-31-python-development-of-sae/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/12/31/tech-2012-12-31-python-development-of-sae/" itemprop="url">sae下的python开发部署和一个简单例子</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-31T16:00:00+08:00">
+                2016-12-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          sae下的python开发部署和一个简单例子
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/12/31/tech-2012-12-31-python-development-of-sae/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2012/12/30/tool-2012-12-30-share-windows-and-linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2012/12/30/tool-2012-12-30-share-windows-and-linux/" itemprop="url">Windows和Linux切换最终解决方案</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-12-30T16:06:25+08:00">
+                2012-12-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          如果你也像我一样经常工作于Windows和Linux，那么这篇文章值得一看
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2012/12/30/tool-2012-12-30-share-windows-and-linux/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
+
 
 
           </div>
@@ -456,8 +720,6 @@
 
 
           
-  
-
 
         </div>
         
@@ -673,10 +935,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
-
 
   
 

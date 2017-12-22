@@ -5,9 +5,9 @@
   <subtitle>Welcome</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://fangzr.github.io/"/>
+  <link href="https://hust.life/"/>
   <updated>2017-12-22T04:59:53.243Z</updated>
-  <id>https://fangzr.github.io/</id>
+  <id>https://hust.life/</id>
   
   <author>
     <name>Peter</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>钻牛角尖是不明智的</title>
-    <link href="https://fangzr.github.io/2017/12/22/life-2017-12-22-ridiculous/"/>
-    <id>https://fangzr.github.io/2017/12/22/life-2017-12-22-ridiculous/</id>
+    <link href="https://hust.life/2017/12/22/life-2017-12-22-ridiculous/"/>
+    <id>https://hust.life/2017/12/22/life-2017-12-22-ridiculous/</id>
     <published>2017-12-22T04:20:00.000Z</published>
     <updated>2017-12-22T04:59:53.243Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="生活" scheme="https://fangzr.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://hust.life/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="https://fangzr.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://hust.life/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>Python学习-线程</title>
-    <link href="https://fangzr.github.io/2017/12/21/tech-2017-12-21-python-thread/"/>
-    <id>https://fangzr.github.io/2017/12/21/tech-2017-12-21-python-thread/</id>
+    <link href="https://hust.life/2017/12/21/tech-2017-12-21-python-thread/"/>
+    <id>https://hust.life/2017/12/21/tech-2017-12-21-python-thread/</id>
     <published>2017-12-21T08:00:00.000Z</published>
     <updated>2017-12-21T16:14:23.277Z</updated>
     
@@ -58,17 +58,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="https://fangzr.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://hust.life/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>if __name__ == &#39;__main__&#39; 如何正确理解?</title>
-    <link href="https://fangzr.github.io/2017/12/20/tech-2017-12-20-python-name-main/"/>
-    <id>https://fangzr.github.io/2017/12/20/tech-2017-12-20-python-name-main/</id>
+    <link href="https://hust.life/2017/12/20/tech-2017-12-20-python-name-main/"/>
+    <id>https://hust.life/2017/12/20/tech-2017-12-20-python-name-main/</id>
     <published>2017-12-20T08:00:00.000Z</published>
     <updated>2017-12-21T16:14:15.731Z</updated>
     
@@ -83,17 +83,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="https://fangzr.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://hust.life/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python学习-进程</title>
-    <link href="https://fangzr.github.io/2017/12/19/tech-2017-12-19-python-process-thread/"/>
-    <id>https://fangzr.github.io/2017/12/19/tech-2017-12-19-python-process-thread/</id>
+    <link href="https://hust.life/2017/12/19/tech-2017-12-19-python-process-thread/"/>
+    <id>https://hust.life/2017/12/19/tech-2017-12-19-python-process-thread/</id>
     <published>2017-12-19T08:00:00.000Z</published>
     <updated>2017-12-21T16:15:08.844Z</updated>
     
@@ -111,17 +111,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="https://fangzr.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://hust.life/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python学习-try/except/else/finally语句</title>
-    <link href="https://fangzr.github.io/2017/12/18/tech-2017-12-18-python-try-finally-except/"/>
-    <id>https://fangzr.github.io/2017/12/18/tech-2017-12-18-python-try-finally-except/</id>
+    <link href="https://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/"/>
+    <id>https://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/</id>
     <published>2017-12-18T08:00:00.000Z</published>
     <updated>2017-12-21T16:15:16.558Z</updated>
     
@@ -137,17 +137,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="https://fangzr.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://hust.life/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python学习-IO操作</title>
-    <link href="https://fangzr.github.io/2017/12/18/tech-2017-12-18-python-io/"/>
-    <id>https://fangzr.github.io/2017/12/18/tech-2017-12-18-python-io/</id>
+    <link href="https://hust.life/2017/12/18/tech-2017-12-18-python-io/"/>
+    <id>https://hust.life/2017/12/18/tech-2017-12-18-python-io/</id>
     <published>2017-12-18T08:00:00.000Z</published>
     <updated>2017-12-21T16:15:22.899Z</updated>
     
@@ -163,17 +163,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="https://fangzr.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://hust.life/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python学习-面向对象高级编程</title>
-    <link href="https://fangzr.github.io/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/"/>
-    <id>https://fangzr.github.io/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/</id>
+    <link href="https://hust.life/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/"/>
+    <id>https://hust.life/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/</id>
     <published>2017-12-17T08:00:00.000Z</published>
     <updated>2017-12-21T16:15:31.046Z</updated>
     
@@ -189,17 +189,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="https://fangzr.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://hust.life/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python学习-面向对象编程概念&amp;Codes</title>
-    <link href="https://fangzr.github.io/2017/12/16/tech-2017-12-16-python-Object-oriented/"/>
-    <id>https://fangzr.github.io/2017/12/16/tech-2017-12-16-python-Object-oriented/</id>
+    <link href="https://hust.life/2017/12/16/tech-2017-12-16-python-Object-oriented/"/>
+    <id>https://hust.life/2017/12/16/tech-2017-12-16-python-Object-oriented/</id>
     <published>2017-12-16T08:00:00.000Z</published>
     <updated>2017-12-21T16:15:38.970Z</updated>
     
@@ -215,69 +215,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="https://fangzr.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python学习-返回函数</title>
-    <link href="https://fangzr.github.io/2017/12/14/tech-2017-12-14-python-learn-return-func/"/>
-    <id>https://fangzr.github.io/2017/12/14/tech-2017-12-14-python-learn-return-func/</id>
-    <published>2017-12-14T08:00:00.000Z</published>
-    <updated>2017-12-21T16:15:57.032Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure><p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p><p>结果为25</p><blockquote><p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="python" scheme="https://fangzr.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>圆脸少女们</title>
-    <link href="https://fangzr.github.io/2017/12/14/life-2017-12-14-painting/"/>
-    <id>https://fangzr.github.io/2017/12/14/life-2017-12-14-painting/</id>
-    <published>2017-12-14T08:00:00.000Z</published>
-    <updated>2017-12-21T16:18:12.293Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,<br>但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活<br>反而会变得豁然开朗。</p></blockquote><p>我从小喜爱绘画，尤其是喜爱漫画。也曾经上过几年素描培训班，但是上了初中之后，兴趣与学业发生冲突，不得不放弃漫画。</p><p>与其让自己沉迷游戏、无聊的娱乐视频。不如用编程学习、体育锻炼、绘画来充实自己。看到自己画的人物栩栩如生地出现在画纸，颇有一番得意呢。</p><p>当然，我不能忘记，自己的主要任务还是学习。周六就要考六级英语了，这次听力要多加练习，多背几篇作文。Python也要加把劲，早日完成课程设计。</p><h2 id="一个活泼的少女像"><a href="#一个活泼的少女像" class="headerlink" title="一个活泼的少女像"></a>一个活泼的少女像</h2><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/57536313.jpg" alt=""></p><h2 id="圆脸可爱少女（1）"><a href="#圆脸可爱少女（1）" class="headerlink" title="圆脸可爱少女（1）"></a>圆脸可爱少女（1）</h2><blockquote><p>圆脸的线条平滑柔和，使角色看起来年级较小，给人单纯、可爱的印象。圆脸一般用来塑造性格纯朴开朗的萌美少女角色。</p></blockquote><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/73290488.jpg" alt=""></p><h2 id="圆脸少女（2）"><a href="#圆脸少女（2）" class="headerlink" title="圆脸少女（2）"></a>圆脸少女（2）</h2><p> 这是我喜欢的女生发型之一，给人一种活泼却不失成熟的感觉</p><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-17/38310361.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,&lt;br&gt;但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活&lt;br&gt;反而会变得豁然开朗。&lt;/p&gt;
-&lt;/blockquo
-      
-    
-    </summary>
-    
-      <category term="绘画" scheme="https://fangzr.github.io/categories/%E7%BB%98%E7%94%BB/"/>
-    
-    
-      <category term="素描" scheme="https://fangzr.github.io/tags/%E7%B4%A0%E6%8F%8F/"/>
+      <category term="Python" scheme="https://hust.life/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python学习-生成器</title>
-    <link href="https://fangzr.github.io/2017/12/14/tech-2017-12-14-python-generator/"/>
-    <id>https://fangzr.github.io/2017/12/14/tech-2017-12-14-python-generator/</id>
+    <link href="https://hust.life/2017/12/14/tech-2017-12-14-python-generator/"/>
+    <id>https://hust.life/2017/12/14/tech-2017-12-14-python-generator/</id>
     <published>2017-12-14T08:00:00.000Z</published>
     <updated>2017-12-21T16:16:03.205Z</updated>
     
@@ -294,17 +242,69 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="python" scheme="https://fangzr.github.io/tags/python/"/>
+      <category term="python" scheme="https://hust.life/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习-返回函数</title>
+    <link href="https://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/"/>
+    <id>https://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/</id>
+    <published>2017-12-14T08:00:00.000Z</published>
+    <updated>2017-12-21T16:15:57.032Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure><p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p><p>结果为25</p><blockquote><p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="python" scheme="https://hust.life/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>圆脸少女们</title>
+    <link href="https://hust.life/2017/12/14/life-2017-12-14-painting/"/>
+    <id>https://hust.life/2017/12/14/life-2017-12-14-painting/</id>
+    <published>2017-12-14T08:00:00.000Z</published>
+    <updated>2017-12-21T16:18:12.293Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,<br>但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活<br>反而会变得豁然开朗。</p></blockquote><p>我从小喜爱绘画，尤其是喜爱漫画。也曾经上过几年素描培训班，但是上了初中之后，兴趣与学业发生冲突，不得不放弃漫画。</p><p>与其让自己沉迷游戏、无聊的娱乐视频。不如用编程学习、体育锻炼、绘画来充实自己。看到自己画的人物栩栩如生地出现在画纸，颇有一番得意呢。</p><p>当然，我不能忘记，自己的主要任务还是学习。周六就要考六级英语了，这次听力要多加练习，多背几篇作文。Python也要加把劲，早日完成课程设计。</p><h2 id="一个活泼的少女像"><a href="#一个活泼的少女像" class="headerlink" title="一个活泼的少女像"></a>一个活泼的少女像</h2><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/57536313.jpg" alt=""></p><h2 id="圆脸可爱少女（1）"><a href="#圆脸可爱少女（1）" class="headerlink" title="圆脸可爱少女（1）"></a>圆脸可爱少女（1）</h2><blockquote><p>圆脸的线条平滑柔和，使角色看起来年级较小，给人单纯、可爱的印象。圆脸一般用来塑造性格纯朴开朗的萌美少女角色。</p></blockquote><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/73290488.jpg" alt=""></p><h2 id="圆脸少女（2）"><a href="#圆脸少女（2）" class="headerlink" title="圆脸少女（2）"></a>圆脸少女（2）</h2><p> 这是我喜欢的女生发型之一，给人一种活泼却不失成熟的感觉</p><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-17/38310361.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,&lt;br&gt;但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活&lt;br&gt;反而会变得豁然开朗。&lt;/p&gt;
+&lt;/blockquo
+      
+    
+    </summary>
+    
+      <category term="绘画" scheme="https://hust.life/categories/%E7%BB%98%E7%94%BB/"/>
+    
+    
+      <category term="素描" scheme="https://hust.life/tags/%E7%B4%A0%E6%8F%8F/"/>
     
   </entry>
   
   <entry>
     <title>Python学习-map与reduce函数</title>
-    <link href="https://fangzr.github.io/2017/12/13/tech-2017-12-13-python-learn-map-reduce/"/>
-    <id>https://fangzr.github.io/2017/12/13/tech-2017-12-13-python-learn-map-reduce/</id>
+    <link href="https://hust.life/2017/12/13/tech-2017-12-13-python-learn-map-reduce/"/>
+    <id>https://hust.life/2017/12/13/tech-2017-12-13-python-learn-map-reduce/</id>
     <published>2017-12-13T08:00:00.000Z</published>
     <updated>2017-12-21T16:16:09.650Z</updated>
     
@@ -320,17 +320,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="https://fangzr.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://hust.life/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>FPGA学习-FPGA小数乘法</title>
-    <link href="https://fangzr.github.io/2017/12/12/tech-2017-12-12-FPGA-small-num/"/>
-    <id>https://fangzr.github.io/2017/12/12/tech-2017-12-12-FPGA-small-num/</id>
+    <link href="https://hust.life/2017/12/12/tech-2017-12-12-FPGA-small-num/"/>
+    <id>https://hust.life/2017/12/12/tech-2017-12-12-FPGA-small-num/</id>
     <published>2017-12-12T08:00:00.000Z</published>
     <updated>2017-12-21T16:16:17.479Z</updated>
     
@@ -349,17 +349,17 @@
     
     </summary>
     
-      <category term="FPGA" scheme="https://fangzr.github.io/categories/FPGA/"/>
+      <category term="FPGA" scheme="https://hust.life/categories/FPGA/"/>
     
     
-      <category term="FPGA" scheme="https://fangzr.github.io/tags/FPGA/"/>
+      <category term="FPGA" scheme="https://hust.life/tags/FPGA/"/>
     
   </entry>
   
   <entry>
     <title>Python学习-Pycharm快捷键</title>
-    <link href="https://fangzr.github.io/2017/12/10/tech-2017-12-10-python-learn-pycharm/"/>
-    <id>https://fangzr.github.io/2017/12/10/tech-2017-12-10-python-learn-pycharm/</id>
+    <link href="https://hust.life/2017/12/10/tech-2017-12-10-python-learn-pycharm/"/>
+    <id>https://hust.life/2017/12/10/tech-2017-12-10-python-learn-pycharm/</id>
     <published>2017-12-10T08:00:00.000Z</published>
     <updated>2017-12-21T16:16:24.679Z</updated>
     
@@ -382,17 +382,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="python" scheme="https://fangzr.github.io/tags/python/"/>
+      <category term="python" scheme="https://hust.life/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>总结篇：基地岁月</title>
-    <link href="https://fangzr.github.io/2017/09/01/life-2017-9-1-sti-summary/"/>
-    <id>https://fangzr.github.io/2017/09/01/life-2017-9-1-sti-summary/</id>
+    <link href="https://hust.life/2017/09/01/life-2017-9-1-sti-summary/"/>
+    <id>https://hust.life/2017/09/01/life-2017-9-1-sti-summary/</id>
     <published>2017-09-01T08:00:00.000Z</published>
     <updated>2017-12-21T16:18:23.415Z</updated>
     
@@ -408,17 +408,17 @@
     
     </summary>
     
-      <category term="生活" scheme="https://fangzr.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://hust.life/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="https://fangzr.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://hust.life/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>C学习-Union联合的妙用</title>
-    <link href="https://fangzr.github.io/2017/01/13/tech-2017-1-13-union/"/>
-    <id>https://fangzr.github.io/2017/01/13/tech-2017-1-13-union/</id>
+    <link href="https://hust.life/2017/01/13/tech-2017-1-13-union/"/>
+    <id>https://hust.life/2017/01/13/tech-2017-1-13-union/</id>
     <published>2017-01-13T08:00:00.000Z</published>
     <updated>2017-12-21T16:16:47.016Z</updated>
     
@@ -436,17 +436,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="C，Union" scheme="https://fangzr.github.io/tags/C%EF%BC%8CUnion/"/>
+      <category term="C，Union" scheme="https://hust.life/tags/C%EF%BC%8CUnion/"/>
     
   </entry>
   
   <entry>
     <title>GPIO Product Guide笔记（Xilinx）</title>
-    <link href="https://fangzr.github.io/2017/01/03/tech-2017-1-30-gpio-product/"/>
-    <id>https://fangzr.github.io/2017/01/03/tech-2017-1-30-gpio-product/</id>
+    <link href="https://hust.life/2017/01/03/tech-2017-1-30-gpio-product/"/>
+    <id>https://hust.life/2017/01/03/tech-2017-1-30-gpio-product/</id>
     <published>2017-01-03T08:00:00.000Z</published>
     <updated>2017-12-21T16:16:35.763Z</updated>
     
@@ -465,17 +465,17 @@
     
     </summary>
     
-      <category term="FPGA" scheme="https://fangzr.github.io/categories/FPGA/"/>
+      <category term="FPGA" scheme="https://hust.life/categories/FPGA/"/>
     
     
-      <category term="FPGA" scheme="https://fangzr.github.io/tags/FPGA/"/>
+      <category term="FPGA" scheme="https://hust.life/tags/FPGA/"/>
     
   </entry>
   
   <entry>
     <title>sae下的python开发部署和一个简单例子</title>
-    <link href="https://fangzr.github.io/2016/12/31/tech-2012-12-31-python-development-of-sae/"/>
-    <id>https://fangzr.github.io/2016/12/31/tech-2012-12-31-python-development-of-sae/</id>
+    <link href="https://hust.life/2016/12/31/tech-2012-12-31-python-development-of-sae/"/>
+    <id>https://hust.life/2016/12/31/tech-2012-12-31-python-development-of-sae/</id>
     <published>2016-12-31T08:00:00.000Z</published>
     <updated>2017-12-21T16:17:06.416Z</updated>
     
@@ -487,17 +487,17 @@
     
     </summary>
     
-      <category term="技术" scheme="https://fangzr.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Python" scheme="https://fangzr.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://hust.life/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Windows和Linux切换最终解决方案</title>
-    <link href="https://fangzr.github.io/2012/12/30/tool-2012-12-30-share-windows-and-linux/"/>
-    <id>https://fangzr.github.io/2012/12/30/tool-2012-12-30-share-windows-and-linux/</id>
+    <link href="https://hust.life/2012/12/30/tool-2012-12-30-share-windows-and-linux/"/>
+    <id>https://hust.life/2012/12/30/tool-2012-12-30-share-windows-and-linux/</id>
     <published>2012-12-30T08:06:25.000Z</published>
     <updated>2017-12-21T13:22:06.197Z</updated>
     
@@ -509,12 +509,12 @@
     
     </summary>
     
-      <category term="工具" scheme="https://fangzr.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https://hust.life/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="Windows" scheme="https://fangzr.github.io/tags/Windows/"/>
+      <category term="Windows" scheme="https://hust.life/tags/Windows/"/>
     
-      <category term="Linux" scheme="https://fangzr.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="https://hust.life/tags/Linux/"/>
     
   </entry>
   

@@ -923,7 +923,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/14/tech-2017-12-14-python-generator/">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter">
@@ -942,7 +942,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/14/tech-2017-12-14-python-generator/" itemprop="url">Python学习-生成器</a></h1>
+                <a class="post-title-link" href="/2017/12/14/tech-2017-12-14-python-learn-return-func/" itemprop="url">Python学习-返回函数</a></h1>
         
 
         <div class="post-meta">
@@ -994,7 +994,7 @@
 
           
           
-             <span id="/2017/12/14/tech-2017-12-14-python-generator/" class="leancloud_visitors" data-flag-title="Python学习-生成器">
+             <span id="/2017/12/14/tech-2017-12-14-python-learn-return-func/" class="leancloud_visitors" data-flag-title="Python学习-返回函数">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1027,14 +1027,13 @@
       
         
           
-            <p>Python使用生成器对延迟操作提供了支持。</p>
-<p>所谓延迟操作，是指在需要的时候才产生结果，而不是立即产生结果。这也是生成器的主要好处。</p>
-<p>生成器函数：常规函数定义，但是，使用yield语句而不是return语句返回结果。yield语句一次返回一个结果，在每个结果中间，挂起函数的状态，以便下次重它离开的地方继续执行</p>
-<p>生成器表达式：类似于列表推导，但是，生成器返回按需产生结果的一个对象，而不是一次构建一个结果列表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成器例子1</span></span><br><span class="line">def gensquares(N):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">        yield i**2</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> gensquares(5):</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br></pre></td></tr></table></figure>
-<p>将推导列表括号换为圆括号，形成生成器表达式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object &lt;genexpr&gt; at 0x042372D0&gt;</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">16</span><br><span class="line">&gt;&gt;&gt; list(sq)</span><br><span class="line">[]</span><br><span class="line">&gt;&gt;&gt; sq = (x**2 <span class="keyword">for</span> x <span class="keyword">in</span> range(5))</span><br><span class="line">&gt;&gt;&gt; list(sq)</span><br><span class="line">[0, 1, 4, 9, 16]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>生成器唯一要注意的就是，生成器只能遍历一次</strong></p>
-
+            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p>
+<p>结果为25</p>
+<blockquote>
+<p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>
           
         
       

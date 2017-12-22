@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fangzr.github.io/"/>
-  <updated>2017-12-21T16:14:23.277Z</updated>
+  <updated>2017-12-22T04:43:40.877Z</updated>
   <id>https://fangzr.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>钻牛角尖是不明智的</title>
+    <link href="https://fangzr.github.io/2017/12/22/life-2017-12-22-ridiculous/"/>
+    <id>https://fangzr.github.io/2017/12/22/life-2017-12-22-ridiculous/</id>
+    <published>2017-12-22T04:20:00.000Z</published>
+    <updated>2017-12-22T04:43:40.877Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于自己的博客，真的有种强迫症的感觉。<br>21号花了一整天，22号花了一上午。终于把博客主题配置完成。予作文以记之。</p><h3 id="搭建博客经历"><a href="#搭建博客经历" class="headerlink" title="搭建博客经历"></a>搭建博客经历</h3><ol><li>21号发现阿里云域名给我停止解析了，赶紧向客服反映，又发现原先的<code>jekyll</code>主题（yansu）的feed有bug，总之jekyll问题真的太多了，想找到称心如意的主题太难</li><li>21号选择hexo主题next，搭建博客到晚上12点，github部署完毕，修改date属性</li><li>22号配置主题页面、背景etc. </li><li>关闭所有动画特效，这让人阅读分心，降低效率。</li><li>博客背景更换为CG图，黑白背景让人看得眼睛难受，具体修改参考<a href="https://zouzls.github.io/2017/03/17/Next%E4%B8%BB%E9%A2%98%E8%83%8C%E6%99%AF%E4%B8%AA%E6%80%A7%E5%8C%96DIY/" target="_blank" rel="noopener">Gs Chen博客文章</a></li></ol><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul><li>搭建<code>github pages</code>毕竟可以用“万事开头难”形容，一旦固定了博客的style，就不要随便改动，浪费时间在这上面不如多写几行代码，多刷几套题。</li><li>今天下午学习Python threadLocal内容，晚上复习DSP和通信原理。</li><li>能不能保研还说不定呢，努力学好这些专业基础课，争取保研，能保研本校就不要去考研了。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;对于自己的博客，真的有种强迫症的感觉。&lt;br&gt;21号花了一整天，22号花了一上午。终于把博客主题配置完成。予作文以记之。&lt;/p&gt;
+&lt;h3 id=&quot;搭建博客经历&quot;&gt;&lt;a href=&quot;#搭建博客经历&quot; class=&quot;headerlink&quot; title=&quot;搭建博客经历&quot;&gt;&lt;/a&gt;
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="https://fangzr.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="生活" scheme="https://fangzr.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Python学习-线程</title>
@@ -201,33 +227,6 @@
   </entry>
   
   <entry>
-    <title>圆脸少女们</title>
-    <link href="https://fangzr.github.io/2017/12/14/life-2017-12-14-painting/"/>
-    <id>https://fangzr.github.io/2017/12/14/life-2017-12-14-painting/</id>
-    <published>2017-12-14T08:00:00.000Z</published>
-    <updated>2017-12-21T16:18:12.293Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,<br>但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活<br>反而会变得豁然开朗。</p></blockquote><p>我从小喜爱绘画，尤其是喜爱漫画。也曾经上过几年素描培训班，但是上了初中之后，兴趣与学业发生冲突，不得不放弃漫画。</p><p>与其让自己沉迷游戏、无聊的娱乐视频。不如用编程学习、体育锻炼、绘画来充实自己。看到自己画的人物栩栩如生地出现在画纸，颇有一番得意呢。</p><p>当然，我不能忘记，自己的主要任务还是学习。周六就要考六级英语了，这次听力要多加练习，多背几篇作文。Python也要加把劲，早日完成课程设计。</p><h2 id="一个活泼的少女像"><a href="#一个活泼的少女像" class="headerlink" title="一个活泼的少女像"></a>一个活泼的少女像</h2><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/57536313.jpg" alt=""></p><h2 id="圆脸可爱少女（1）"><a href="#圆脸可爱少女（1）" class="headerlink" title="圆脸可爱少女（1）"></a>圆脸可爱少女（1）</h2><blockquote><p>圆脸的线条平滑柔和，使角色看起来年级较小，给人单纯、可爱的印象。圆脸一般用来塑造性格纯朴开朗的萌美少女角色。</p></blockquote><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/73290488.jpg" alt=""></p><h2 id="圆脸少女（2）"><a href="#圆脸少女（2）" class="headerlink" title="圆脸少女（2）"></a>圆脸少女（2）</h2><p> 这是我喜欢的女生发型之一，给人一种活泼却不失成熟的感觉</p><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-17/38310361.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,&lt;br&gt;但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活&lt;br&gt;反而会变得豁然开朗。&lt;/p&gt;
-&lt;/blockquo
-      
-    
-    </summary>
-    
-      <category term="绘画" scheme="https://fangzr.github.io/categories/%E7%BB%98%E7%94%BB/"/>
-    
-    
-      <category term="素描" scheme="https://fangzr.github.io/tags/%E7%B4%A0%E6%8F%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python学习-生成器</title>
     <link href="https://fangzr.github.io/2017/12/14/tech-2017-12-14-python-generator/"/>
     <id>https://fangzr.github.io/2017/12/14/tech-2017-12-14-python-generator/</id>
@@ -251,6 +250,33 @@
     
     
       <category term="python" scheme="https://fangzr.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>圆脸少女们</title>
+    <link href="https://fangzr.github.io/2017/12/14/life-2017-12-14-painting/"/>
+    <id>https://fangzr.github.io/2017/12/14/life-2017-12-14-painting/</id>
+    <published>2017-12-14T08:00:00.000Z</published>
+    <updated>2017-12-21T16:18:12.293Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,<br>但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活<br>反而会变得豁然开朗。</p></blockquote><p>我从小喜爱绘画，尤其是喜爱漫画。也曾经上过几年素描培训班，但是上了初中之后，兴趣与学业发生冲突，不得不放弃漫画。</p><p>与其让自己沉迷游戏、无聊的娱乐视频。不如用编程学习、体育锻炼、绘画来充实自己。看到自己画的人物栩栩如生地出现在画纸，颇有一番得意呢。</p><p>当然，我不能忘记，自己的主要任务还是学习。周六就要考六级英语了，这次听力要多加练习，多背几篇作文。Python也要加把劲，早日完成课程设计。</p><h2 id="一个活泼的少女像"><a href="#一个活泼的少女像" class="headerlink" title="一个活泼的少女像"></a>一个活泼的少女像</h2><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/57536313.jpg" alt=""></p><h2 id="圆脸可爱少女（1）"><a href="#圆脸可爱少女（1）" class="headerlink" title="圆脸可爱少女（1）"></a>圆脸可爱少女（1）</h2><blockquote><p>圆脸的线条平滑柔和，使角色看起来年级较小，给人单纯、可爱的印象。圆脸一般用来塑造性格纯朴开朗的萌美少女角色。</p></blockquote><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/73290488.jpg" alt=""></p><h2 id="圆脸少女（2）"><a href="#圆脸少女（2）" class="headerlink" title="圆脸少女（2）"></a>圆脸少女（2）</h2><p> 这是我喜欢的女生发型之一，给人一种活泼却不失成熟的感觉</p><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-17/38310361.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,&lt;br&gt;但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活&lt;br&gt;反而会变得豁然开朗。&lt;/p&gt;
+&lt;/blockquo
+      
+    
+    </summary>
+    
+      <category term="绘画" scheme="https://fangzr.github.io/categories/%E7%BB%98%E7%94%BB/"/>
+    
+    
+      <category term="素描" scheme="https://fangzr.github.io/tags/%E7%B4%A0%E6%8F%8F/"/>
     
   </entry>
   

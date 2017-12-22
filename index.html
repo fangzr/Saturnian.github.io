@@ -909,7 +909,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/18/tech-2017-12-18-python-try-finally-except/">
+    <link itemprop="mainEntityOfPage" href="https://fangzr.github.io/2017/12/18/tech-2017-12-18-python-io/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter">
@@ -928,7 +928,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/18/tech-2017-12-18-python-try-finally-except/" itemprop="url">Python学习-try/except/else/finally语句</a></h1>
+                <a class="post-title-link" href="/2017/12/18/tech-2017-12-18-python-io/" itemprop="url">Python学习-IO操作</a></h1>
         
 
         <div class="post-meta">
@@ -980,7 +980,7 @@
 
           
           
-             <span id="/2017/12/18/tech-2017-12-18-python-try-finally-except/" class="leancloud_visitors" data-flag-title="Python学习-try/except/else/finally语句">
+             <span id="/2017/12/18/tech-2017-12-18-python-io/" class="leancloud_visitors" data-flag-title="Python学习-IO操作">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1013,23 +1013,15 @@
       
         
           
-            <p>与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；</p>
-<p>而try/finally语句则主要用于在无论是否发生异常情况，都需要执行一些清理工作的场合，如在通信过程中，无论通信是否发生错误，都需要在通信完成或者发生错误时关闭网络连接。</p>
-<p>尽管try/except和try/finally的作用不同，但是在编程实践中通常可以把它们组合在一起使用try/except/else/finally的形式来实现稳定性和灵活性更好的设计。</p>
-<p>默认情况下，在程序段的执行过程中，如果没有提供try/except的处理，脚本文件执行过程中所产生的异常消息会自动发送给程序调用端，如python shell，而python shell对异常消息的默认处理则是终止程序的执行并打印具体的出错信息。</p>
-<p>这也是在python shell中执行程序错误后所出现的出错打印信息的由来。</p>
-<p>python中try/except/else/finally语句的完整格式如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">     Normal execution block</span><br><span class="line">except A:</span><br><span class="line">     Exception A handle</span><br><span class="line">except B:</span><br><span class="line">     Exception B handle</span><br><span class="line">except:</span><br><span class="line">     Other exception handle</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">if</span> no exception,get here</span><br><span class="line">finally:</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">"finally"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>说明：</p>
-<p>正常执行的程序在try下面的Normal execution block执行块中执行，在执行过程中如果发生了异常，则中断当前在Normal execution block中的执行跳转到对应的异常处理块中开始执行；</p>
-<p>python从第一个except X处开始查找，如果找到了对应的exception类型则进入其提供的exception handle中进行处理，如果没有找到则直接进入except块处进行处理。except块是可选项，如果没有提供，该exception将会被提交给python进行默认处理，处理方式则是终止应用程序并打印提示信息；</p>
-<p>如果在Normal execution block执行块中执行过程中没有发生任何异常，则在执行完Normal execution block后会进入else执行块中（如果存在的话）执行。</p>
-<p>无论是否发生了异常，只要提供了finally语句，以上try/except/else/finally代码块执行的最后一步总是执行finally所对应的代码块。</p>
-<p><strong>需要注意的是：</strong></p>
-<p>1.在上面所示的完整语句中try/except/else/finally所出现的顺序必须是try–&gt;except X–&gt;except–&gt;else–&gt;finally，即所有的except必须在else和finally之前，else（如果有的话）必须在finally之前，而except X必须在except之前。否则会出现语法错误。</p>
-<p>2.对于上面所展示的try/except完整格式而言，else和finally都是可选的，而不是必须的，但是如果存在的话else必须在finally之前，finally（如果存在的话）必须在整个语句的最后位置。</p>
-<p>3.在上面的完整语句中，else语句的存在必须以except X或者except语句为前提，如果在没有except语句的try block中使用else语句会引发语法错误。也就是说else不能与try/finally配合使用。</p>
-<p>4.except的使用要非常小心，慎用。</p>
-
+            <h3 id="文件读"><a href="#文件读" class="headerlink" title="文件读"></a>文件读</h3><blockquote>
+<p>由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论是否出错都能正确地关闭文件，我们可以使用try … finally来实现：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    f = open(<span class="string">'/path/to/file'</span>, <span class="string">'r'</span>)</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">finally:</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
+<h3 id="文件写"><a href="#文件写" class="headerlink" title="文件写"></a>文件写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'F:/Codeblock_file/FFT/fangzr.github.io/test.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">f.write(<span class="string">'Hello,world!'</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>你可以反复调用write()来写入文件，但是务必要调用f.close()来关闭文件。当我们写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘。忘记调用close()的后果是数据可能只写了一部分到磁盘，剩下的丢失了。所以，还是用with语句来得保险：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with open(<span class="string">'/Users/michael/test.txt'</span>, <span class="string">'w'</span>) as f:</span><br><span class="line">    f.write(<span class="string">'Hello, world!'</span>)</span><br></pre></td></tr></table></figure>
           
         
       

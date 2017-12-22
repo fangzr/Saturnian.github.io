@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Saturnian&#39;s Blog">
 <meta property="og:description" content="多任务可以由多进程完成，也可以由一个进程内的多线程完成。 进程是由若干线程组成的，一个进程至少有一个线程。 Python的标准库提供了两个模块：_thread和threading，_thread是低级模块，threading是高级模块，对_thread进行了封装。绝大多数情况下，我们只需要使用threading这个高级模块。 启动一个线程就是把一个函数传入并创建Thread实例，然后调用start">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-21T16:14:23.277Z">
+<meta property="og:updated_time" content="2017-12-22T16:43:23.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习-线程">
 <meta name="twitter:description" content="多任务可以由多进程完成，也可以由一个进程内的多线程完成。 进程是由若干线程组成的，一个进程至少有一个线程。 Python的标准库提供了两个模块：_thread和threading，_thread是低级模块，threading是高级模块，对_thread进行了封装。绝大多数情况下，我们只需要使用threading这个高级模块。 启动一个线程就是把一个函数传入并创建Thread实例，然后调用start">
@@ -360,6 +360,7 @@
 <p>Python的标准库提供了两个模块：<code>_thread</code>和<code>threading</code>，<code>_thread</code>是低级模块，<code>threading</code>是高级模块，对<code>_thread</code>进行了封装。绝大多数情况下，我们只需要使用<code>threading</code>这个高级模块。</p>
 <p>启动一个线程就是把一个函数传入并创建<code>Thread</code>实例，然后调用<code>start()</code>开始执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import time,threading</span><br><span class="line"><span class="comment">#新线程执行的代码</span></span><br><span class="line">def loop():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'thread %s is running...'</span>%threading.current_thread().name )</span><br><span class="line">    n=0</span><br><span class="line">    <span class="keyword">while</span> n&lt;5:</span><br><span class="line">        n = n+1</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'thread %s &gt;&gt;&gt;%s'</span>%(threading.current_thread().name,n))</span><br><span class="line">        time.sleep(1)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'thread %s ended.'</span>%threading.current_thread().name)</span><br><span class="line"></span><br><span class="line"><span class="comment">#打印线程名字，默认thread-1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'thread %s is running...'</span>%threading.current_thread().name)</span><br><span class="line"><span class="comment">#传入线程执行的程序，这里只有一个线程</span></span><br><span class="line">t = threading.Thread(target=loop)</span><br><span class="line">t.start()</span><br><span class="line">t.join()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'thread %s ended'</span>% threading.current_thread().name)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p><strong>多线程导致的变量被随意修改问题解决-lock</strong></p>
 <p>当多个线程同时执行lock.acquire()时，只有一个线程能成功地获取锁，然后继续执行代码，其他线程就继续等待直到获得锁为止。</p>
 <p>获得锁的线程用完后一定要释放锁，否则那些苦苦等待锁的线程将永远等待下去，成为死线程。所以我们用try…finally来确保锁一定会被释放。</p>
@@ -490,7 +491,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -512,7 +513,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

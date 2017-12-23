@@ -251,6 +251,167 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/12/tech-2017-12-12-FPGA-small-num/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/12/tech-2017-12-12-FPGA-small-num/" itemprop="url">FPGA学习-FPGA小数乘法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-12T16:00:00+08:00">
+                2017-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/FPGA/" itemprop="url" rel="index">
+                    <span itemprop="name">FPGA</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/12/tech-2017-12-12-FPGA-small-num/" class="leancloud_visitors" data-flag-title="FPGA学习-FPGA小数乘法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>经常有人问, fpga里小数乘法怎么搞?</p>
+</blockquote>
+<p>  如果你乐意, 按照IEEE754标准做”浮点”型运算的ip当然最好(虽然面积上不太好).<br>不过,很多情况下,没有这个必要.</p>
+<p>  一般我们就用”定点”了.<br>你得自己”定个点”, 比如用16位, 分成8位整数8位小数(后面记为”(8.8)”), 即”定点”在第8位.<br>那么:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 -&gt; 16<span class="string">'h0100;</span></span><br><span class="line"><span class="string">1.5 -&gt; 16'</span>h0180;</span><br><span class="line">-1.5 -&gt; -1.5*256 + 65536(补码) -&gt; 16<span class="string">'hFE80(其实就是-16'</span>sh0180, 让综合器给我们算补码去~~);</span><br><span class="line">...</span><br><span class="line">1.164 -&gt; 1.164*256 = 298 = 16<span class="string">'h012A;</span></span><br></pre></td></tr></table></figure></p>
+<p>  所以 signed input [15:0] a (也是”8整.8小”)和 1.164相乘给 signed output [15:0] mul (也是”8整.8小”), 直接写:<br>assign mul = (a * 16’sh012A) &gt;&gt;&gt;8;<br>就行了, 当然, 你的fpga里有dsp block最好, 不然也要几百个LE的.</p>
+<p>  因为 (8.8) 乘  (8.8) 得到  (16.16), 为了恢复成 (8.8), 所以帯符号右移8位即可.<br>把低8位小数舍掉, 高8位整数也丢了, 所以你得保证你的16位(8.8)的”定点小数”乘积不能超过范围, 多数数字信号处理系数都是区间[-1.0, 1.0]的,多半不存在问题, 积分什么的, 还有其它可能有问题的自己想清楚就行, 当然你要保留16位整.16位小也可以~~~</p>
+<p>总结:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">module fixpmul</span><br><span class="line">#(</span><br><span class="line">    parameter IW = 8,</span><br><span class="line">    parameter FW = 8 </span><br><span class="line">)(</span><br><span class="line">    input signed [IW+FW-1 : 0] a,</span><br><span class="line">    input signed [IW+FW-1 : 0] b,</span><br><span class="line">    output signed [IW+FW-1 : 0] o</span><br><span class="line">);</span><br><span class="line">    (* multstyle = &quot;dsp&quot; *) wire signed [IW*2+FW*2-1 : 0] long;</span><br><span class="line">    assign long = a * b;</span><br><span class="line">    assign o = long &gt;&gt;&gt; FW;</span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure></p>
+<p>PS: 作为一个完美主义者的想法: 以8位整型为例, 其实 8位有符号 乘 8位有符号得到的 16位有符号, 中的第14位(权2^14的位, 符号位右边的位), 很讨厌, 它只有在 -128 <em> -128时才等于1, 其它65535种情况, 全是0, 很浪费.<br>所以我们一般在数字信号处理系统中, 永远把[-1,1]映射到[-127,127], 这样那个讨厌的第14位永远用不到, 然后就可以: wire signed [15:0] mul = a </em> b; wire signed [14:0] out = {wire[15], wire[13:0]}, 8位有符号 乘 8位有符号 得到 15位有符号, 节约一位.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/10/tech-2017-12-10-python-learn-pycharm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -982,163 +1143,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2016/12/31/tech-2012-12-31-python-development-of-sae/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/12/31/tech-2012-12-31-python-development-of-sae/" itemprop="url">sae下的python开发部署和一个简单例子</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-31T16:00:00+08:00">
-                2016-12-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2016/12/31/tech-2012-12-31-python-development-of-sae/" class="leancloud_visitors" data-flag-title="sae下的python开发部署和一个简单例子">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          sae下的python开发部署和一个简单例子
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/12/31/tech-2012-12-31-python-development-of-sae/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1195,7 +1199,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

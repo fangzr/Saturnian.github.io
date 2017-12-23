@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hust.life/"/>
-  <updated>2017-12-22T16:59:39.748Z</updated>
+  <updated>2017-12-23T04:20:33.960Z</updated>
   <id>http://hust.life/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python学习-正则表达式</title>
+    <link href="http://hust.life/2017/12/23/tech-2017-12-21-python-regular-expression/"/>
+    <id>http://hust.life/2017/12/23/tech-2017-12-21-python-regular-expression/</id>
+    <published>2017-12-23T03:00:00.000Z</published>
+    <updated>2017-12-23T04:20:33.960Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="常用表达式"><a href="#常用表达式" class="headerlink" title="常用表达式"></a>常用表达式</h3><table><thead><tr><th>常用表达式</th><th>功能</th></tr></thead><tbody><tr><td>\d</td><td>一配一个数字</td></tr><tr><td>\w</td><td>匹配一个数字或字母</td></tr><tr><td>.</td><td>可以匹配任意字符</td></tr><tr><td>+</td><td>表示至少一个字符</td></tr><tr><td>？</td><td>表示0个或者1个字符</td></tr><tr><td>^</td><td>行开头，<code>^\d</code>表示必须数字开头</td></tr><tr><td>$</td><td>行结尾，<code>\d$</code>表示必须数字结尾</td></tr><tr><td>\s</td><td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]</td></tr><tr><td>{n}</td><td>表示n个字符</td></tr><tr><td>{n,m}</td><td>表示n-m个字符</td></tr><tr><td>AIB</td><td>可以匹配A或者B，(PIp)ython</td></tr><tr><td>[0-9a-zA-Z_]</td><td>可以匹配一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[0-9a-zA-Z_]+</td><td>可以匹配至少一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]*</td><td>可以匹配由字母或下划线开头，后接任意个由一个数字、字母或者下划线组成的字符串，也就是Python合法的变量</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]{0, 19}</td><td>精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）</td></tr></tbody></table><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="匹配电话号码"><a href="#匹配电话号码" class="headerlink" title="匹配电话号码"></a>匹配电话号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d&#123;3&#125;\-\d&#123;3,8&#125;</span><br></pre></td></tr></table></figure><p>先匹配三个数字，再匹配‘-’，最后匹配3-8个数字。<br>可以匹配一个带区号的电话号码，如：<code>123-456789</code></p><h4 id="切分字符串"><a href="#切分字符串" class="headerlink" title="切分字符串"></a>切分字符串</h4><p>split()方法语法：<code>str.split(str=&quot;&quot;, num=string.count(str)).</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; re.split(r&apos;[\s\,\;]+&apos;,&apos;a,b;;c,,,d  e&apos;)</span><br><span class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;]</span><br></pre></td></tr></table></figure></p><h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><blockquote><p>除了简单地判断是否匹配之外，正则表达式还有提取子串的强大功能。用()表示的就是要提取的分组（Group）。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;常用表达式&quot;&gt;&lt;a href=&quot;#常用表达式&quot; class=&quot;headerlink&quot; title=&quot;常用表达式&quot;&gt;&lt;/a&gt;常用表达式&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;常用表达式&lt;/th&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Python" scheme="http://hust.life/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Next主题背景颜色修改或添加图片</title>
@@ -166,32 +197,6 @@
   </entry>
   
   <entry>
-    <title>Python学习-try/except/else/finally语句</title>
-    <link href="http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/"/>
-    <id>http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/</id>
-    <published>2017-12-18T08:00:00.000Z</published>
-    <updated>2017-12-21T16:15:16.558Z</updated>
-    
-    <content type="html"><![CDATA[<p>与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；</p><p>而try/finally语句则主要用于在无论是否发生异常情况，都需要执行一些清理工作的场合，如在通信过程中，无论通信是否发生错误，都需要在通信完成或者发生错误时关闭网络连接。</p><p>尽管try/except和try/finally的作用不同，但是在编程实践中通常可以把它们组合在一起使用try/except/else/finally的形式来实现稳定性和灵活性更好的设计。</p><p>默认情况下，在程序段的执行过程中，如果没有提供try/except的处理，脚本文件执行过程中所产生的异常消息会自动发送给程序调用端，如python shell，而python shell对异常消息的默认处理则是终止程序的执行并打印具体的出错信息。</p><p>这也是在python shell中执行程序错误后所出现的出错打印信息的由来。</p><p>python中try/except/else/finally语句的完整格式如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">     Normal execution block</span><br><span class="line">except A:</span><br><span class="line">     Exception A handle</span><br><span class="line">except B:</span><br><span class="line">     Exception B handle</span><br><span class="line">except:</span><br><span class="line">     Other exception handle</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">if</span> no exception,get here</span><br><span class="line">finally:</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">"finally"</span>)</span><br></pre></td></tr></table></figure></p><p>说明：</p><p>正常执行的程序在try下面的Normal execution block执行块中执行，在执行过程中如果发生了异常，则中断当前在Normal execution block中的执行跳转到对应的异常处理块中开始执行；</p><p>python从第一个except X处开始查找，如果找到了对应的exception类型则进入其提供的exception handle中进行处理，如果没有找到则直接进入except块处进行处理。except块是可选项，如果没有提供，该exception将会被提交给python进行默认处理，处理方式则是终止应用程序并打印提示信息；</p><p>如果在Normal execution block执行块中执行过程中没有发生任何异常，则在执行完Normal execution block后会进入else执行块中（如果存在的话）执行。</p><p>无论是否发生了异常，只要提供了finally语句，以上try/except/else/finally代码块执行的最后一步总是执行finally所对应的代码块。</p><p><strong>需要注意的是：</strong></p><p>1.在上面所示的完整语句中try/except/else/finally所出现的顺序必须是try–&gt;except X–&gt;except–&gt;else–&gt;finally，即所有的except必须在else和finally之前，else（如果有的话）必须在finally之前，而except X必须在except之前。否则会出现语法错误。</p><p>2.对于上面所展示的try/except完整格式而言，else和finally都是可选的，而不是必须的，但是如果存在的话else必须在finally之前，finally（如果存在的话）必须在整个语句的最后位置。</p><p>3.在上面的完整语句中，else语句的存在必须以except X或者except语句为前提，如果在没有except语句的try block中使用else语句会引发语法错误。也就是说else不能与try/finally配合使用。</p><p>4.except的使用要非常小心，慎用。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；&lt;/p&gt;
-&lt;p&gt;而try
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Python" scheme="http://hust.life/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python学习-IO操作</title>
     <link href="http://hust.life/2017/12/18/tech-2017-12-18-python-io/"/>
     <id>http://hust.life/2017/12/18/tech-2017-12-18-python-io/</id>
@@ -206,6 +211,32 @@
       
         &lt;h3 id=&quot;文件读&quot;&gt;&lt;a href=&quot;#文件读&quot; class=&quot;headerlink&quot; title=&quot;文件读&quot;&gt;&lt;/a&gt;文件读&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Python" scheme="http://hust.life/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习-try/except/else/finally语句</title>
+    <link href="http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/"/>
+    <id>http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/</id>
+    <published>2017-12-18T08:00:00.000Z</published>
+    <updated>2017-12-21T16:15:16.558Z</updated>
+    
+    <content type="html"><![CDATA[<p>与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；</p><p>而try/finally语句则主要用于在无论是否发生异常情况，都需要执行一些清理工作的场合，如在通信过程中，无论通信是否发生错误，都需要在通信完成或者发生错误时关闭网络连接。</p><p>尽管try/except和try/finally的作用不同，但是在编程实践中通常可以把它们组合在一起使用try/except/else/finally的形式来实现稳定性和灵活性更好的设计。</p><p>默认情况下，在程序段的执行过程中，如果没有提供try/except的处理，脚本文件执行过程中所产生的异常消息会自动发送给程序调用端，如python shell，而python shell对异常消息的默认处理则是终止程序的执行并打印具体的出错信息。</p><p>这也是在python shell中执行程序错误后所出现的出错打印信息的由来。</p><p>python中try/except/else/finally语句的完整格式如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">     Normal execution block</span><br><span class="line">except A:</span><br><span class="line">     Exception A handle</span><br><span class="line">except B:</span><br><span class="line">     Exception B handle</span><br><span class="line">except:</span><br><span class="line">     Other exception handle</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">if</span> no exception,get here</span><br><span class="line">finally:</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">"finally"</span>)</span><br></pre></td></tr></table></figure></p><p>说明：</p><p>正常执行的程序在try下面的Normal execution block执行块中执行，在执行过程中如果发生了异常，则中断当前在Normal execution block中的执行跳转到对应的异常处理块中开始执行；</p><p>python从第一个except X处开始查找，如果找到了对应的exception类型则进入其提供的exception handle中进行处理，如果没有找到则直接进入except块处进行处理。except块是可选项，如果没有提供，该exception将会被提交给python进行默认处理，处理方式则是终止应用程序并打印提示信息；</p><p>如果在Normal execution block执行块中执行过程中没有发生任何异常，则在执行完Normal execution block后会进入else执行块中（如果存在的话）执行。</p><p>无论是否发生了异常，只要提供了finally语句，以上try/except/else/finally代码块执行的最后一步总是执行finally所对应的代码块。</p><p><strong>需要注意的是：</strong></p><p>1.在上面所示的完整语句中try/except/else/finally所出现的顺序必须是try–&gt;except X–&gt;except–&gt;else–&gt;finally，即所有的except必须在else和finally之前，else（如果有的话）必须在finally之前，而except X必须在except之前。否则会出现语法错误。</p><p>2.对于上面所展示的try/except完整格式而言，else和finally都是可选的，而不是必须的，但是如果存在的话else必须在finally之前，finally（如果存在的话）必须在整个语句的最后位置。</p><p>3.在上面的完整语句中，else语句的存在必须以except X或者except语句为前提，如果在没有except语句的try block中使用else语句会引发语法错误。也就是说else不能与try/finally配合使用。</p><p>4.except的使用要非常小心，慎用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；&lt;/p&gt;
+&lt;p&gt;而try
       
     
     </summary>
@@ -297,31 +328,6 @@
   </entry>
   
   <entry>
-    <title>Python学习-返回函数</title>
-    <link href="http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/"/>
-    <id>http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/</id>
-    <published>2017-12-14T08:00:00.000Z</published>
-    <updated>2017-12-21T16:15:57.032Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure><p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p><p>结果为25</p><blockquote><p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="python" scheme="http://hust.life/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python学习-生成器</title>
     <link href="http://hust.life/2017/12/14/tech-2017-12-14-python-generator/"/>
     <id>http://hust.life/2017/12/14/tech-2017-12-14-python-generator/</id>
@@ -337,6 +343,31 @@
         &lt;p&gt;Python使用生成器对延迟操作提供了支持。&lt;/p&gt;
 &lt;p&gt;所谓延迟操作，是指在需要的时候才产生结果，而不是立即产生结果。这也是生成器的主要好处。&lt;/p&gt;
 &lt;p&gt;生成器函数：常规函数定义，但是，使用yield语句而不是return语句返回结果。yield语句一次返回一个结果
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="python" scheme="http://hust.life/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习-返回函数</title>
+    <link href="http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/"/>
+    <id>http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/</id>
+    <published>2017-12-14T08:00:00.000Z</published>
+    <updated>2017-12-21T16:15:57.032Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure><p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p><p>结果为25</p><blockquote><p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
       
     
     </summary>
@@ -516,28 +547,6 @@
     
     
       <category term="FPGA" scheme="http://hust.life/tags/FPGA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sae下的python开发部署和一个简单例子</title>
-    <link href="http://hust.life/2016/12/31/tech-2012-12-31-python-development-of-sae/"/>
-    <id>http://hust.life/2016/12/31/tech-2012-12-31-python-development-of-sae/</id>
-    <published>2016-12-31T08:00:00.000Z</published>
-    <updated>2017-12-21T16:17:06.416Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>以前开发php时，一直在使用<a href="http://sae.sina.com.cn" title="sae" target="_blank" rel="noopener">sae</a>的平台和服务，非常的喜欢。现在在整openstack，所以改用python做一些东西，为了不来回切换两个语言，我决定学习学习django，方便做一些自己的东西。关于sae下python的使用，<a href="http://appstack.sinaapp.com/static/doc/release/testing/index.html" title="sae官方文档" target="_blank" rel="noopener">sae官方文档</a>写的非常全面，我这里只是记录自己的一个学习过程</p></blockquote><h2 id="搭建本地开发环境"><a href="#搭建本地开发环境" class="headerlink" title="搭建本地开发环境"></a>搭建本地开发环境</h2><p>安装django</p><pre><code>easy_install django</code></pre><p>下载安装本地开发环境</p><pre><code>git clone https://github.com/SAEPython/saepythondevguide.gitcd dev_serverpython setup.py install</code></pre><h2 id="创建python项目"><a href="#创建python项目" class="headerlink" title="创建python项目"></a>创建python项目</h2><p>到sae.sina.com.cn下创建一个python项目</p><p>进入管理面板创建版本，版本号为1</p><p>使用svn下载代码</p><pre><code>svn co https://svn.sinaapp.com/xxxxx/</code></pre><p>进入主目录，发现一个1的文件夹，这个就是对应的django的工程目录</p><pre><code>django-admin.py start project mysitemv mysite/* 1    </code></pre><p>在1下创建配置文件config.yaml，并写入如下内容</p><pre><code>libraries:- name: &quot;django&quot;   version: &quot;1.4&quot;</code></pre><p>在1下创建index.wsgi，内容如下</p><pre><code>import saefrom mysite import wsgiapplication = sae.create_wsgi_app(wsgi.application)    </code></pre><p>项目创建完毕，在1中执行dev_server.py来启动sae项目，默认localhost:8080访问</p><p>我在这里遇到一个问题，我是用Windows虚拟的Linux，所以我在Windows下无法通过ip:8080访问到linux。看了d&gt;ev_server.py的代码发现这里host是写死为localhost的，所以我将代码小改动了一下</p><pre><code>#/usr/local/lib/python2.7/dist-packages/sae_python_dev.../EGG-INFO/scripts/dev_server.pyrun_simple(option.host, options.port...)if __name__ == &apos;__main__&apos;:    parser = Option.Parser()    parser.add_option(&quot;--host&quot;,dest=&quot;host&quot;,default=&quot;localhost&quot;)    </code></pre><p>这样就能通过增加–host，将外部访问的ip设定好了</p><h2 id="实现一个简单的投票应用"><a href="#实现一个简单的投票应用" class="headerlink" title="实现一个简单的投票应用"></a>实现一个简单的投票应用</h2><p>在1目录下，创建应用</p><pre><code>python manage.py startapp polls</code></pre><p>修改配置文件settings</p><pre><code>import osif &apos;SERVER_SOFTWARE&apos; in os.environ:    from sae.const import(                          MYSQL_HOST,                          MYSQL_PORT,                          MYSQL_USER,                          MYSQL_PASS,                          MYSQL_DB                          )else:    MYSQL_HOST = &quot;localhost&quot;    MYSQL_PORT = &quot;3306&quot;    MYSQL_USER = &quot;root&quot;    MYSQL_PASS = &quot;xxxxx&quot;    MYSQL_DB = &quot;app_polls&quot;DATABASES = {    &apos;default&apos;: {        &apos;ENGINE&apos;:   &apos;django.db.backends.mysql&apos;,        &apos;NAME&apos;:     MYSQL_DB,        &apos;USER&apos;:     MYSQL_USER,        &apos;PASSWORD&apos;: MYSQL_PASS,        &apos;HOST&apos;:     MYSQL_HOST,        &apos;PORT&apos;:     MYSQL_PORT,    }}...TEMPLATE_DIRS = (    # Put strings here, like &quot;/home/html/django_templates&quot; or &quot;C:/www/django/templates&quot;.    # Always use forward slashes, even on Windows.    # Don&apos;t forget to use absolute paths, not relative paths.    os.path.join(os.path.dirname(__file__), &apos;templates&apos;),)INSTALLED_APPS = (    &apos;django.contrib.auth&apos;,    &apos;django.contrib.contenttypes&apos;,    &apos;django.contrib.sessions&apos;,    &apos;django.contrib.sites&apos;,    &apos;django.contrib.messages&apos;,    &apos;django.contrib.staticfiles&apos;,    # Uncomment the next line to enable the admin:    &apos;django.contrib.admin&apos;,    # Uncomment the next line to enable admin documentation:    # &apos;django.contrib.admindocs&apos;,    &apos;polls&apos;)</code></pre><p>这里的配置项主要是将SAE和本地开发环境区分开，在SAE环境下使用它们提供的变量就可以直接连接数据库了，不过记得要在SAE控制面板进行初始化</p><p>配置主urls，即mysite下的urls</p><pre><code>from django.conf.urls import patterns, include, urlfrom django.contrib import adminadmin.autodiscover()urlpatterns = patterns(&apos;&apos;,    url(r&apos;^admin/&apos;, include(admin.site.urls)),    url(r&apos;^polls/&apos;, include(&apos;polls.urls&apos;)),)</code></pre><p>在polls文件夹下修改urls</p><pre><code>from django.conf.urls import patterns, urlurlpatterns = patterns(&apos;polls.views&apos;,    url(r&apos;^$&apos;, &apos;index&apos;),    url(r&apos;^(?P&lt;poll_id&gt;\d+)/$&apos;, &apos;detail&apos;),    url(r&apos;^(?P&lt;poll_id&gt;\d+)/results/$&apos;, &apos;results&apos;),    url(r&apos;^(?P&lt;poll_id&gt;\d+)/vote/$&apos;, &apos;vote&apos;),)</code></pre><p>在polls文件夹下创建model.py</p><pre><code>from django.db import modelsclass Poll(models.Model):    question = models.CharField(max_length=200)    pub_date = models.DateTimeField(&apos;date published&apos;)class Choice(models.Model):    poll = models.ForeignKey(Poll)    choice = models.CharField(max_length=200)    votes = models.IntegerField()</code></pre><p>然后在mysql中创建一个add_polls数据库，使用</p><pre><code>python manage.py syncdb</code></pre><p>同步数据库，这个仅限本地，如果要在sae使用的话，需要本地生成后导入到sae上。</p><p>在polls文件夹下创建view视图文件</p><pre><code>from django.shortcuts import render_to_response, get_object_or_404from django.template import RequestContextfrom django.http import HttpResponseRedirectfrom django.core.urlresolvers import reversefrom polls.models import Poll, Choice#主页显示最新的5条投票列表def index(request):    latest_poll_list = Poll.objects.all().order_by(&apos;-pub_date&apos;)[:5]    return render_to_response(&apos;index.html&apos;, {&apos;latest_poll_list&apos;: latest_poll_list})#获得某条信息详细情况def detail(request, poll_id):    p = get_object_or_404(Poll, pk=poll_id)    return render_to_response(&apos;detail.html&apos;, {&apos;poll&apos;: p},                               context_instance=RequestContext(request))#投票def vote(request, poll_id):    p = get_object_or_404(Poll, pk=poll_id)    try:        selected_choice = p.choice_set.get(pk=request.POST[&apos;choice&apos;])    except (KeyError, Choice.DoesNotExist):        return render_to_response(&apos;detail.html&apos;, {            &apos;poll&apos;: p,            &apos;error_message&apos;: &quot;You didn&apos;t select a choice.&quot;,        }, context_instance=RequestContext(request))    else:        selected_choice.votes += 1        selected_choice.save()        return HttpResponseRedirect(reverse(&apos;polls.views.results&apos;, args=(p.id,)))#显示投票结果def results(request, poll_id):    p = get_object_or_404(Poll, pk=poll_id)    return render_to_response(&apos;results.html&apos;, {&apos;poll&apos;: p})</code></pre><p>在polls下创建templates文件夹，并创建以下三个文件</p><p>detail.html</p><pre><code>{% raw %}    <h1>{{ poll.question }}</h1>    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}    <form action="/polls/{{ poll.id }}/vote/" method="post">    {% csrf_token %}    {% for choice in poll.choice_set.all %}        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">        <label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br>    {% endfor %}    <input type="submit" value="Vote">    </form>    {% endraw %}</code></pre><p>index.html</p><pre><code>{% raw %}    {% if latest_poll_list %}        <ul>        {% for poll in latest_poll_list %}            <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>        {% endfor %}        </ul>    {% else %}        <p>No polls are available.</p>    {% endif %}    {% endraw %}</code></pre><p>results.html</p><pre><code>{% raw %}    <h1>{{ poll.question }}</h1>    <ul>    {% for choice in poll.choice_set.all %}        <li>{{ choice.choice }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>    {% endfor %}    </ul>    <a href="/polls/{{ poll.id }}/">Vote again?</a>    {% endraw %}</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      sae下的python开发部署和一个简单例子
-    
-    </summary>
-    
-      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Python" scheme="http://hust.life/tags/Python/"/>
     
   </entry>
   

@@ -251,6 +251,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/20/tech-2017-12-20-python-name-main/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/20/tech-2017-12-20-python-name-main/" itemprop="url">if __name__ == '__main__' 如何正确理解?</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-20T16:00:00+08:00">
+                2017-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/20/tech-2017-12-20-python-name-main/" class="leancloud_visitors" data-flag-title="if __name__ == '__main__' 如何正确理解?">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><em>转载stackoverflow回答</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># file one.py</span></span><br><span class="line">def func():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"func() in one.py"</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"top-level in one.py"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"one.py is being run directly"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"one.py is being imported into another module"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># file two.py</span></span><br><span class="line">import one</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"top-level in two.py"</span>)</span><br><span class="line">one.func()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"two.py is being run directly"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"two.py is being imported into another module"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>如果你执行one.py文件，python one.py</p>
+<p>会输出：top-level in one.py</p>
+<p>one.py is being run directly</p>
+<p>如果你执行two.py文件，python two.py</p>
+<p>会输出：top-level in one.py</p>
+<p>one.py is being imported into another module</p>
+<p>top-level in two.py</p>
+<p>func() in one.py</p>
+<p>two.py is being run directly</p>
+<p><strong>Thus, when module one gets loaded, its <strong>name</strong> equals “one” instead of <strong>main</strong>.</strong></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/19/tech-2017-12-19-python-process-thread/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -367,6 +530,166 @@
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/18/tech-2017-12-18-python-io/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/18/tech-2017-12-18-python-io/" itemprop="url">Python学习-IO操作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-18T16:00:00+08:00">
+                2017-12-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/18/tech-2017-12-18-python-io/" class="leancloud_visitors" data-flag-title="Python学习-IO操作">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="文件读"><a href="#文件读" class="headerlink" title="文件读"></a>文件读</h3><blockquote>
+<p>由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论是否出错都能正确地关闭文件，我们可以使用try … finally来实现：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    f = open(<span class="string">'/path/to/file'</span>, <span class="string">'r'</span>)</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">finally:</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
+<h3 id="文件写"><a href="#文件写" class="headerlink" title="文件写"></a>文件写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'F:/Codeblock_file/FFT/fangzr.github.io/test.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">f.write(<span class="string">'Hello,world!'</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>你可以反复调用write()来写入文件，但是务必要调用f.close()来关闭文件。当我们写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘。忘记调用close()的后果是数据可能只写了一部分到磁盘，剩下的丢失了。所以，还是用with语句来得保险：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with open(<span class="string">'/Users/michael/test.txt'</span>, <span class="string">'w'</span>) as f:</span><br><span class="line">    f.write(<span class="string">'Hello, world!'</span>)</span><br></pre></td></tr></table></figure>
+          
         
       
     </div>
@@ -581,166 +904,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/18/tech-2017-12-18-python-io/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/18/tech-2017-12-18-python-io/" itemprop="url">Python学习-IO操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-18T16:00:00+08:00">
-                2017-12-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/12/18/tech-2017-12-18-python-io/" class="leancloud_visitors" data-flag-title="Python学习-IO操作">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="文件读"><a href="#文件读" class="headerlink" title="文件读"></a>文件读</h3><blockquote>
-<p>由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论是否出错都能正确地关闭文件，我们可以使用try … finally来实现：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    f = open(<span class="string">'/path/to/file'</span>, <span class="string">'r'</span>)</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">finally:</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
-<h3 id="文件写"><a href="#文件写" class="headerlink" title="文件写"></a>文件写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'F:/Codeblock_file/FFT/fangzr.github.io/test.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">f.write(<span class="string">'Hello,world!'</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>你可以反复调用write()来写入文件，但是务必要调用f.close()来关闭文件。当我们写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘。忘记调用close()的后果是数据可能只写了一部分到磁盘，剩下的丢失了。所以，还是用with语句来得保险：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with open(<span class="string">'/Users/michael/test.txt'</span>, <span class="string">'w'</span>) as f:</span><br><span class="line">    f.write(<span class="string">'Hello, world!'</span>)</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -888,190 +1051,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/16/tech-2017-12-16-python-Object-oriented/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/16/tech-2017-12-16-python-Object-oriented/" itemprop="url">Python学习-面向对象编程概念&Codes</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-16T16:00:00+08:00">
-                2017-12-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/12/16/tech-2017-12-16-python-Object-oriented/" class="leancloud_visitors" data-flag-title="Python学习-面向对象编程概念&Codes">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="类和实例"><a href="#类和实例" class="headerlink" title="类和实例"></a>类和实例</h3><ul>
-<li><p>面向对象最重要的概念就是类（Class）和实例（Instance），必须牢记类是抽象的模板，<br>比如Student类，而实例是根据类创建出来的一个个具体的“对象”，每个对象都拥有相同的方法，但各自的数据可能不同。</p>
-</li>
-<li><p>由于类可以起到模板的作用，因此，可以在创建实例的时候，把一些我们认为必须绑定的属性强制填写进去。通过定义一个特殊的<strong>init</strong>方法，在创建实例的时候，就把name，score等属性绑上去：</p>
-</li>
-<li><p>特殊方法“<strong>init</strong>”前后分别有两个下划线！！！</p>
-</li>
-</ul>
-<blockquote>
-<p>类是创建实例的模板，而实例则是一个一个具体的对象，各个实例拥有的数据都互相独立，互不影响；<br>方法就是与实例绑定的函数，和普通函数不同，方法可以直接访问实例的数据；<br>通过在实例上调用方法，我们就直接操作了对象内部的数据，但无需知道方法内部的实现细节。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self,name,score):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.score = score</span><br><span class="line"></span><br><span class="line">    def print_score(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'%s:%s'</span>%(self.name,self.score))</span><br><span class="line"></span><br><span class="line">    def get_grad(self):</span><br><span class="line">        <span class="keyword">if</span> self.score &gt;=90:</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'A'</span></span><br><span class="line">        <span class="keyword">if</span> self.score &gt;= 60:</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'B'</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'C'</span></span><br><span class="line">bart = Student(<span class="string">'Jack'</span>,99)</span><br><span class="line">bart.print_score()</span><br><span class="line"><span class="built_in">print</span>(bart.get_grad())</span><br></pre></td></tr></table></figure>
-<h3 id="访问限制"><a href="#访问限制" class="headerlink" title="访问限制"></a>访问限制</h3><blockquote>
-<p>这样就确保了外部代码不能随意修改对象内部的状态，这样通过访问限制的保护，代码更加健壮。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name, gender):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.__gender = gender</span><br><span class="line"></span><br><span class="line">    def set_gender(self,gender):</span><br><span class="line">        self.__gender = gender</span><br><span class="line"></span><br><span class="line">    def get_gender(self):</span><br><span class="line">        <span class="built_in">return</span> self.__gender</span><br><span class="line"></span><br><span class="line">bart = Student(<span class="string">'Bart'</span>, <span class="string">'male'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> bart.get_gender() != <span class="string">'male'</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    bart.set_gender(<span class="string">'female'</span>)</span><br><span class="line">    <span class="keyword">if</span> bart.get_gender() != <span class="string">'female'</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'测试成功!'</span>)</span><br></pre></td></tr></table></figure>
-<p><code>results:</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">测试成功</span><br></pre></td></tr></table></figure></p>
-<h3 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h3><p><strong>鸭子类型</strong></p>
-<blockquote>
-<p>“当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”</p>
-</blockquote>
-<p>对于静态语言（例如Java）来说，如果需要传入Animal类型，则传入的对象必须是Animal类型或者它的子类，否则，将无法调用run()方法。</p>
-<p>对于Python这样的动态语言来说，则不一定需要传入Animal类型。我们只需要保证传入的对象有一个run()方法就可以了：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Aminal(object):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Animal is running...'</span>)</span><br><span class="line">class Dog(Aminal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Dog is running...'</span>)</span><br><span class="line">class Cat(Aminal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Cat is running...'</span>)</span><br><span class="line">class Tortoise(Aminal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Tortoise is running slowly...'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#鸭子类型</span></span><br><span class="line">class Duck(object):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'这是鸭子类型'</span>)</span><br><span class="line"></span><br><span class="line">def run_twice(Aminal):</span><br><span class="line">    Aminal.run()</span><br><span class="line">    Aminal.run()</span><br><span class="line"><span class="comment">#pass 用法：http://www.cnpythoner.com/post/286.html</span></span><br><span class="line">run_twice(Cat())</span><br><span class="line">run_twice(Tortoise())</span><br><span class="line">run_twice(Duck())</span><br></pre></td></tr></table></figure>
-<p><code>results:</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Cat is running...</span><br><span class="line">Cat is running...</span><br><span class="line">Tortoise is running slowly...</span><br><span class="line">Tortoise is running slowly...</span><br><span class="line">这是鸭子类型</span><br><span class="line">这是鸭子类型</span><br></pre></td></tr></table></figure></p>
-<h3 id="获取对象的信息"><a href="#获取对象的信息" class="headerlink" title="获取对象的信息"></a>获取对象的信息</h3><p>1.Type函数用法</p>
-<p>2.isinstance（）</p>
-<p>3.hasattr() 函数、setattr函数、getattr函数</p>
-<p>仅仅把属性和方法列出来是不够的，配合getattr()、setattr()以及hasattr()，我们可以直接操作一个对象的状态：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; class MyObject(object):</span><br><span class="line">...     def __init__(self):</span><br><span class="line">...         self.x = 9</span><br><span class="line">...     def power(self):</span><br><span class="line">...         <span class="built_in">return</span> self.x * self.x</span><br><span class="line">...</span><br><span class="line">&gt;&gt;&gt; obj = MyObject()</span><br><span class="line">紧接着，可以测试该对象的属性：</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; hasattr(obj, <span class="string">'x'</span>) <span class="comment"># 有属性'x'吗？</span></span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; obj.x</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; hasattr(obj, <span class="string">'y'</span>) <span class="comment"># 有属性'y'吗？</span></span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; setattr(obj, <span class="string">'y'</span>, 19) <span class="comment"># 设置一个属性'y'</span></span><br><span class="line">&gt;&gt;&gt; hasattr(obj, <span class="string">'y'</span>) <span class="comment"># 有属性'y'吗？</span></span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; getattr(obj, <span class="string">'y'</span>) <span class="comment"># 获取属性'y'</span></span><br><span class="line">19</span><br><span class="line">&gt;&gt;&gt; obj.y <span class="comment"># 获取属性'y'</span></span><br><span class="line">19</span><br></pre></td></tr></table></figure></p>
-<h3 id="实例属性和类属性"><a href="#实例属性和类属性" class="headerlink" title="实例属性和类属性"></a>实例属性和类属性</h3><blockquote>
-<p>在编写程序的时候，千万不要对实例属性和类属性使用相同的名字，因为相同名称的实例属性将屏蔽掉类属性，但是当你删除实例属性后，再使用相同的名称，访问到的将是类属性。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1128,7 +1107,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

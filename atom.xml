@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hust.life/"/>
-  <updated>2017-12-23T04:20:33.960Z</updated>
+  <updated>2017-12-23T04:21:44.749Z</updated>
   <id>http://hust.life/</id>
   
   <author>
@@ -21,22 +21,13 @@
     <link href="http://hust.life/2017/12/23/tech-2017-12-21-python-regular-expression/"/>
     <id>http://hust.life/2017/12/23/tech-2017-12-21-python-regular-expression/</id>
     <published>2017-12-23T03:00:00.000Z</published>
-    <updated>2017-12-23T04:20:33.960Z</updated>
+    <updated>2017-12-23T04:21:44.749Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="常用表达式"><a href="#常用表达式" class="headerlink" title="常用表达式"></a>常用表达式</h3><table><thead><tr><th>常用表达式</th><th>功能</th></tr></thead><tbody><tr><td>\d</td><td>一配一个数字</td></tr><tr><td>\w</td><td>匹配一个数字或字母</td></tr><tr><td>.</td><td>可以匹配任意字符</td></tr><tr><td>+</td><td>表示至少一个字符</td></tr><tr><td>？</td><td>表示0个或者1个字符</td></tr><tr><td>^</td><td>行开头，<code>^\d</code>表示必须数字开头</td></tr><tr><td>$</td><td>行结尾，<code>\d$</code>表示必须数字结尾</td></tr><tr><td>\s</td><td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]</td></tr><tr><td>{n}</td><td>表示n个字符</td></tr><tr><td>{n,m}</td><td>表示n-m个字符</td></tr><tr><td>AIB</td><td>可以匹配A或者B，(PIp)ython</td></tr><tr><td>[0-9a-zA-Z_]</td><td>可以匹配一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[0-9a-zA-Z_]+</td><td>可以匹配至少一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]*</td><td>可以匹配由字母或下划线开头，后接任意个由一个数字、字母或者下划线组成的字符串，也就是Python合法的变量</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]{0, 19}</td><td>精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）</td></tr></tbody></table><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="匹配电话号码"><a href="#匹配电话号码" class="headerlink" title="匹配电话号码"></a>匹配电话号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d&#123;3&#125;\-\d&#123;3,8&#125;</span><br></pre></td></tr></table></figure><p>先匹配三个数字，再匹配‘-’，最后匹配3-8个数字。<br>可以匹配一个带区号的电话号码，如：<code>123-456789</code></p><h4 id="切分字符串"><a href="#切分字符串" class="headerlink" title="切分字符串"></a>切分字符串</h4><p>split()方法语法：<code>str.split(str=&quot;&quot;, num=string.count(str)).</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; re.split(r&apos;[\s\,\;]+&apos;,&apos;a,b;;c,,,d  e&apos;)</span><br><span class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;]</span><br></pre></td></tr></table></figure></p><h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><blockquote><p>除了简单地判断是否匹配之外，正则表达式还有提取子串的强大功能。用()表示的就是要提取的分组（Group）。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。<br><a id="more"></a></p><h3 id="常用表达式"><a href="#常用表达式" class="headerlink" title="常用表达式"></a>常用表达式</h3><table><thead><tr><th>常用表达式</th><th>功能</th></tr></thead><tbody><tr><td>\d</td><td>一配一个数字</td></tr><tr><td>\w</td><td>匹配一个数字或字母</td></tr><tr><td>.</td><td>可以匹配任意字符</td></tr><tr><td>+</td><td>表示至少一个字符</td></tr><tr><td>？</td><td>表示0个或者1个字符</td></tr><tr><td>^</td><td>行开头，<code>^\d</code>表示必须数字开头</td></tr><tr><td>$</td><td>行结尾，<code>\d$</code>表示必须数字结尾</td></tr><tr><td>\s</td><td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]</td></tr><tr><td>{n}</td><td>表示n个字符</td></tr><tr><td>{n,m}</td><td>表示n-m个字符</td></tr><tr><td>AIB</td><td>可以匹配A或者B，(PIp)ython</td></tr><tr><td>[0-9a-zA-Z_]</td><td>可以匹配一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[0-9a-zA-Z_]+</td><td>可以匹配至少一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]*</td><td>可以匹配由字母或下划线开头，后接任意个由一个数字、字母或者下划线组成的字符串，也就是Python合法的变量</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]{0, 19}</td><td>精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）</td></tr></tbody></table><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="匹配电话号码"><a href="#匹配电话号码" class="headerlink" title="匹配电话号码"></a>匹配电话号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d&#123;3&#125;\-\d&#123;3,8&#125;</span><br></pre></td></tr></table></figure><p>先匹配三个数字，再匹配‘-’，最后匹配3-8个数字。<br>可以匹配一个带区号的电话号码，如：<code>123-456789</code></p><h4 id="切分字符串"><a href="#切分字符串" class="headerlink" title="切分字符串"></a>切分字符串</h4><p>split()方法语法：<code>str.split(str=&quot;&quot;, num=string.count(str)).</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; re.split(r&apos;[\s\,\;]+&apos;,&apos;a,b;;c,,,d  e&apos;)</span><br><span class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;]</span><br></pre></td></tr></table></figure></p><h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><blockquote><p>除了简单地判断是否匹配之外，正则表达式还有提取子串的强大功能。用()表示的就是要提取的分组（Group）。</p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h3 id=&quot;常用表达式&quot;&gt;&lt;a href=&quot;#常用表达式&quot; class=&quot;headerlink&quot; title=&quot;常用表达式&quot;&gt;&lt;/a&gt;常用表达式&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;常用表达式&lt;/th&gt;
-&lt;th&gt;功能&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead
-      
+      &lt;p&gt;正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。&lt;br&gt;
     
     </summary>
     
@@ -197,32 +188,6 @@
   </entry>
   
   <entry>
-    <title>Python学习-IO操作</title>
-    <link href="http://hust.life/2017/12/18/tech-2017-12-18-python-io/"/>
-    <id>http://hust.life/2017/12/18/tech-2017-12-18-python-io/</id>
-    <published>2017-12-18T08:00:00.000Z</published>
-    <updated>2017-12-21T16:15:22.899Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="文件读"><a href="#文件读" class="headerlink" title="文件读"></a>文件读</h3><blockquote><p>由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论是否出错都能正确地关闭文件，我们可以使用try … finally来实现：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    f = open(<span class="string">'/path/to/file'</span>, <span class="string">'r'</span>)</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">finally:</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure><h3 id="文件写"><a href="#文件写" class="headerlink" title="文件写"></a>文件写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'F:/Codeblock_file/FFT/fangzr.github.io/test.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">f.write(<span class="string">'Hello,world!'</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure><blockquote><p>你可以反复调用write()来写入文件，但是务必要调用f.close()来关闭文件。当我们写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘。忘记调用close()的后果是数据可能只写了一部分到磁盘，剩下的丢失了。所以，还是用with语句来得保险：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with open(<span class="string">'/Users/michael/test.txt'</span>, <span class="string">'w'</span>) as f:</span><br><span class="line">    f.write(<span class="string">'Hello, world!'</span>)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;文件读&quot;&gt;&lt;a href=&quot;#文件读&quot; class=&quot;headerlink&quot; title=&quot;文件读&quot;&gt;&lt;/a&gt;文件读&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Python" scheme="http://hust.life/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python学习-try/except/else/finally语句</title>
     <link href="http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/"/>
     <id>http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/</id>
@@ -237,6 +202,32 @@
       
         &lt;p&gt;与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；&lt;/p&gt;
 &lt;p&gt;而try
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Python" scheme="http://hust.life/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习-IO操作</title>
+    <link href="http://hust.life/2017/12/18/tech-2017-12-18-python-io/"/>
+    <id>http://hust.life/2017/12/18/tech-2017-12-18-python-io/</id>
+    <published>2017-12-18T08:00:00.000Z</published>
+    <updated>2017-12-21T16:15:22.899Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="文件读"><a href="#文件读" class="headerlink" title="文件读"></a>文件读</h3><blockquote><p>由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论是否出错都能正确地关闭文件，我们可以使用try … finally来实现：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    f = open(<span class="string">'/path/to/file'</span>, <span class="string">'r'</span>)</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">finally:</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure><h3 id="文件写"><a href="#文件写" class="headerlink" title="文件写"></a>文件写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'F:/Codeblock_file/FFT/fangzr.github.io/test.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">f.write(<span class="string">'Hello,world!'</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure><blockquote><p>你可以反复调用write()来写入文件，但是务必要调用f.close()来关闭文件。当我们写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘。忘记调用close()的后果是数据可能只写了一部分到磁盘，剩下的丢失了。所以，还是用with语句来得保险：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with open(<span class="string">'/Users/michael/test.txt'</span>, <span class="string">'w'</span>) as f:</span><br><span class="line">    f.write(<span class="string">'Hello, world!'</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;文件读&quot;&gt;&lt;a href=&quot;#文件读&quot; class=&quot;headerlink&quot; title=&quot;文件读&quot;&gt;&lt;/a&gt;文件读&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论
       
     
     </summary>
@@ -301,29 +292,27 @@
   </entry>
   
   <entry>
-    <title>圆脸少女们</title>
-    <link href="http://hust.life/2017/12/14/life-2017-12-14-painting/"/>
-    <id>http://hust.life/2017/12/14/life-2017-12-14-painting/</id>
+    <title>Python学习-返回函数</title>
+    <link href="http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/"/>
+    <id>http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/</id>
     <published>2017-12-14T08:00:00.000Z</published>
-    <updated>2017-12-21T16:18:12.293Z</updated>
+    <updated>2017-12-21T16:15:57.032Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,<br>但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活<br>反而会变得豁然开朗。</p></blockquote><p>我从小喜爱绘画，尤其是喜爱漫画。也曾经上过几年素描培训班，但是上了初中之后，兴趣与学业发生冲突，不得不放弃漫画。</p><p>与其让自己沉迷游戏、无聊的娱乐视频。不如用编程学习、体育锻炼、绘画来充实自己。看到自己画的人物栩栩如生地出现在画纸，颇有一番得意呢。</p><p>当然，我不能忘记，自己的主要任务还是学习。周六就要考六级英语了，这次听力要多加练习，多背几篇作文。Python也要加把劲，早日完成课程设计。</p><h2 id="一个活泼的少女像"><a href="#一个活泼的少女像" class="headerlink" title="一个活泼的少女像"></a>一个活泼的少女像</h2><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/57536313.jpg" alt=""></p><h2 id="圆脸可爱少女（1）"><a href="#圆脸可爱少女（1）" class="headerlink" title="圆脸可爱少女（1）"></a>圆脸可爱少女（1）</h2><blockquote><p>圆脸的线条平滑柔和，使角色看起来年级较小，给人单纯、可爱的印象。圆脸一般用来塑造性格纯朴开朗的萌美少女角色。</p></blockquote><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/73290488.jpg" alt=""></p><h2 id="圆脸少女（2）"><a href="#圆脸少女（2）" class="headerlink" title="圆脸少女（2）"></a>圆脸少女（2）</h2><p> 这是我喜欢的女生发型之一，给人一种活泼却不失成熟的感觉</p><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-17/38310361.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure><p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p><p>结果为25</p><blockquote><p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;blockquote&gt;
-&lt;p&gt;我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,&lt;br&gt;但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活&lt;br&gt;反而会变得豁然开朗。&lt;/p&gt;
-&lt;/blockquo
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
       
     
     </summary>
     
-      <category term="绘画" scheme="http://hust.life/categories/%E7%BB%98%E7%94%BB/"/>
+      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="素描" scheme="http://hust.life/tags/%E7%B4%A0%E6%8F%8F/"/>
+      <category term="python" scheme="http://hust.life/tags/python/"/>
     
   </entry>
   
@@ -355,27 +344,29 @@
   </entry>
   
   <entry>
-    <title>Python学习-返回函数</title>
-    <link href="http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/"/>
-    <id>http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/</id>
+    <title>圆脸少女们</title>
+    <link href="http://hust.life/2017/12/14/life-2017-12-14-painting/"/>
+    <id>http://hust.life/2017/12/14/life-2017-12-14-painting/</id>
     <published>2017-12-14T08:00:00.000Z</published>
-    <updated>2017-12-21T16:15:57.032Z</updated>
+    <updated>2017-12-21T16:18:12.293Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure><p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p><p>结果为25</p><blockquote><p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,<br>但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活<br>反而会变得豁然开朗。</p></blockquote><p>我从小喜爱绘画，尤其是喜爱漫画。也曾经上过几年素描培训班，但是上了初中之后，兴趣与学业发生冲突，不得不放弃漫画。</p><p>与其让自己沉迷游戏、无聊的娱乐视频。不如用编程学习、体育锻炼、绘画来充实自己。看到自己画的人物栩栩如生地出现在画纸，颇有一番得意呢。</p><p>当然，我不能忘记，自己的主要任务还是学习。周六就要考六级英语了，这次听力要多加练习，多背几篇作文。Python也要加把劲，早日完成课程设计。</p><h2 id="一个活泼的少女像"><a href="#一个活泼的少女像" class="headerlink" title="一个活泼的少女像"></a>一个活泼的少女像</h2><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/57536313.jpg" alt=""></p><h2 id="圆脸可爱少女（1）"><a href="#圆脸可爱少女（1）" class="headerlink" title="圆脸可爱少女（1）"></a>圆脸可爱少女（1）</h2><blockquote><p>圆脸的线条平滑柔和，使角色看起来年级较小，给人单纯、可爱的印象。圆脸一般用来塑造性格纯朴开朗的萌美少女角色。</p></blockquote><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/73290488.jpg" alt=""></p><h2 id="圆脸少女（2）"><a href="#圆脸少女（2）" class="headerlink" title="圆脸少女（2）"></a>圆脸少女（2）</h2><p> 这是我喜欢的女生发型之一，给人一种活泼却不失成熟的感觉</p><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-17/38310361.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
+        &lt;blockquote&gt;
+&lt;p&gt;我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,&lt;br&gt;但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活&lt;br&gt;反而会变得豁然开朗。&lt;/p&gt;
+&lt;/blockquo
       
     
     </summary>
     
-      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="绘画" scheme="http://hust.life/categories/%E7%BB%98%E7%94%BB/"/>
     
     
-      <category term="python" scheme="http://hust.life/tags/python/"/>
+      <category term="素描" scheme="http://hust.life/tags/%E7%B4%A0%E6%8F%8F/"/>
     
   </entry>
   

@@ -354,85 +354,14 @@
 
       
         
-          
-            <h3 id="常用表达式"><a href="#常用表达式" class="headerlink" title="常用表达式"></a>常用表达式</h3><table>
-<thead>
-<tr>
-<th>常用表达式</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\d</td>
-<td>一配一个数字</td>
-</tr>
-<tr>
-<td>\w</td>
-<td>匹配一个数字或字母</td>
-</tr>
-<tr>
-<td>.</td>
-<td>可以匹配任意字符</td>
-</tr>
-<tr>
-<td>+</td>
-<td>表示至少一个字符</td>
-</tr>
-<tr>
-<td>？</td>
-<td>表示0个或者1个字符</td>
-</tr>
-<tr>
-<td>^</td>
-<td>行开头，<code>^\d</code>表示必须数字开头</td>
-</tr>
-<tr>
-<td>$</td>
-<td>行结尾，<code>\d$</code>表示必须数字结尾</td>
-</tr>
-<tr>
-<td>\s</td>
-<td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]</td>
-</tr>
-<tr>
-<td>{n}</td>
-<td>表示n个字符</td>
-</tr>
-<tr>
-<td>{n,m}</td>
-<td>表示n-m个字符</td>
-</tr>
-<tr>
-<td>AIB</td>
-<td>可以匹配A或者B，(PIp)ython</td>
-</tr>
-<tr>
-<td>[0-9a-zA-Z_]</td>
-<td>可以匹配一个数字、字母或者下划线组成的字符串</td>
-</tr>
-<tr>
-<td>[0-9a-zA-Z_]+</td>
-<td>可以匹配至少一个数字、字母或者下划线组成的字符串</td>
-</tr>
-<tr>
-<td>[a-zA-Z_][0-9a-zA-Z_]*</td>
-<td>可以匹配由字母或下划线开头，后接任意个由一个数字、字母或者下划线组成的字符串，也就是Python合法的变量</td>
-</tr>
-<tr>
-<td>[a-zA-Z_][0-9a-zA-Z_]{0, 19}</td>
-<td>精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）</td>
-</tr>
-</tbody>
-</table>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="匹配电话号码"><a href="#匹配电话号码" class="headerlink" title="匹配电话号码"></a>匹配电话号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d&#123;3&#125;\-\d&#123;3,8&#125;</span><br></pre></td></tr></table></figure>
-<p>先匹配三个数字，再匹配‘-’，最后匹配3-8个数字。<br>可以匹配一个带区号的电话号码，如：<code>123-456789</code></p>
-<h4 id="切分字符串"><a href="#切分字符串" class="headerlink" title="切分字符串"></a>切分字符串</h4><p>split()方法语法：<code>str.split(str=&quot;&quot;, num=string.count(str)).</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; re.split(r&apos;[\s\,\;]+&apos;,&apos;a,b;;c,,,d  e&apos;)</span><br><span class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;]</span><br></pre></td></tr></table></figure></p>
-<h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><blockquote>
-<p>除了简单地判断是否匹配之外，正则表达式还有提取子串的强大功能。用()表示的就是要提取的分组（Group）。</p>
-</blockquote>
-
-          
+          <p>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/23/tech-2017-12-21-python-regular-expression/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

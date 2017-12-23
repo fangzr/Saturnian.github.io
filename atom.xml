@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hust.life/"/>
-  <updated>2017-12-23T04:21:44.749Z</updated>
+  <updated>2017-12-23T04:54:36.052Z</updated>
   <id>http://hust.life/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://hust.life/2017/12/23/tech-2017-12-21-python-regular-expression/"/>
     <id>http://hust.life/2017/12/23/tech-2017-12-21-python-regular-expression/</id>
     <published>2017-12-23T03:00:00.000Z</published>
-    <updated>2017-12-23T04:21:44.749Z</updated>
+    <updated>2017-12-23T04:54:36.052Z</updated>
     
-    <content type="html"><![CDATA[<p>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。<br><a id="more"></a></p><h3 id="常用表达式"><a href="#常用表达式" class="headerlink" title="常用表达式"></a>常用表达式</h3><table><thead><tr><th>常用表达式</th><th>功能</th></tr></thead><tbody><tr><td>\d</td><td>一配一个数字</td></tr><tr><td>\w</td><td>匹配一个数字或字母</td></tr><tr><td>.</td><td>可以匹配任意字符</td></tr><tr><td>+</td><td>表示至少一个字符</td></tr><tr><td>？</td><td>表示0个或者1个字符</td></tr><tr><td>^</td><td>行开头，<code>^\d</code>表示必须数字开头</td></tr><tr><td>$</td><td>行结尾，<code>\d$</code>表示必须数字结尾</td></tr><tr><td>\s</td><td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]</td></tr><tr><td>{n}</td><td>表示n个字符</td></tr><tr><td>{n,m}</td><td>表示n-m个字符</td></tr><tr><td>AIB</td><td>可以匹配A或者B，(PIp)ython</td></tr><tr><td>[0-9a-zA-Z_]</td><td>可以匹配一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[0-9a-zA-Z_]+</td><td>可以匹配至少一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]*</td><td>可以匹配由字母或下划线开头，后接任意个由一个数字、字母或者下划线组成的字符串，也就是Python合法的变量</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]{0, 19}</td><td>精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）</td></tr></tbody></table><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="匹配电话号码"><a href="#匹配电话号码" class="headerlink" title="匹配电话号码"></a>匹配电话号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d&#123;3&#125;\-\d&#123;3,8&#125;</span><br></pre></td></tr></table></figure><p>先匹配三个数字，再匹配‘-’，最后匹配3-8个数字。<br>可以匹配一个带区号的电话号码，如：<code>123-456789</code></p><h4 id="切分字符串"><a href="#切分字符串" class="headerlink" title="切分字符串"></a>切分字符串</h4><p>split()方法语法：<code>str.split(str=&quot;&quot;, num=string.count(str)).</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; re.split(r&apos;[\s\,\;]+&apos;,&apos;a,b;;c,,,d  e&apos;)</span><br><span class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;]</span><br></pre></td></tr></table></figure></p><h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><blockquote><p>除了简单地判断是否匹配之外，正则表达式还有提取子串的强大功能。用()表示的就是要提取的分组（Group）。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。</p><a id="more"></a><h3 id="常用表达式"><a href="#常用表达式" class="headerlink" title="常用表达式"></a>常用表达式</h3><table><thead><tr><th>常用表达式</th><th>功能</th></tr></thead><tbody><tr><td>\d</td><td>一配一个数字</td></tr><tr><td>\w</td><td>匹配一个数字或字母</td></tr><tr><td>.</td><td>可以匹配任意字符</td></tr><tr><td>+</td><td>表示至少一个字符</td></tr><tr><td>？</td><td>表示0个或者1个字符</td></tr><tr><td>^</td><td>行开头，<code>^\d</code>表示必须数字开头</td></tr><tr><td>$</td><td>行结尾，<code>\d$</code>表示必须数字结尾</td></tr><tr><td>\s</td><td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]</td></tr><tr><td>{n}</td><td>表示n个字符</td></tr><tr><td>{n,m}</td><td>表示n-m个字符</td></tr><tr><td>AIB</td><td>可以匹配A或者B，(PIp)ython</td></tr><tr><td>[0-9a-zA-Z_]</td><td>可以匹配一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[0-9a-zA-Z_]+</td><td>可以匹配至少一个数字、字母或者下划线组成的字符串</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]*</td><td>可以匹配由字母或下划线开头，后接任意个由一个数字、字母或者下划线组成的字符串，也就是Python合法的变量</td></tr><tr><td>[a-zA-Z_][0-9a-zA-Z_]{0, 19}</td><td>精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）</td></tr></tbody></table><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="匹配电话号码"><a href="#匹配电话号码" class="headerlink" title="匹配电话号码"></a>匹配电话号码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d&#123;3&#125;\-\d&#123;3,8&#125;</span><br></pre></td></tr></table></figure><p>先匹配三个数字，再匹配‘-’，最后匹配3-8个数字。<br>可以匹配一个带区号的电话号码，如：<code>123-456789</code></p><h4 id="切分字符串"><a href="#切分字符串" class="headerlink" title="切分字符串"></a>切分字符串</h4><p>split()方法语法：<code>str.split(str=&quot;&quot;, num=string.count(str)).</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; re.split(r&apos;[\s\,\;]+&apos;,&apos;a,b;;c,,,d  e&apos;)</span><br><span class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;]</span><br></pre></td></tr></table></figure></p><h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><blockquote><p>除了简单地判断是否匹配之外，正则表达式还有提取子串的强大功能。用()表示的就是要提取的分组（Group）。</p></blockquote>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。&lt;br&gt;
+      &lt;p&gt;正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。&lt;/p&gt;
     
     </summary>
     
@@ -188,32 +188,6 @@
   </entry>
   
   <entry>
-    <title>Python学习-try/except/else/finally语句</title>
-    <link href="http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/"/>
-    <id>http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/</id>
-    <published>2017-12-18T08:00:00.000Z</published>
-    <updated>2017-12-21T16:15:16.558Z</updated>
-    
-    <content type="html"><![CDATA[<p>与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；</p><p>而try/finally语句则主要用于在无论是否发生异常情况，都需要执行一些清理工作的场合，如在通信过程中，无论通信是否发生错误，都需要在通信完成或者发生错误时关闭网络连接。</p><p>尽管try/except和try/finally的作用不同，但是在编程实践中通常可以把它们组合在一起使用try/except/else/finally的形式来实现稳定性和灵活性更好的设计。</p><p>默认情况下，在程序段的执行过程中，如果没有提供try/except的处理，脚本文件执行过程中所产生的异常消息会自动发送给程序调用端，如python shell，而python shell对异常消息的默认处理则是终止程序的执行并打印具体的出错信息。</p><p>这也是在python shell中执行程序错误后所出现的出错打印信息的由来。</p><p>python中try/except/else/finally语句的完整格式如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">     Normal execution block</span><br><span class="line">except A:</span><br><span class="line">     Exception A handle</span><br><span class="line">except B:</span><br><span class="line">     Exception B handle</span><br><span class="line">except:</span><br><span class="line">     Other exception handle</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">if</span> no exception,get here</span><br><span class="line">finally:</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">"finally"</span>)</span><br></pre></td></tr></table></figure></p><p>说明：</p><p>正常执行的程序在try下面的Normal execution block执行块中执行，在执行过程中如果发生了异常，则中断当前在Normal execution block中的执行跳转到对应的异常处理块中开始执行；</p><p>python从第一个except X处开始查找，如果找到了对应的exception类型则进入其提供的exception handle中进行处理，如果没有找到则直接进入except块处进行处理。except块是可选项，如果没有提供，该exception将会被提交给python进行默认处理，处理方式则是终止应用程序并打印提示信息；</p><p>如果在Normal execution block执行块中执行过程中没有发生任何异常，则在执行完Normal execution block后会进入else执行块中（如果存在的话）执行。</p><p>无论是否发生了异常，只要提供了finally语句，以上try/except/else/finally代码块执行的最后一步总是执行finally所对应的代码块。</p><p><strong>需要注意的是：</strong></p><p>1.在上面所示的完整语句中try/except/else/finally所出现的顺序必须是try–&gt;except X–&gt;except–&gt;else–&gt;finally，即所有的except必须在else和finally之前，else（如果有的话）必须在finally之前，而except X必须在except之前。否则会出现语法错误。</p><p>2.对于上面所展示的try/except完整格式而言，else和finally都是可选的，而不是必须的，但是如果存在的话else必须在finally之前，finally（如果存在的话）必须在整个语句的最后位置。</p><p>3.在上面的完整语句中，else语句的存在必须以except X或者except语句为前提，如果在没有except语句的try block中使用else语句会引发语法错误。也就是说else不能与try/finally配合使用。</p><p>4.except的使用要非常小心，慎用。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；&lt;/p&gt;
-&lt;p&gt;而try
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Python" scheme="http://hust.life/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python学习-IO操作</title>
     <link href="http://hust.life/2017/12/18/tech-2017-12-18-python-io/"/>
     <id>http://hust.life/2017/12/18/tech-2017-12-18-python-io/</id>
@@ -228,6 +202,32 @@
       
         &lt;h3 id=&quot;文件读&quot;&gt;&lt;a href=&quot;#文件读&quot; class=&quot;headerlink&quot; title=&quot;文件读&quot;&gt;&lt;/a&gt;文件读&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Python" scheme="http://hust.life/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习-try/except/else/finally语句</title>
+    <link href="http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/"/>
+    <id>http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/</id>
+    <published>2017-12-18T08:00:00.000Z</published>
+    <updated>2017-12-21T16:15:16.558Z</updated>
+    
+    <content type="html"><![CDATA[<p>与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；</p><p>而try/finally语句则主要用于在无论是否发生异常情况，都需要执行一些清理工作的场合，如在通信过程中，无论通信是否发生错误，都需要在通信完成或者发生错误时关闭网络连接。</p><p>尽管try/except和try/finally的作用不同，但是在编程实践中通常可以把它们组合在一起使用try/except/else/finally的形式来实现稳定性和灵活性更好的设计。</p><p>默认情况下，在程序段的执行过程中，如果没有提供try/except的处理，脚本文件执行过程中所产生的异常消息会自动发送给程序调用端，如python shell，而python shell对异常消息的默认处理则是终止程序的执行并打印具体的出错信息。</p><p>这也是在python shell中执行程序错误后所出现的出错打印信息的由来。</p><p>python中try/except/else/finally语句的完整格式如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">     Normal execution block</span><br><span class="line">except A:</span><br><span class="line">     Exception A handle</span><br><span class="line">except B:</span><br><span class="line">     Exception B handle</span><br><span class="line">except:</span><br><span class="line">     Other exception handle</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">if</span> no exception,get here</span><br><span class="line">finally:</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">"finally"</span>)</span><br></pre></td></tr></table></figure></p><p>说明：</p><p>正常执行的程序在try下面的Normal execution block执行块中执行，在执行过程中如果发生了异常，则中断当前在Normal execution block中的执行跳转到对应的异常处理块中开始执行；</p><p>python从第一个except X处开始查找，如果找到了对应的exception类型则进入其提供的exception handle中进行处理，如果没有找到则直接进入except块处进行处理。except块是可选项，如果没有提供，该exception将会被提交给python进行默认处理，处理方式则是终止应用程序并打印提示信息；</p><p>如果在Normal execution block执行块中执行过程中没有发生任何异常，则在执行完Normal execution block后会进入else执行块中（如果存在的话）执行。</p><p>无论是否发生了异常，只要提供了finally语句，以上try/except/else/finally代码块执行的最后一步总是执行finally所对应的代码块。</p><p><strong>需要注意的是：</strong></p><p>1.在上面所示的完整语句中try/except/else/finally所出现的顺序必须是try–&gt;except X–&gt;except–&gt;else–&gt;finally，即所有的except必须在else和finally之前，else（如果有的话）必须在finally之前，而except X必须在except之前。否则会出现语法错误。</p><p>2.对于上面所展示的try/except完整格式而言，else和finally都是可选的，而不是必须的，但是如果存在的话else必须在finally之前，finally（如果存在的话）必须在整个语句的最后位置。</p><p>3.在上面的完整语句中，else语句的存在必须以except X或者except语句为前提，如果在没有except语句的try block中使用else语句会引发语法错误。也就是说else不能与try/finally配合使用。</p><p>4.except的使用要非常小心，慎用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；&lt;/p&gt;
+&lt;p&gt;而try
       
     
     </summary>
@@ -292,31 +292,6 @@
   </entry>
   
   <entry>
-    <title>Python学习-返回函数</title>
-    <link href="http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/"/>
-    <id>http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/</id>
-    <published>2017-12-14T08:00:00.000Z</published>
-    <updated>2017-12-21T16:15:57.032Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure><p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p><p>结果为25</p><blockquote><p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
-      
-    
-    </summary>
-    
-      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="python" scheme="http://hust.life/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python学习-生成器</title>
     <link href="http://hust.life/2017/12/14/tech-2017-12-14-python-generator/"/>
     <id>http://hust.life/2017/12/14/tech-2017-12-14-python-generator/</id>
@@ -367,6 +342,31 @@
     
     
       <category term="素描" scheme="http://hust.life/tags/%E7%B4%A0%E6%8F%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习-返回函数</title>
+    <link href="http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/"/>
+    <id>http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/</id>
+    <published>2017-12-14T08:00:00.000Z</published>
+    <updated>2017-12-21T16:15:57.032Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure><p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p><p>结果为25</p><blockquote><p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://hust.life/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="python" scheme="http://hust.life/tags/python/"/>
     
   </entry>
   

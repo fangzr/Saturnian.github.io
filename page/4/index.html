@@ -251,6 +251,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/13/tech-2017-12-13-python-learn-map-reduce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/13/tech-2017-12-13-python-learn-map-reduce/" itemprop="url">Python学习-map与reduce函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T16:00:00+08:00">
+                2017-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/13/tech-2017-12-13-python-learn-map-reduce/" class="leancloud_visitors" data-flag-title="Python学习-map与reduce函数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>reduce() 函数会对参数序列中元素进行累积。<br>函数将一个数据集合（链表，元组等）中的所有数据进行下列操作：用传给reduce中的函数 function（有两个参数）先对集合中的第 1、2 个元素进行操作，得到的结果再与第三个数据用 function 函数运算，最后得到一个结果。<br>map() 会根据提供的函数对指定序列做映射。<br>第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。<br>`<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from functools import reduce</span><br><span class="line">def str2int(s):</span><br><span class="line">    def fn(x,y):</span><br><span class="line">        return x*10+y</span><br><span class="line">    def char2num(s):</span><br><span class="line">        return &#123;&apos;0&apos;:0,&apos;1&apos;:1,&apos;2&apos;:2,&apos;3&apos;:3,&apos;4&apos;:4, &apos;5&apos;: 5, &apos;6&apos;: 6, &apos;7&apos;: 7, &apos;8&apos;: 8, &apos;9&apos;: 9&#125;[s]</span><br><span class="line">    return (reduce(fn, map(char2num,s)))</span><br><span class="line">print(str2int(&quot;1545645&quot;))</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>##注意调用reduce函数之前写上：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from functools import reduce</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/12/tech-2017-12-12-FPGA-small-num/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -954,195 +1110,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/01/03/tech-2017-1-30-gpio-product/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/01/03/tech-2017-1-30-gpio-product/" itemprop="url">GPIO Product Guide笔记（Xilinx）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-03T16:00:00+08:00">
-                2017-01-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/FPGA/" itemprop="url" rel="index">
-                    <span itemprop="name">FPGA</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/01/03/tech-2017-1-30-gpio-product/" class="leancloud_visitors" data-flag-title="GPIO Product Guide笔记（Xilinx）">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。</p>
-</blockquote>
-<p>GPIO控制器的基本结构如图1所示。</p>
-<p><img src="http://img.blog.csdn.net/20170130211925026?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>总线接口模块实现地址译码，并将特定总线信号转化为内部总线；中断逻辑模块，根据中断控制以及中断产生条件产生中断请求信号。输入/输出控制模块将内部总线信号转化为基本的输入/输出引线，并实现输出数据锁定,输入数据暂存的功能。</p>
-<p>图中只画出1位数据的原理图，多位数据需要多组都同样的结构。输入/输出控制模块包括内部译码控制模块。输出使能控制寄存器（GPIO_TRI），输入数据输出寄存器数据输入寄存器（GPIO_DATA）,数据采样寄存器（GPIO_IN）。需要首先向（GPIO_TRI） 写入零。然后再向 GPIO_DATA写数据。数据才能传输到外部引脚上。如果要输入外部引脚的数据，那么必须同时使能 GPIO_DATA_IN和 READ_REG_IN。并且使得MUX选择GPIO_IO的数据。同样可以通过控制MUX读取使能状态GPIO_TRI，由输入输出模块的原理图，可知程序可以先通过读取什么状态，了解外部引脚信号再根据需要修改输出到GPIO_IO上。</p>
-<p>以下以赛灵思AXI总线GPIO IP核为例来介绍GPIO控制器的具体应用。该 GPIO控制器IP核支持两个独立的 GPIO通道，并且每个通道可以支持1-32位的数据输入/输出，可配置为单，输入单输出或双向输入输出。</p>
-<p>控制器包括接口总线模块，中断产生逻辑模块以及双通道输入输出模块。双通道输入输出模块的原理框图2如下，该GPIO包括两个通道，并且独立工作，只有中断信号由同一个一个引脚输出，两个通道都可以输入输出，但是任意时刻仅作为输入或输出接口使用，其数据的传输方向通过什么控制，当输出低电平时，数据输出，反之则输入。<br><img src="http://img.blog.csdn.net/20170130211957573?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>GPIO内部寄存器如表所示，所有寄存器采用小字节序，即数据的第一位对应引脚的地位。 GPIO的各部分分别控制 GPIO的各位为输入或输出，当 GPIO_TRI末位为0时，GPS对应的IO配置为输出。当GPIO_TRI某位为1，相应的IO配置为输入。如果我们只是配置 GPIO，作为简单的输出接口，不需要使用中断机制，那么对 GPIO编程控制，只需要先写GPIO_TRI，然后再输出数据到 GPIO_DATA就可以了。<br><img src="http://img.blog.csdn.net/20170130212013729?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>2.具体实现<br>Tips：这次演示一个Microblaze的流水灯</p>
-<pre><code>* background：首先你要在你的FPGA开发板（比如ZYBO）搭建好软核
-* Add IP -&gt;gpio
-* 选择你要用的通道，比如我有7个LED，都为OUTPUT，你可以选择All output或者不选择（会作为inout）之后在SDK调用时对GPIO_TRI写0作为输出端口,连接好GPIO的时钟、控制线、复位(可以选择自动连接)
-</code></pre><p><img src="http://img.blog.csdn.net/20170130212032636?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<pre><code>* 修改顶层模块的端口定义，加上LED
-* 修改XDC文件
-* 综合编译工程，生成bit文件
-* Export Hardware-&gt;Launch SDK
-* 编写C语言程序（这个就很简单了。。。）首先你要看看你的GPIO BASE Address是多少，每个外设都有自己的地址，学过微机原理的童鞋都好理解。如图所示，我的是0x40010000（记得去掉中间的&quot;_&quot;,SDK会报错）
-</code></pre><p><img src="http://img.blog.csdn.net/20170130212128355?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>我们先介绍一下GPIO外设常用的几个函数（学过51单片机，或者是STM32的童鞋就非常容易上手）<br>其实这是直接对寄存器操作的函数，并不是GPIO外设特有的。（详细定义参考xil_io.h头文件）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	* </span><br><span class="line">#define Xil_In8(Addr)  (*(volatile u8  *)(Addr))</span><br><span class="line"></span><br><span class="line">	* </span><br><span class="line">#define Xil_In16(Addr) (*(volatile u16 *)(Addr))</span><br><span class="line"></span><br><span class="line">	* </span><br><span class="line">#define Xil_In32(Addr) (*(volatile u32 *)(Addr))</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Perform an input operation for a xx-bit memory location by reading from the</li>
-<li>specified address and returning the value read from that address.<br>*</li>
-<li>@param     Addr contains the address to perform the input operation at.<br>*</li>
-<li>@return    The value read from the specified input address.</li>
-</ul>
-<p>以上是读GPIO数据的函数，使用前确保你设置GPIO_TRI对应的那1位为1（或者你已经配置了all input） ，否则no effect</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#define Xil_Out8(Addr, Value)  \</span><br><span class="line">       (*(volatile u8  *)((Addr)) = (Value))</span><br><span class="line">#define Xil_Out16(Addr, Value)  \</span><br><span class="line">       (*(volatile u16  *)((Addr)) = (Value))</span><br><span class="line">#define Xil_Out32(Addr, Value)  \</span><br><span class="line">       (*(volatile u32  *)((Addr)) = (Value))</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Perform an output operation for a xx-bit memory location by writing the</li>
-<li>specified value to the specified address.<br>以上是写GPIO数据的函数，使用前确保你设置GPIO_TRI对应的那1位为0（或者你已经配置了all output），否则no effect</li>
-</ul>
-<p>打开system.mss，还可以看到peripheral Drivers里面有GPIO外设提供的API函数<br>实质就是把Xil_Out这样的函数封装了罢了，本次例子较为简单，就不用了（而且每次调用这些函数都要Initialize，有点麻烦）请自己打开页面去查看函数功能<br><img src="http://img.blog.csdn.net/20170130212153261?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>附送代码：（均在FPGA开发板成功验证）<br>1.直接写寄存器的方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;xparameters.h&gt;</span><br><span class="line">#include &lt;xgpio.h&gt;</span><br><span class="line">#include &lt;xintc.h&gt;</span><br><span class="line">#include &lt;xtmrctr.h&gt;</span><br><span class="line">#include &lt;xuartlite.h&gt;</span><br><span class="line">#include &quot;platform.h&quot;</span><br><span class="line">#include &quot;keys/keys.h&quot;</span><br><span class="line">#include &quot;queue/queue.h&quot;</span><br><span class="line">#include &lt;microblaze_sleep.h&gt;</span><br><span class="line">#define LED_BASE           0x40010000</span><br><span class="line">#define LED_BASE_TRI       0x40010000 + 0x04</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">       int i=1;</span><br><span class="line">       Xil_Out8(LED_BASE_TRI,0x00); //设置为输出</span><br><span class="line">       while(1)</span><br><span class="line">       &#123;</span><br><span class="line">             //MB_Sleep(1000);</span><br><span class="line">             for( ;i&lt;=0x80;i=i&lt;&lt;1)</span><br><span class="line">             &#123;</span><br><span class="line">                    Xil_Out8(LED_BASE,i); //写数据</span><br><span class="line">                    MB_Sleep(10);</span><br><span class="line">             &#125;</span><br><span class="line">             i = 0x01;</span><br><span class="line">       &#125;</span><br><span class="line">    cleanup_platform();</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.使用GPIO的API函数方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;xparameters.h&gt;</span><br><span class="line">#include &lt;xgpio.h&gt;</span><br><span class="line">#include &lt;xintc.h&gt;</span><br><span class="line">#include &lt;xtmrctr.h&gt;</span><br><span class="line">#include &lt;xuartlite.h&gt;</span><br><span class="line">#include &quot;platform.h&quot;</span><br><span class="line">#include &quot;keys/keys.h&quot;</span><br><span class="line">#include &quot;queue/queue.h&quot;</span><br><span class="line">#include &lt;microblaze_sleep.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">       int sts;</span><br><span class="line">       int i;</span><br><span class="line"></span><br><span class="line">    init_platform();</span><br><span class="line"></span><br><span class="line">    sts=XGpio_Initialize (&amp;gpioLed, XPAR_HIER_PERIPH_GPIO_LEDS_DEVICE_ID);</span><br><span class="line">    if(sts != XST_SUCCESS) printf(&quot;pgio led init error!\n&quot;);</span><br><span class="line">    while(1)</span><br><span class="line">    &#123;</span><br><span class="line">           for( i=0x01;i&lt;=0x80;i=i&lt;&lt;1)</span><br><span class="line">             &#123;</span><br><span class="line">              XGpio_DiscreteWrite (&amp;gpioLed, 1, i);//led hign is effective</span><br><span class="line">              MB_Sleep(500);</span><br><span class="line">             &#125;</span><br><span class="line">           i=0x01;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>反思：学习FPGA不自己去阅读英文文档是不行的，有问题可以去Xilinx英文论坛讨论。总而言之，官方的文档还是比较重要的第一手资料吧（By华科Peter）</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1199,7 +1166,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

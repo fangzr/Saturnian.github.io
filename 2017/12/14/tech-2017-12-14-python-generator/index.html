@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Saturnian&#39;s Blog">
 <meta property="og:description" content="Python使用生成器对延迟操作提供了支持。 所谓延迟操作，是指在需要的时候才产生结果，而不是立即产生结果。这也是生成器的主要好处。 生成器函数：常规函数定义，但是，使用yield语句而不是return语句返回结果。yield语句一次返回一个结果，在每个结果中间，挂起函数的状态，以便下次重它离开的地方继续执行 生成器表达式：类似于列表推导，但是，生成器返回按需产生结果的一个对象，而不是一次构建一个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-21T16:16:03.205Z">
+<meta property="og:updated_time" content="2017-12-24T05:50:53.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习-生成器">
 <meta name="twitter:description" content="Python使用生成器对延迟操作提供了支持。 所谓延迟操作，是指在需要的时候才产生结果，而不是立即产生结果。这也是生成器的主要好处。 生成器函数：常规函数定义，但是，使用yield语句而不是return语句返回结果。yield语句一次返回一个结果，在每个结果中间，挂起函数的状态，以便下次重它离开的地方继续执行 生成器表达式：类似于列表推导，但是，生成器返回按需产生结果的一个对象，而不是一次构建一个">
@@ -360,6 +360,7 @@
 <p>生成器函数：常规函数定义，但是，使用yield语句而不是return语句返回结果。yield语句一次返回一个结果，在每个结果中间，挂起函数的状态，以便下次重它离开的地方继续执行</p>
 <p>生成器表达式：类似于列表推导，但是，生成器返回按需产生结果的一个对象，而不是一次构建一个结果列表</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成器例子1</span></span><br><span class="line">def gensquares(N):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">        yield i**2</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> gensquares(5):</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>将推导列表括号换为圆括号，形成生成器表达式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object &lt;genexpr&gt; at 0x042372D0&gt;</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">16</span><br><span class="line">&gt;&gt;&gt; list(sq)</span><br><span class="line">[]</span><br><span class="line">&gt;&gt;&gt; sq = (x**2 <span class="keyword">for</span> x <span class="keyword">in</span> range(5))</span><br><span class="line">&gt;&gt;&gt; list(sq)</span><br><span class="line">[0, 1, 4, 9, 16]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure></p>
 <p><strong>生成器唯一要注意的就是，生成器只能遍历一次</strong></p>
 
@@ -392,8 +393,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/14/tech-2017-12-14-python-learn-return-func/" rel="next" title="Python学习-返回函数">
-                <i class="fa fa-chevron-left"></i> Python学习-返回函数
+              <a href="/2017/12/14/life-2017-12-14-painting/" rel="next" title="圆脸少女们">
+                <i class="fa fa-chevron-left"></i> 圆脸少女们
               </a>
             
           </div>
@@ -402,8 +403,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/16/tech-2017-12-16-python-Object-oriented/" rel="prev" title="Python学习-面向对象编程概念&Codes">
-                Python学习-面向对象编程概念&Codes <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/14/tech-2017-12-14-python-learn-return-func/" rel="prev" title="Python学习-返回函数">
+                Python学习-返回函数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

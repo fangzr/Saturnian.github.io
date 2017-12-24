@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。  GPIO控制器的基本结构如图1所示。 总线接口模块实现地址译码，并将特定总线信号转化为内部总线；中断逻辑模块，根据中断控制以及中断产生条件产生中断请求信号。输入/输出控制模块将内部总线信号转化为基本的输入/输出引线，并实现输出数据锁定,输入数据暂存的功能。 图中只画出1位">
+<meta name="description" content="GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。  GPIO控制器的基本结构如图1所示。">
 <meta name="keywords" content="fpga,gpio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GPIO Product Guide笔记（Xilinx）">
 <meta property="og:url" content="http://hust.life/2017/01/03/tech-2017-1-30-gpio-product/index.html">
 <meta property="og:site_name" content="Saturnian&#39;s Blog">
-<meta property="og:description" content="GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。  GPIO控制器的基本结构如图1所示。 总线接口模块实现地址译码，并将特定总线信号转化为内部总线；中断逻辑模块，根据中断控制以及中断产生条件产生中断请求信号。输入/输出控制模块将内部总线信号转化为基本的输入/输出引线，并实现输出数据锁定,输入数据暂存的功能。 图中只画出1位">
+<meta property="og:description" content="GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。  GPIO控制器的基本结构如图1所示。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img.blog.csdn.net/20170130211925026?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170130211957573?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
@@ -95,10 +95,10 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20170130212032636?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170130212128355?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170130212153261?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-12-21T16:16:35.763Z">
+<meta property="og:updated_time" content="2017-12-24T05:46:37.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GPIO Product Guide笔记（Xilinx）">
-<meta name="twitter:description" content="GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。  GPIO控制器的基本结构如图1所示。 总线接口模块实现地址译码，并将特定总线信号转化为内部总线；中断逻辑模块，根据中断控制以及中断产生条件产生中断请求信号。输入/输出控制模块将内部总线信号转化为基本的输入/输出引线，并实现输出数据锁定,输入数据暂存的功能。 图中只画出1位">
+<meta name="twitter:description" content="GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。  GPIO控制器的基本结构如图1所示。">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20170130211925026?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
@@ -365,7 +365,7 @@
         <blockquote>
 <p>GPIO是通用并行IO接口的简称。他将总线信号转化为IO设备要求的信号类型，实现地址译码输出数据，锁定输入数据缓冲的功能。</p>
 </blockquote>
-<p>GPIO控制器的基本结构如图1所示。</p>
+<p>GPIO控制器的基本结构如图1所示。<br><a id="more"></a></p>
 <p><img src="http://img.blog.csdn.net/20170130211925026?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzM5Mjk2ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>总线接口模块实现地址译码，并将特定总线信号转化为内部总线；中断逻辑模块，根据中断控制以及中断产生条件产生中断请求信号。输入/输出控制模块将内部总线信号转化为基本的输入/输出引线，并实现输出数据锁定,输入数据暂存的功能。</p>
 <p>图中只画出1位数据的原理图，多位数据需要多组都同样的结构。输入/输出控制模块包括内部译码控制模块。输出使能控制寄存器（GPIO_TRI），输入数据输出寄存器数据输入寄存器（GPIO_DATA）,数据采样寄存器（GPIO_IN）。需要首先向（GPIO_TRI） 写入零。然后再向 GPIO_DATA写数据。数据才能传输到外部引脚上。如果要输入外部引脚的数据，那么必须同时使能 GPIO_DATA_IN和 READ_REG_IN。并且使得MUX选择GPIO_IO的数据。同样可以通过控制MUX读取使能状态GPIO_TRI，由输入输出模块的原理图，可知程序可以先通过读取什么状态，了解外部引脚信号再根据需要修改输出到GPIO_IO上。</p>
 <p>以下以赛灵思AXI总线GPIO IP核为例来介绍GPIO控制器的具体应用。该 GPIO控制器IP核支持两个独立的 GPIO通道，并且每个通道可以支持1-32位的数据输入/输出，可配置为单，输入单输出或双向输入输出。</p>

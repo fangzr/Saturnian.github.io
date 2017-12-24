@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Saturnian&#39;s Blog">
 <meta property="og:description" content="正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-23T04:54:36.052Z">
+<meta property="og:updated_time" content="2017-12-24T13:31:31.354Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习-正则表达式">
 <meta name="twitter:description" content="正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。">
@@ -433,6 +433,18 @@
 <h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><blockquote>
 <p>除了简单地判断是否匹配之外，正则表达式还有提取子串的强大功能。用()表示的就是要提取的分组（Group）。</p>
 </blockquote>
+<p><code>^(\d{3})-(\d{3,8})$</code>分别定义了两个组，可以直接从匹配的字符串中提取出区号和本地号码</p>
+<h4 id="正则转义与字符串转义"><a href="#正则转义与字符串转义" class="headerlink" title="正则转义与字符串转义"></a>正则转义与字符串转义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python  </span><br><span class="line"># coding=utf-8  </span><br><span class="line">  </span><br><span class="line">import re  </span><br><span class="line">  </span><br><span class="line">string = &apos;3\8&apos;  </span><br><span class="line">m = re.search(&apos;(\d+)\\\\&apos;, string)  </span><br><span class="line">  </span><br><span class="line">if m is not None:  </span><br><span class="line">    print m.group(1)  # 结果为：3  </span><br><span class="line">  </span><br><span class="line">n = re.search(r&apos;(\d+)\\&apos;, string)  </span><br><span class="line">  </span><br><span class="line">if n is not None:  </span><br><span class="line">    print n.group(1)  # 结果为：3</span><br></pre></td></tr></table></figure>
+<p>1.没有用<code>r&#39;&#39;</code>格式：<code>(\d+)\\\\</code>的右斜杠先字符串转义为<code>\ \</code> ,再进行正则转义为<code>\</code>；<br>2.用<code>r&#39;&#39;</code>格式：<code>(\d+)\\</code>的右斜杠无需字符串转义 ,直接进行正则转义为<code>\</code>；<br>3.结论：字符串转义优先于正则转义。</p>
+<h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><blockquote>
+<p>如果一个正则表达式要重复使用几千次，出于效率的考虑，我们可以预编译该正则表达式，接下来重复使用时就不需要编译这个步骤了，直接匹配：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import re</span><br><span class="line">&gt;&gt;&gt; re_telephone = re.compile(r&apos;^(\d&#123;3&#125;)-(\d&#123;3,8&#125;)$&apos;)</span><br><span class="line">&gt;&gt;&gt; re_telephone.match(&apos;010-123456&apos;).groups()</span><br><span class="line">(&apos;010&apos;, &apos;123456&apos;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h4><p>题1：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 请尝试写一个验证Email地址的正则表达式。版本一应该可以验证出类似的Email：</span><br><span class="line">#</span><br><span class="line"># someone@gmail.com</span><br><span class="line"># bill.gates@microsoft.com</span><br><span class="line">import re</span><br><span class="line">re_test=re.compile(r&apos;^([0-9a-zA-Z\_\.]+)\@([0-9a-zA-Z\_]+)\.([0-9a-zA-Z\_]+)$&apos;)</span><br><span class="line">def is_valid_email(addr):</span><br><span class="line">     if re.match(re_test , addr):</span><br><span class="line">         return True</span><br><span class="line">     else :</span><br><span class="line">         return False</span><br><span class="line"># 测试:</span><br><span class="line">assert is_valid_email(&apos;someone@gmail.com&apos;)</span><br><span class="line">assert is_valid_email(&apos;bill.gates@microsoft.com&apos;)</span><br><span class="line">assert not is_valid_email(&apos;bob#example.com&apos;)</span><br><span class="line">assert not is_valid_email(&apos;mr-bob@example.com&apos;)</span><br><span class="line">print(&apos;ok&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>题2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 版本二可以提取出带名字的Email地址：</span><br><span class="line">#</span><br><span class="line"># &lt;Tom Paris&gt; tom@voyager.org =&gt; Tom Paris</span><br><span class="line"># bob@example.com =&gt; bob</span><br><span class="line">import re</span><br><span class="line">re_name_of_email = re.compile(r&apos;^\&lt;([0-9a-zA-Z\_\.]+\s[0-9a-zA-Z\_\.]+)\&gt;\s([0-9a-zA-Z\_\.]+)?\@([0-9a-zA-Z\_]+)?\.([0-9a-zA-Z\_]+)$&apos;)</span><br><span class="line">re_name_of_email_2 = re.compile(r&apos;^([0-9a-zA-Z]+)\@([0-9a-zA-Z\_]+)\.([0-9a-zA-Z\_]+)$&apos;)</span><br><span class="line">def name_of_email(addr):</span><br><span class="line">    if re_name_of_email.match(addr):</span><br><span class="line">        return re_name_of_email.match(addr).group(1)</span><br><span class="line">    else :</span><br><span class="line">        return re_name_of_email_2.match(addr).group(1)</span><br><span class="line"># 测试:</span><br><span class="line">assert name_of_email(&apos;&lt;Tom Paris&gt; tom@voyager.org&apos;) == &apos;Tom Paris&apos;</span><br><span class="line">assert name_of_email(&apos;tom@voyager.org&apos;) == &apos;tom&apos;</span><br><span class="line">print(&apos;ok&apos;)</span><br><span class="line">assert name_of_email(&apos;tom@voyager.org&apos;) == &apos;tom&apos;</span><br><span class="line">print(&apos;ok&apos;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="作业总结"><a href="#作业总结" class="headerlink" title="作业总结"></a>作业总结</h4><p>判断正则表达式是否匹配成功，还是要用以下方法比较好：</p>
+<blockquote>
+<p>match()方法判断是否匹配，如果匹配成功，返回一个Match对象，否则返回None。常见的判断方法就是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test = &apos;用户输入的字符串&apos;</span><br><span class="line">if re.match(r&apos;正则表达式&apos;, test):</span><br><span class="line">    print(&apos;ok&apos;)</span><br><span class="line">else:</span><br><span class="line">    print(&apos;failed&apos;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
       
     </div>
@@ -463,8 +475,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/22/tech-2017-12-22-hexo-next-bug/" rel="next" title="Next主题背景颜色修改或添加图片">
-                <i class="fa fa-chevron-left"></i> Next主题背景颜色修改或添加图片
+              <a href="/2017/12/22/tech-2017-12-22-hexo-CNAME-bug/" rel="next" title="“hexo部署后，Github绑定的域名总被删除”解决方案">
+                <i class="fa fa-chevron-left"></i> “hexo部署后，Github绑定的域名总被删除”解决方案
               </a>
             
           </div>
@@ -556,7 +568,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -640,7 +652,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用表达式"><span class="nav-number">1.</span> <span class="nav-text">常用表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">2.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#匹配电话号码"><span class="nav-number">2.1.</span> <span class="nav-text">匹配电话号码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#切分字符串"><span class="nav-number">2.2.</span> <span class="nav-text">切分字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分组"><span class="nav-number">2.3.</span> <span class="nav-text">分组</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用表达式"><span class="nav-number">1.</span> <span class="nav-text">常用表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">2.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#匹配电话号码"><span class="nav-number">2.1.</span> <span class="nav-text">匹配电话号码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#切分字符串"><span class="nav-number">2.2.</span> <span class="nav-text">切分字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分组"><span class="nav-number">2.3.</span> <span class="nav-text">分组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正则转义与字符串转义"><span class="nav-number">2.4.</span> <span class="nav-text">正则转义与字符串转义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译"><span class="nav-number">2.5.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作业"><span class="nav-number">2.6.</span> <span class="nav-text">作业</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作业总结"><span class="nav-number">2.7.</span> <span class="nav-text">作业总结</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/21/tech-2017-12-21-python-thread/">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter">
@@ -270,7 +270,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/21/tech-2017-12-21-python-thread/" itemprop="url">Python学习-线程</a></h1>
+                <a class="post-title-link" href="/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/" itemprop="url">Python学习-面向对象高级编程</a></h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T16:00:00+08:00">
-                2017-12-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-17T16:00:00+08:00">
+                2017-12-17
               </time>
             
 
@@ -322,168 +322,7 @@
 
           
           
-             <span id="/2017/12/21/tech-2017-12-21-python-thread/" class="leancloud_visitors" data-flag-title="Python学习-线程">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>多任务可以由多进程完成，也可以由一个进程内的多线程完成。</p>
-<p>进程是由若干线程组成的，一个进程至少有一个线程。</p>
-<p>Python的标准库提供了两个模块：<code>_thread</code>和<code>threading</code>，<code>_thread</code>是低级模块，<code>threading</code>是高级模块，对<code>_thread</code>进行了封装。绝大多数情况下，我们只需要使用<code>threading</code>这个高级模块。</p>
-<p>启动一个线程就是把一个函数传入并创建<code>Thread</code>实例，然后调用<code>start()</code>开始执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import time,threading</span><br><span class="line"><span class="comment">#新线程执行的代码</span></span><br><span class="line">def loop():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'thread %s is running...'</span>%threading.current_thread().name )</span><br><span class="line">    n=0</span><br><span class="line">    <span class="keyword">while</span> n&lt;5:</span><br><span class="line">        n = n+1</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'thread %s &gt;&gt;&gt;%s'</span>%(threading.current_thread().name,n))</span><br><span class="line">        time.sleep(1)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'thread %s ended.'</span>%threading.current_thread().name)</span><br><span class="line"></span><br><span class="line"><span class="comment">#打印线程名字，默认thread-1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'thread %s is running...'</span>%threading.current_thread().name)</span><br><span class="line"><span class="comment">#传入线程执行的程序，这里只有一个线程</span></span><br><span class="line">t = threading.Thread(target=loop)</span><br><span class="line">t.start()</span><br><span class="line">t.join()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'thread %s ended'</span>% threading.current_thread().name)</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/12/21/tech-2017-12-21-python-thread/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/20/tech-2017-12-20-python-name-main/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/20/tech-2017-12-20-python-name-main/" itemprop="url">if __name__ == '__main__' 如何正确理解?</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-20T16:00:00+08:00">
-                2017-12-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/12/20/tech-2017-12-20-python-name-main/" class="leancloud_visitors" data-flag-title="if __name__ == '__main__' 如何正确理解?">
+             <span id="/2017/12/17/tech-2017-12-17-python-Object-oriented-high-level/" class="leancloud_visitors" data-flag-title="Python学习-面向对象高级编程">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -516,508 +355,1553 @@
       
         
           
-            <p><em>转载stackoverflow回答</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># file one.py</span></span><br><span class="line">def func():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"func() in one.py"</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"top-level in one.py"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"one.py is being run directly"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"one.py is being imported into another module"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># file two.py</span></span><br><span class="line">import one</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"top-level in two.py"</span>)</span><br><span class="line">one.func()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"two.py is being run directly"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"two.py is being imported into another module"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>如果你执行one.py文件，python one.py</p>
-<p>会输出：top-level in one.py</p>
-<p>one.py is being run directly</p>
-<p>如果你执行two.py文件，python two.py</p>
-<p>会输出：top-level in one.py</p>
-<p>one.py is being imported into another module</p>
-<p>top-level in two.py</p>
-<p>func() in one.py</p>
-<p>two.py is being run directly</p>
-<p><strong>Thus, when module one gets loaded, its <strong>name</strong> equals “one” instead of <strong>main</strong>.</strong></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/19/tech-2017-12-19-python-process-thread/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/19/tech-2017-12-19-python-process-thread/" itemprop="url">Python学习-进程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T16:00:00+08:00">
-                2017-12-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/12/19/tech-2017-12-19-python-process-thread/" class="leancloud_visitors" data-flag-title="Python学习-进程">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。</p>
+            <h3 id="使用-slots"><a href="#使用-slots" class="headerlink" title="使用 slots"></a>使用 <strong>slots</strong></h3><blockquote>
+<p>如果我们想要限制实例的属性怎么办？比如，只允许对Student实例添加name和age属性。<br>为了达到限制的目的，Python允许在定义class的时候，定义一个特殊的<strong>slots</strong>变量，<br>来限制该class实例能添加的属性：</p>
 </blockquote>
-<p><code>multiprocessing</code>模块是跨平台版本的多进程模块。</p>
-<p><code>multiprocessing</code>模块提供了一个<code>Process</code>类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">from multiprocessing import Process</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line"><span class="comment">#子进程要执行的代码</span></span><br><span class="line">def run_proc(name):</span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Run child process %s (%s)...'</span>%(name, os.getpid()))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Parent process %s.'</span>% os.getpid())<span class="comment">#getpid()是获取进程的id号</span></span><br><span class="line">   p = Process(target=run_proc,args=(<span class="string">'test'</span>,))</span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Child process will start.'</span>)</span><br><span class="line">   p.start()<span class="comment">#开始进程</span></span><br><span class="line">   p.join()<span class="comment">#等待子进程结束再往下运行，通常用于进程间的同步</span></span><br><span class="line">   <span class="built_in">print</span>(<span class="string">'Child process end'</span>)</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/12/19/tech-2017-12-19-python-process-thread/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/18/tech-2017-12-18-python-try-finally-except/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/18/tech-2017-12-18-python-try-finally-except/" itemprop="url">Python学习-try/except/else/finally语句</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-18T16:00:00+08:00">
-                2017-12-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/12/18/tech-2017-12-18-python-try-finally-except/" class="leancloud_visitors" data-flag-title="Python学习-try/except/else/finally语句">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>与其他语言相同，在python中，try/except语句主要是用于处理程序正常执行过程中出现的一些异常情况，如语法错误（python作为脚本语言没有编译的环节，在执行过程中对语法进行检测，出错后发出异常消息）、数据除零错误、从未定义的变量上取值等；</p>
-<p>而try/finally语句则主要用于在无论是否发生异常情况，都需要执行一些清理工作的场合，如在通信过程中，无论通信是否发生错误，都需要在通信完成或者发生错误时关闭网络连接。</p>
-<p>尽管try/except和try/finally的作用不同，但是在编程实践中通常可以把它们组合在一起使用try/except/else/finally的形式来实现稳定性和灵活性更好的设计。</p>
-<p>默认情况下，在程序段的执行过程中，如果没有提供try/except的处理，脚本文件执行过程中所产生的异常消息会自动发送给程序调用端，如python shell，而python shell对异常消息的默认处理则是终止程序的执行并打印具体的出错信息。</p>
-<p>这也是在python shell中执行程序错误后所出现的出错打印信息的由来。</p>
-<p>python中try/except/else/finally语句的完整格式如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">     Normal execution block</span><br><span class="line">except A:</span><br><span class="line">     Exception A handle</span><br><span class="line">except B:</span><br><span class="line">     Exception B handle</span><br><span class="line">except:</span><br><span class="line">     Other exception handle</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">if</span> no exception,get here</span><br><span class="line">finally:</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">"finally"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>说明：</p>
-<p>正常执行的程序在try下面的Normal execution block执行块中执行，在执行过程中如果发生了异常，则中断当前在Normal execution block中的执行跳转到对应的异常处理块中开始执行；</p>
-<p>python从第一个except X处开始查找，如果找到了对应的exception类型则进入其提供的exception handle中进行处理，如果没有找到则直接进入except块处进行处理。except块是可选项，如果没有提供，该exception将会被提交给python进行默认处理，处理方式则是终止应用程序并打印提示信息；</p>
-<p>如果在Normal execution block执行块中执行过程中没有发生任何异常，则在执行完Normal execution block后会进入else执行块中（如果存在的话）执行。</p>
-<p>无论是否发生了异常，只要提供了finally语句，以上try/except/else/finally代码块执行的最后一步总是执行finally所对应的代码块。</p>
-<p><strong>需要注意的是：</strong></p>
-<p>1.在上面所示的完整语句中try/except/else/finally所出现的顺序必须是try–&gt;except X–&gt;except–&gt;else–&gt;finally，即所有的except必须在else和finally之前，else（如果有的话）必须在finally之前，而except X必须在except之前。否则会出现语法错误。</p>
-<p>2.对于上面所展示的try/except完整格式而言，else和finally都是可选的，而不是必须的，但是如果存在的话else必须在finally之前，finally（如果存在的话）必须在整个语句的最后位置。</p>
-<p>3.在上面的完整语句中，else语句的存在必须以except X或者except语句为前提，如果在没有except语句的try block中使用else语句会引发语法错误。也就是说else不能与try/finally配合使用。</p>
-<p>4.except的使用要非常小心，慎用。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/18/tech-2017-12-18-python-io/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Peter">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/18/tech-2017-12-18-python-io/" itemprop="url">Python学习-IO操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-18T16:00:00+08:00">
-                2017-12-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/12/18/tech-2017-12-18-python-io/" class="leancloud_visitors" data-flag-title="Python学习-IO操作">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="文件读"><a href="#文件读" class="headerlink" title="文件读"></a>文件读</h3><blockquote>
-<p>由于文件读写时都有可能产生IOError，一旦出错，后面的f.close()就不会调用。所以，为了保证无论是否出错都能正确地关闭文件，我们可以使用try … finally来实现：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; class Student(object):</span><br><span class="line">	__slots__ = (<span class="string">'name'</span>,<span class="string">'age'</span>)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; s = Student()</span><br><span class="line">&gt;&gt;&gt; s.name = <span class="string">'Michael'</span></span><br><span class="line">&gt;&gt;&gt; s.age = 25</span><br><span class="line">&gt;&gt;&gt; s.score = 99</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#6&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    s.score = 99</span><br><span class="line">AttributeError: <span class="string">'Student'</span> object has no attribute <span class="string">'score'</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用property"><a href="#使用property" class="headerlink" title="使用property"></a>使用property</h3><blockquote>
+<p>@property广泛应用在类的定义中，可以让调用者写出简短的代码，同时保证对参数进行必要的检查，这样，程序运行时就减少了出错的可能性。</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    f = open(<span class="string">'/path/to/file'</span>, <span class="string">'r'</span>)</span><br><span class="line">    <span class="built_in">print</span>(f.read())</span><br><span class="line">finally:</span><br><span class="line">    <span class="keyword">if</span> f:</span><br><span class="line">        f.close()</span><br></pre></td></tr></table></figure>
-<h3 id="文件写"><a href="#文件写" class="headerlink" title="文件写"></a>文件写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">'F:/Codeblock_file/FFT/fangzr.github.io/test.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">f.write(<span class="string">'Hello,world!'</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p><strong>请利用@property给一个Screen对象加上width和height属性，以及一个只读属性resolution:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Screen(object):</span><br><span class="line">    @property</span><br><span class="line">    def width(self):</span><br><span class="line">        <span class="built_in">return</span> self._width</span><br><span class="line"></span><br><span class="line">    @width.setter</span><br><span class="line">    def width(self,value):</span><br><span class="line">        self._width = value</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def height(self):</span><br><span class="line">        <span class="built_in">return</span> self._height</span><br><span class="line"></span><br><span class="line">    @height.setter</span><br><span class="line">    def height(self,value):</span><br><span class="line">        self._height = value</span><br><span class="line"></span><br><span class="line">    @property</span><br><span class="line">    def resolution(self):</span><br><span class="line">        <span class="built_in">return</span> self._width*self._height</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试:</span></span><br><span class="line">s = Screen()</span><br><span class="line">s.width = 1024</span><br><span class="line">s.height = 768</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'resolution ='</span>, s.resolution)</span><br><span class="line"><span class="keyword">if</span> s.resolution == 786432:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试通过!'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/16/tech-2017-12-16-python-Object-oriented/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/16/tech-2017-12-16-python-Object-oriented/" itemprop="url">Python学习-面向对象编程概念&Codes</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-16T16:00:00+08:00">
+                2017-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/16/tech-2017-12-16-python-Object-oriented/" class="leancloud_visitors" data-flag-title="Python学习-面向对象编程概念&Codes">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="类和实例"><a href="#类和实例" class="headerlink" title="类和实例"></a>类和实例</h3><ul>
+<li><p>面向对象最重要的概念就是类（Class）和实例（Instance），必须牢记类是抽象的模板，<br>比如Student类，而实例是根据类创建出来的一个个具体的“对象”，每个对象都拥有相同的方法，但各自的数据可能不同。</p>
+</li>
+<li><p>由于类可以起到模板的作用，因此，可以在创建实例的时候，把一些我们认为必须绑定的属性强制填写进去。通过定义一个特殊的<strong>init</strong>方法，在创建实例的时候，就把name，score等属性绑上去：</p>
+</li>
+<li><p>特殊方法“<strong>init</strong>”前后分别有两个下划线！！！</p>
+</li>
+</ul>
 <blockquote>
-<p>你可以反复调用write()来写入文件，但是务必要调用f.close()来关闭文件。当我们写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘。忘记调用close()的后果是数据可能只写了一部分到磁盘，剩下的丢失了。所以，还是用with语句来得保险：</p>
+<p>类是创建实例的模板，而实例则是一个一个具体的对象，各个实例拥有的数据都互相独立，互不影响；<br>方法就是与实例绑定的函数，和普通函数不同，方法可以直接访问实例的数据；<br>通过在实例上调用方法，我们就直接操作了对象内部的数据，但无需知道方法内部的实现细节。</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with open(<span class="string">'/Users/michael/test.txt'</span>, <span class="string">'w'</span>) as f:</span><br><span class="line">    f.write(<span class="string">'Hello, world!'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self,name,score):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.score = score</span><br><span class="line"></span><br><span class="line">    def print_score(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'%s:%s'</span>%(self.name,self.score))</span><br><span class="line"></span><br><span class="line">    def get_grad(self):</span><br><span class="line">        <span class="keyword">if</span> self.score &gt;=90:</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'A'</span></span><br><span class="line">        <span class="keyword">if</span> self.score &gt;= 60:</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'B'</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'C'</span></span><br><span class="line">bart = Student(<span class="string">'Jack'</span>,99)</span><br><span class="line">bart.print_score()</span><br><span class="line"><span class="built_in">print</span>(bart.get_grad())</span><br></pre></td></tr></table></figure>
+<h3 id="访问限制"><a href="#访问限制" class="headerlink" title="访问限制"></a>访问限制</h3><blockquote>
+<p>这样就确保了外部代码不能随意修改对象内部的状态，这样通过访问限制的保护，代码更加健壮。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name, gender):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.__gender = gender</span><br><span class="line"></span><br><span class="line">    def set_gender(self,gender):</span><br><span class="line">        self.__gender = gender</span><br><span class="line"></span><br><span class="line">    def get_gender(self):</span><br><span class="line">        <span class="built_in">return</span> self.__gender</span><br><span class="line"></span><br><span class="line">bart = Student(<span class="string">'Bart'</span>, <span class="string">'male'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> bart.get_gender() != <span class="string">'male'</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    bart.set_gender(<span class="string">'female'</span>)</span><br><span class="line">    <span class="keyword">if</span> bart.get_gender() != <span class="string">'female'</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'测试失败!'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'测试成功!'</span>)</span><br></pre></td></tr></table></figure>
+<p><code>results:</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">测试成功</span><br></pre></td></tr></table></figure></p>
+<h3 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h3><p><strong>鸭子类型</strong></p>
+<blockquote>
+<p>“当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”</p>
+</blockquote>
+<p>对于静态语言（例如Java）来说，如果需要传入Animal类型，则传入的对象必须是Animal类型或者它的子类，否则，将无法调用run()方法。</p>
+<p>对于Python这样的动态语言来说，则不一定需要传入Animal类型。我们只需要保证传入的对象有一个run()方法就可以了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Aminal(object):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Animal is running...'</span>)</span><br><span class="line">class Dog(Aminal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Dog is running...'</span>)</span><br><span class="line">class Cat(Aminal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Cat is running...'</span>)</span><br><span class="line">class Tortoise(Aminal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Tortoise is running slowly...'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#鸭子类型</span></span><br><span class="line">class Duck(object):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'这是鸭子类型'</span>)</span><br><span class="line"></span><br><span class="line">def run_twice(Aminal):</span><br><span class="line">    Aminal.run()</span><br><span class="line">    Aminal.run()</span><br><span class="line"><span class="comment">#pass 用法：http://www.cnpythoner.com/post/286.html</span></span><br><span class="line">run_twice(Cat())</span><br><span class="line">run_twice(Tortoise())</span><br><span class="line">run_twice(Duck())</span><br></pre></td></tr></table></figure>
+<p><code>results:</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Cat is running...</span><br><span class="line">Cat is running...</span><br><span class="line">Tortoise is running slowly...</span><br><span class="line">Tortoise is running slowly...</span><br><span class="line">这是鸭子类型</span><br><span class="line">这是鸭子类型</span><br></pre></td></tr></table></figure></p>
+<h3 id="获取对象的信息"><a href="#获取对象的信息" class="headerlink" title="获取对象的信息"></a>获取对象的信息</h3><p>1.Type函数用法</p>
+<p>2.isinstance（）</p>
+<p>3.hasattr() 函数、setattr函数、getattr函数</p>
+<p>仅仅把属性和方法列出来是不够的，配合getattr()、setattr()以及hasattr()，我们可以直接操作一个对象的状态：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; class MyObject(object):</span><br><span class="line">...     def __init__(self):</span><br><span class="line">...         self.x = 9</span><br><span class="line">...     def power(self):</span><br><span class="line">...         <span class="built_in">return</span> self.x * self.x</span><br><span class="line">...</span><br><span class="line">&gt;&gt;&gt; obj = MyObject()</span><br><span class="line">紧接着，可以测试该对象的属性：</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; hasattr(obj, <span class="string">'x'</span>) <span class="comment"># 有属性'x'吗？</span></span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; obj.x</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; hasattr(obj, <span class="string">'y'</span>) <span class="comment"># 有属性'y'吗？</span></span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; setattr(obj, <span class="string">'y'</span>, 19) <span class="comment"># 设置一个属性'y'</span></span><br><span class="line">&gt;&gt;&gt; hasattr(obj, <span class="string">'y'</span>) <span class="comment"># 有属性'y'吗？</span></span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; getattr(obj, <span class="string">'y'</span>) <span class="comment"># 获取属性'y'</span></span><br><span class="line">19</span><br><span class="line">&gt;&gt;&gt; obj.y <span class="comment"># 获取属性'y'</span></span><br><span class="line">19</span><br></pre></td></tr></table></figure></p>
+<h3 id="实例属性和类属性"><a href="#实例属性和类属性" class="headerlink" title="实例属性和类属性"></a>实例属性和类属性</h3><blockquote>
+<p>在编写程序的时候，千万不要对实例属性和类属性使用相同的名字，因为相同名称的实例属性将屏蔽掉类属性，但是当你删除实例属性后，再使用相同的名称，访问到的将是类属性。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/14/tech-2017-12-14-python-learn-return-func/" itemprop="url">Python学习-返回函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-14T16:00:00+08:00">
+                2017-12-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/14/tech-2017-12-14-python-learn-return-func/" class="leancloud_visitors" data-flag-title="Python学习-返回函数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p>
+<p>结果为25</p>
+<blockquote>
+<p>在这个例子中，我们在函数lazy_sum中又定义了函数sum，并且，内部函数sum可以引用外部函数lazy_sum的参数和局部变量，当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。请再注意一点，当我们调用lazy_sum()时，每次调用都会返回一个新的函数，即使传入相同的参数：返回闭包时牢记一点：返回函数不要引用任何循环变量，或者后续会发生变化的变量。如果一定要引用循环变量怎么办？方法是再创建一个函数，用该函数的参数绑定循环变量当前的值，无论该循环变量后续如何更改，已绑定到函数参数的值不变：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def count():</span><br><span class="line">    def f(j):</span><br><span class="line">        def g():</span><br><span class="line">            <span class="built_in">return</span> j*j</span><br><span class="line">        <span class="built_in">return</span> g</span><br><span class="line">    fs = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,4):</span><br><span class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></span><br><span class="line">    <span class="built_in">return</span> fs</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/14/tech-2017-12-14-python-generator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/14/tech-2017-12-14-python-generator/" itemprop="url">Python学习-生成器</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-14T16:00:00+08:00">
+                2017-12-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/14/tech-2017-12-14-python-generator/" class="leancloud_visitors" data-flag-title="Python学习-生成器">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Python使用生成器对延迟操作提供了支持。</p>
+<p>所谓延迟操作，是指在需要的时候才产生结果，而不是立即产生结果。这也是生成器的主要好处。</p>
+<p>生成器函数：常规函数定义，但是，使用yield语句而不是return语句返回结果。yield语句一次返回一个结果，在每个结果中间，挂起函数的状态，以便下次重它离开的地方继续执行</p>
+<p>生成器表达式：类似于列表推导，但是，生成器返回按需产生结果的一个对象，而不是一次构建一个结果列表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成器例子1</span></span><br><span class="line">def gensquares(N):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">        yield i**2</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> gensquares(5):</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br></pre></td></tr></table></figure>
+<p>将推导列表括号换为圆括号，形成生成器表达式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;generator object &lt;genexpr&gt; at 0x042372D0&gt;</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; next(sq)</span><br><span class="line">16</span><br><span class="line">&gt;&gt;&gt; list(sq)</span><br><span class="line">[]</span><br><span class="line">&gt;&gt;&gt; sq = (x**2 <span class="keyword">for</span> x <span class="keyword">in</span> range(5))</span><br><span class="line">&gt;&gt;&gt; list(sq)</span><br><span class="line">[0, 1, 4, 9, 16]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>生成器唯一要注意的就是，生成器只能遍历一次</strong></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/14/life-2017-12-14-painting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/14/life-2017-12-14-painting/" itemprop="url">圆脸少女们</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-14T16:00:00+08:00">
+                2017-12-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/绘画/" itemprop="url" rel="index">
+                    <span itemprop="name">绘画</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/14/life-2017-12-14-painting/" class="leancloud_visitors" data-flag-title="圆脸少女们">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,<br>但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活<br>反而会变得豁然开朗。</p>
+</blockquote>
+<p>我从小喜爱绘画，尤其是喜爱漫画。也曾经上过几年素描培训班，但是上了初中之后，兴趣与学业发生冲突，不得不放弃漫画。</p>
+<p>与其让自己沉迷游戏、无聊的娱乐视频。不如用编程学习、体育锻炼、绘画来充实自己。看到自己画的人物栩栩如生地出现在画纸，颇有一番得意呢。</p>
+<p>当然，我不能忘记，自己的主要任务还是学习。周六就要考六级英语了，这次听力要多加练习，多背几篇作文。Python也要加把劲，早日完成课程设计。</p>
+<h2 id="一个活泼的少女像"><a href="#一个活泼的少女像" class="headerlink" title="一个活泼的少女像"></a>一个活泼的少女像</h2><p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/57536313.jpg" alt=""></p>
+<h2 id="圆脸可爱少女（1）"><a href="#圆脸可爱少女（1）" class="headerlink" title="圆脸可爱少女（1）"></a>圆脸可爱少女（1）</h2><blockquote>
+<p>圆脸的线条平滑柔和，使角色看起来年级较小，给人单纯、可爱的印象。圆脸一般用来塑造性格纯朴开朗的萌美少女角色。</p>
+</blockquote>
+<p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-14/73290488.jpg" alt=""></p>
+<h2 id="圆脸少女（2）"><a href="#圆脸少女（2）" class="headerlink" title="圆脸少女（2）"></a>圆脸少女（2）</h2><p> 这是我喜欢的女生发型之一，给人一种活泼却不失成熟的感觉</p>
+<p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-17/38310361.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/13/tech-2017-12-13-python-learn-map-reduce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/13/tech-2017-12-13-python-learn-map-reduce/" itemprop="url">Python学习-map与reduce函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T16:00:00+08:00">
+                2017-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/13/tech-2017-12-13-python-learn-map-reduce/" class="leancloud_visitors" data-flag-title="Python学习-map与reduce函数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>reduce() 函数会对参数序列中元素进行累积。<br>函数将一个数据集合（链表，元组等）中的所有数据进行下列操作：用传给reduce中的函数 function（有两个参数）先对集合中的第 1、2 个元素进行操作，得到的结果再与第三个数据用 function 函数运算，最后得到一个结果。<br>map() 会根据提供的函数对指定序列做映射。<br>第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。<br>`<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from functools import reduce</span><br><span class="line">def str2int(s):</span><br><span class="line">    def fn(x,y):</span><br><span class="line">        return x*10+y</span><br><span class="line">    def char2num(s):</span><br><span class="line">        return &#123;&apos;0&apos;:0,&apos;1&apos;:1,&apos;2&apos;:2,&apos;3&apos;:3,&apos;4&apos;:4, &apos;5&apos;: 5, &apos;6&apos;: 6, &apos;7&apos;: 7, &apos;8&apos;: 8, &apos;9&apos;: 9&#125;[s]</span><br><span class="line">    return (reduce(fn, map(char2num,s)))</span><br><span class="line">print(str2int(&quot;1545645&quot;))</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>##注意调用reduce函数之前写上：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from functools import reduce</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/12/tech-2017-12-12-FPGA-small-num/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/12/tech-2017-12-12-FPGA-small-num/" itemprop="url">FPGA学习-FPGA小数乘法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-12T16:00:00+08:00">
+                2017-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/FPGA/" itemprop="url" rel="index">
+                    <span itemprop="name">FPGA</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/12/tech-2017-12-12-FPGA-small-num/" class="leancloud_visitors" data-flag-title="FPGA学习-FPGA小数乘法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>经常有人问, fpga里小数乘法怎么搞?</p>
+</blockquote>
+<p>  如果你乐意, 按照IEEE754标准做”浮点”型运算的ip当然最好(虽然面积上不太好).<br>不过,很多情况下,没有这个必要.</p>
+<p>  一般我们就用”定点”了.<br>你得自己”定个点”, 比如用16位, 分成8位整数8位小数(后面记为”(8.8)”), 即”定点”在第8位.<br>那么:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 -&gt; 16<span class="string">'h0100;</span></span><br><span class="line"><span class="string">1.5 -&gt; 16'</span>h0180;</span><br><span class="line">-1.5 -&gt; -1.5*256 + 65536(补码) -&gt; 16<span class="string">'hFE80(其实就是-16'</span>sh0180, 让综合器给我们算补码去~~);</span><br><span class="line">...</span><br><span class="line">1.164 -&gt; 1.164*256 = 298 = 16<span class="string">'h012A;</span></span><br></pre></td></tr></table></figure></p>
+<p>  所以 signed input [15:0] a (也是”8整.8小”)和 1.164相乘给 signed output [15:0] mul (也是”8整.8小”), 直接写:<br>assign mul = (a * 16’sh012A) &gt;&gt;&gt;8;<br>就行了, 当然, 你的fpga里有dsp block最好, 不然也要几百个LE的.</p>
+<p>  因为 (8.8) 乘  (8.8) 得到  (16.16), 为了恢复成 (8.8), 所以帯符号右移8位即可.<br>把低8位小数舍掉, 高8位整数也丢了, 所以你得保证你的16位(8.8)的”定点小数”乘积不能超过范围, 多数数字信号处理系数都是区间[-1.0, 1.0]的,多半不存在问题, 积分什么的, 还有其它可能有问题的自己想清楚就行, 当然你要保留16位整.16位小也可以~~~</p>
+<p>总结:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">module fixpmul</span><br><span class="line">#(</span><br><span class="line">    parameter IW = 8,</span><br><span class="line">    parameter FW = 8 </span><br><span class="line">)(</span><br><span class="line">    input signed [IW+FW-1 : 0] a,</span><br><span class="line">    input signed [IW+FW-1 : 0] b,</span><br><span class="line">    output signed [IW+FW-1 : 0] o</span><br><span class="line">);</span><br><span class="line">    (* multstyle = &quot;dsp&quot; *) wire signed [IW*2+FW*2-1 : 0] long;</span><br><span class="line">    assign long = a * b;</span><br><span class="line">    assign o = long &gt;&gt;&gt; FW;</span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure></p>
+<p>PS: 作为一个完美主义者的想法: 以8位整型为例, 其实 8位有符号 乘 8位有符号得到的 16位有符号, 中的第14位(权2^14的位, 符号位右边的位), 很讨厌, 它只有在 -128 <em> -128时才等于1, 其它65535种情况, 全是0, 很浪费.<br>所以我们一般在数字信号处理系统中, 永远把[-1,1]映射到[-127,127], 这样那个讨厌的第14位永远用不到, 然后就可以: wire signed [15:0] mul = a </em> b; wire signed [14:0] out = {wire[15], wire[13:0]}, 8位有符号 乘 8位有符号 得到 15位有符号, 节约一位.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/10/tech-2017-12-10-python-learn-pycharm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/10/tech-2017-12-10-python-learn-pycharm/" itemprop="url">Python学习-Pycharm快捷键</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-10T16:00:00+08:00">
+                2017-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/10/tech-2017-12-10-python-learn-pycharm/" class="leancloud_visitors" data-flag-title="Python学习-Pycharm快捷键">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>提示</p>
+</blockquote>
+<p>CTRL Q: 在参数列表位置，显示可以输入的所有参数。</p>
+<p>CTRL Q: 查看选中方法的文档字符串</p>
+<blockquote>
+<p>阅读</p>
+</blockquote>
+<p>CTRL -: 折叠当前代码</p>
+<p>CTRL +: 展开当前代码</p>
+<p>CTRL SHIFT -: 折叠所有代码</p>
+<p>CTRL SHIFT +: 展开所有代码</p>
+<p>CTRL SHIFT F7: 将当前单词在整个文件中高亮，F3移动到下一个，ESC取消高亮。</p>
+<p>CTRL F11 | F11: 设置书签.</p>
+<p>SHIFT F11: 显示所有书签。</p>
+<p>CTRL F12: 当一个文件中方法太多，要快速跳到某个方法时，可以用此快捷键打开LIST,</p>
+<p>除了用上下箭选择外，还可以输入字母。</p>
+<blockquote>
+<p>移动</p>
+</blockquote>
+<p>ALT UP: 移到上一个方法</p>
+<p>ALT DOWN: 移到下一个方法</p>
+<p>CTRL B | CTRL 单击： 转到方法定义处</p>
+<p>CTRL SHIFT UP: 将当前行上移一行</p>
+<p>CTRL SHIFT UP: 将当前行下移一行</p>
+<p>SHIFT ENTER: 在行中间执行时，智能跳到下一行。</p>
+<blockquote>
+<p>注释<br>CTRL /: 注释、取消注释行</p>
+<p>选择</p>
+</blockquote>
+<p>ALT 左键： 列模式选择</p>
+<p>CTRL W: 选中当前单词，继续按，选中它所属的行/IF/方法.</p>
+<p>编辑<br>CTRL D: 未选中时，复制当前行到下一行，选中时复制粘贴选中部分。</p>
+<p>CTRL J: 输入模板</p>
+<p>SHIFT F6: 更改变量/方法名字</p>
+<p>删除<br>CTRY Y: 删除当前行</p>
+<p>调试<br>CTRL F8: 设置/取消断点</p>
+<p>其它<br>CTRL E: 最近访问的文件列表</p>
+<p>ESC: 焦点从其它窗口到编辑窗口</p>
+<p>SHIFT ESC: 隐藏当前窗口，焦点到编辑窗口</p>
+<p>F12: 焦点从编辑窗口到上一个使用窗口</p>
+<p>编辑器右键，local history, show history： 显示本地修改记录</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/09/01/life-2017-9-1-sti-summary/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/01/life-2017-9-1-sti-summary/" itemprop="url">总结篇：基地岁月</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-01T16:00:00+08:00">
+                2017-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/生活/" itemprop="url" rel="index">
+                    <span itemprop="name">生活</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/01/life-2017-9-1-sti-summary/" class="leancloud_visitors" data-flag-title="总结篇：基地岁月">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>  两年前我和诸位一样，作为一个懵懂无知，对大学生活充满期待的大一新生来到了华中科技大学，加入了电信系的大家庭。高考结束前，无论是这个专业还是这个学校，我是一点都不了解的。高考的超常发挥20分让我有了更大的选择空间，当时可以选择电子科大和北邮所有专业吧.</p>
+<p>  结果当时我抱着幼稚的想法“不能浪费这来之不易的高分”，然后就报了华科电信系。事实证明，我之前想法还是比较天真的=。= </p>
+<p>  到了大学，为了不荒废学业多学几门技术，我就想加入一个技术团队，比如联创、Dian、冰岩或者电工基地，去提升一下自己的知识水平。</p>
+<p>  联创通宵测试我没去，冰岩被刷了，Dian的种子班通宵测试没过。（真的被自己菜哭了TAT） 最后因为电工基地不怎么刷人，加上我进入基地认真焊了3个星期板子，焊了3个作品：LCD12864数字钟、1位LED秒表、基于单片机的音乐盒，然而最后还是有两个可以正常工作。。。呵呵。</p>
+<p>  面试的学长听我扯了半天单片机（我背书滴~）,结果给了比较高的分，让我还进了个“十佳答辩”。我真正接触到基地的大神，就是在“十佳答辩”上面。有人用单片机最小系统做了摇摇棒，有人用树莓派做了声卡（TI的某芯片，尼玛当时我德州仪器都不知道是啥），还有电磁炮打易拉罐的，单片机LED做贪吃蛇小游戏的，还有一个LED大功率手电筒（基地的林神，作品记得不太清了）。看得我一愣一愣的，还是华科人才多，让我这个粤北山区的同学开了眼界。</p>
+<p>  轮到我答辩了，结果不用说，被学长学姐怼了软件bug（一个月自学的一点单片机。。。），这貌似就是我最后一次用Keil，尴尬。。。虽然没有十佳，但是过了笔试，过了操作考试，还是成了基地2班一员。 </p>
+<p>  大一上，学了硬件基础，拆过信号发生器辨认元件，学画PCB、原理图、焊贴片，这些我学得不好，找了两个不靠谱队友，次次甩锅给我，没办法，最后我只好离开他们自己单干，直到大一下找到新队友–一个安静却十分认真的女生CC。</p>
+<p>  大一下：学习了10天数电之后，要完成大作业“信号发生器”，做出来了，但是因为自己不是很了解验收步奏，后面做的一般，但是还是得了“优”。</p>
+<p>这里，我不得不吐槽基地的培训制度。电子设计大赛分为三大方向（电力电子、控制、测量），但是Verilog、FPGA只有测量方向以后用得着，而控制和电力电子主控基本都是STM32和MSP430单片机，培训软件主要培训的是Verilog、数电、FPGA、软核啥的。只学过Verilog的我想转控制都难，也怪我没有自学单片机吧，唉。 </p>
+<p>  大二上：比大一下还坑，坑就坑在题目的设定上： 这道题目，老师要求两个月之内做完，每周验收一部分，验收进度表如下：</p>
+<blockquote>
+<ul>
+<li>10-11周：调AD（5分）/DA（5分）以及数码管 </li>
+<li>12周：交流电压测量（5分），直流电压测量（5分） </li>
+<li>13周：交流电流测量（5分），直流电流测量（5分） </li>
+<li>14周：电阻测量（5分） </li>
+<li>15周：整机联调（50分）与报告（10分）</li>
+<li>16周：系统优化与其他（5分） </li>
+</ul>
+</blockquote>
+<p>  坑就坑在延期验收得0分，这样让大部分组都完全放弃继续做下去了。</p>
+<p>  大三的情况基本一样，只有一个组做了示波器雏形，也没有验收；大二有一个组实力强悍坚持做了下去，得分也不理想。</p>
+<p>  电工基地的不如往届的情况在这个学期基本就体现出来：平时基本没人在基地做东西，周末也就一两个人；没人告诉我们如何调AD、DA，怎么看手册，怎么写驱动，各种测量原理是什么，全都要自己查资料或者问老师，我写这些话你读着可能觉得“这没什么啊，不就问个老师、查查资料、看看手册的功夫吗？”。</p>
+<p>  只有做过的人才知道理论与实践的差距，没有人引导，我就自己在网上找别人的驱动仿照、用Google一点一点翻译手册，用逻辑分析仪、ILA、仿真一点一点、一个触发延一个触发延对着timing summary写驱动，你知道这要花费多少时间吗？《复变函数与积分变换》的课我翘了一半，大物才考了77分，最后一学期加权排名跌到了39/150名。</p>
+<p>  如果周围有一个助教或者学长告诉我，SPI总线就是三根线如何拉高拉低，告诉我手册应该怎么阅读，告诉我什么Verilog语法风格最好，我需要花几个星期写驱动吗？我需要花这么多时间浪费在无意义的搜索资料上面吗？ 最后感觉一个学期下来，除了调了个AD、DA啥都没学到。老王说“希望我们有产品的意识，作品稳定性太差”。我感觉这倒是像去创业的尹老师说的。我连作品功能都没有实现，谈什么产品稳定性？谈什么3D打印外壳？这有点本末倒置了吧？ </p>
+<p>  寒假留下来10多天，复习了一下微机原理知识，熟悉了Microblaze开发流程，写好了TFT屏幕驱动。</p>
+<p>  大二下：开始模块培训，这时候发现我们队伍磨合真的很有问题。模块培训我们队成绩还可以，除了iir滤波器延时验收，其他都可以按时验收。感觉平时在做的队伍也不多，相比较电子科大的同学就积极多了，毕竟可以保研，华科呢？修改了保研加分制度，电信的培训老师也没再没见过。比赛自己买的模块是不能报销的，对比电子科技大学，真是羡慕得我口水都流出来，一个普通的院队（电子科大分为院队、校队，院队选拔才是校队），还是全部是大一组成的，居然每周可以报销上千元材料费？！基地是每周排名前三的队伍发100~300不等的奖金。这样的队伍在电子科大还有一百多支。</p>
+<p>  对此，我只能说没有对比就没有伤害。</p>
+<p>  大二的暑假：培训五周，给了5题，做出来只有2题可以验收。主要还是旁边大三的学长们罩着，靠他们的方案苟活了五周，呵呵，没办法，太多专业知识不懂，太多软件工具不会用。人家都是python自己写程序多项式拟合，我还要excel做图拟合。。。。。。其他不想说什么了，苦涩的失败远多于成功的喜悦吧，这就是菜鸡的结果。</p>
+<p>  四天三夜：我们选题选了“可见光室内定位装置（I题）”，总共有5支队伍选了这道题。一开始看这道题感觉完成基本要求不会太难，结果后来发现坐标拟合很困难，和外界光强有关。最大的问题是我用了差不多十来个FIR滤波器做抽取采样，忘记了滤波器延时问题，就是平时没怎么接触这个问题，被坑了，直到最后第四天下午才发现问题重新拟合数据，封箱之前发现固化又出问题，多亏了老王帮忙。。。因为问题发现太晚，调制解调传输数字和音乐没做。。。要是平时做过这方面的发送接收训练就好了！！！简直了，连“信噪比为负数也可以还原出信号”的常识也不知道。</p>
+<blockquote>
+<p>补充：我现在学了通信原理，发现事情并不简单。我们这种调制是2FSK，低信噪比情况下会出现门限效应，导致误码率大大上升。最好的解调方法应该是相干解调。</p>
+</blockquote>
+<p>  虽然后来一想当然是这么回事，但是四天三夜真的比高考强度大得多，很多情况完全不容你想太多，基地能提供帮助的助教导师相比电子科大真的少得可怜，这样子基本只能抱住同做一题的学长大腿。这里不得不谢谢wxd学长、ldx学长、zjw学长、姜队、TD、海爷、周老大、Canpi、攀哥、C11大佬们。。。。。。</p>
+<p>  有了大佬们的帮助，的确学到了更多东西，但是离国奖还是遥不可及。。。。。。 最后还是封箱了，然后回去睡了12小时= =。</p>
+<p>  综合测评前一个晚上我们讨论了一下测试流程，我提出想要在测试现场把FPGA重新换下来，改成完善的代码（因为已经提前一个晚上知道了测评表），通过一个范围进行拟合拿下发挥要求部分分数。队友不同意我作弊，不了了之。</p>
+<p>测评把能测的都测了，估计给个省三就算给面子了。 很遗憾的是，去测评的三个做I题的组，其中最有希望的那个大三学长的组，恢复作品时把接收端烧了，真的可惜！！！ 意料之中，我们没有进综测。基地生活从此画上句号。</p>
+<p>  我不想说什么“虽然没得奖，但是我还是学到了xxx和xxx还有xxx”。我挺难过，明明付出了这么多，花费的时间差不多赶上在图书馆自习的时间了，寒假暑假几乎都奉献给基地，居然得到这样的结果。</p>
+<p>  我都忘记了多少个实验室冷清的夜晚自己还守在示波器下面看文档，多少个晚上自己还在用逻辑分析仪一点一点对时序，多少个晚上在modelsim仿真检查着Verilog的错误。。。。。。</p>
+<p>  大三学乖了，好好刷加权。现在发现，还是加权高的人稳啊。（主要是自己难以分心吧？）</p>
+<p>  不过，我相信付出必有回报，天道必会酬勤。我在基地学到的东西，可能不足以让我斩获国奖，但是那些阅读专业文档的能力，那些调试电路的能力，那些FPGA里面的知识细节。。。。。。都会如同待萌发种子安静地在我的脑海深处，迟早有一天，它们会冲破束缚自身的障碍，以更加崭新的姿态迎接希望的曙光。</p>
+<p>  这里，我提醒新的基地学弟学妹：<br>  <strong>不要轻易选择测量和高频（相比其他方向，每次测量训练题目没几个组及格TAT）。基地不培训stm32，你就自己买开发板自学，千万不要因为培训只培训FPGA你就以为适合测量方向，当时我就是这样想的，完全没想去尝试控制和电力电子。如果时光倒流，我一定会再努力学《信号与系统》的，这是许多测量方向题目的基础。</strong></p>
+<p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-18/41518763.jpg" alt=""></p>
+<p><em>我的座位</em></p>
+<p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-18/61988293.jpg" alt=""></p>
+<p><em>大佬作品拍照</em></p>
+<p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-18/86703379.jpg" alt=""></p>
+<p><em>我们在武汉理工大学测试作品</em></p>
+<p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-19/2508907.jpg" alt=""></p>
+<p><em>学长学姐在现场调试作品</em></p>
+<p><img src="http://p0xt50lze.bkt.clouddn.com/17-12-19/14283934.jpg" alt=""></p>
+<p><em>Canpi学长“稳了”</em></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/01/13/tech-2017-1-13-union/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peter">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p0xt50lze.bkt.clouddn.com/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Saturnian's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/01/13/tech-2017-1-13-union/" itemprop="url">C学习-Union联合的妙用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-13T16:00:00+08:00">
+                2017-01-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/01/13/tech-2017-1-13-union/" class="leancloud_visitors" data-flag-title="C学习-Union联合的妙用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>UART串口有一个缺点，就是发送和接受是一个字节一个字节的接收，如果发送的浮点数那可怎么办啊？</p>
+</blockquote>
+<p>为什么联合体会这么神奇呢？<br>因为它的所有成员相对于基地址的偏移量都为0<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;string.h&gt;</span></span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">int i=0;</span><br><span class="line">     union result</span><br><span class="line">     &#123;</span><br><span class="line">         <span class="built_in">float</span> d;</span><br><span class="line">         unsigned char data[4];</span><br><span class="line">     &#125;r1,r2;</span><br><span class="line">// 特别需要注意的是在单片机中int <span class="built_in">float</span> double 类型的字长和PC机中是不一样的，需要注意</span><br><span class="line">//测试1：测试发送浮点数7.215487</span><br><span class="line">     r1.d=7.215487;</span><br><span class="line">     r2.data[0]=r1.data[0];</span><br><span class="line">     r2.data[1]=r1.data[1];</span><br><span class="line">     r2.data[2]=r1.data[2];</span><br><span class="line">     r2.data[3]=r1.data[3];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"byte0= %d byte1= %d byte2= %d byte3= %d r1=%f r2=%f \n"</span>,r1.data[0],r1.data[1],r1.data[2],r1.data[3],r1.d,r2.d);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"float is 0x%x\n\r"</span>,r1.d);</span><br><span class="line">    <span class="keyword">for</span>(i=3;i&gt;=0;i--)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%x"</span>,r1.data[i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n\r"</span>);</span><br><span class="line"></span><br><span class="line">//测试2：测试转换浮点数162.000381</span><br><span class="line">    r1.data[0] = 0x19;</span><br><span class="line">    r1.data[1] = 0x00;</span><br><span class="line">    r1.data[2] = 0x22;</span><br><span class="line">    r1.data[3] = 0x43;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"float is %f\n\r"</span>,r1.d);</span><br><span class="line">   getchar();</span><br><span class="line">   getchar();</span><br><span class="line">   <span class="built_in">return</span> 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>不过，可能会涉及到大字节序和小字节序的问题，具体问题具体分析。</p>
+
           
         
       
@@ -1056,7 +1940,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 

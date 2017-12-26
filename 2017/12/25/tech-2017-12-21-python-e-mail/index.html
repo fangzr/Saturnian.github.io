@@ -74,25 +74,25 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Saturnian Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Temporary Blog" type="application/atom+xml" />
 
 
 
 
 
 
-<meta name="description" content="SMTP发送邮件 SMTP是发送邮件的协议，Python内置对SMTP的支持，可以发送纯文本邮件、HTML邮件以及带附件的邮件。 Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件。">
+<meta name="description" content="SMTP是发送邮件的协议，Python内置对SMTP的支持，可以发送纯文本邮件、HTML邮件以及带附件的邮件。Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件。">
 <meta name="keywords" content="Python,电子邮件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python学习-电子邮件编程">
 <meta property="og:url" content="http://hust.life/2017/12/25/tech-2017-12-21-python-e-mail/index.html">
-<meta property="og:site_name" content="Saturnian Blog">
-<meta property="og:description" content="SMTP发送邮件 SMTP是发送邮件的协议，Python内置对SMTP的支持，可以发送纯文本邮件、HTML邮件以及带附件的邮件。 Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件。">
+<meta property="og:site_name" content="Temporary Blog">
+<meta property="og:description" content="SMTP是发送邮件的协议，Python内置对SMTP的支持，可以发送纯文本邮件、HTML邮件以及带附件的邮件。Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-25T15:48:10.320Z">
+<meta property="og:updated_time" content="2017-12-26T12:05:39.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习-电子邮件编程">
-<meta name="twitter:description" content="SMTP发送邮件 SMTP是发送邮件的协议，Python内置对SMTP的支持，可以发送纯文本邮件、HTML邮件以及带附件的邮件。 Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件。">
+<meta name="twitter:description" content="SMTP是发送邮件的协议，Python内置对SMTP的支持，可以发送纯文本邮件、HTML邮件以及带附件的邮件。Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件。">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>Python学习-电子邮件编程 | Saturnian Blog</title>
+  <title>Python学习-电子邮件编程 | Temporary Blog</title>
   
 
 
@@ -158,12 +158,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Saturnian Blog</span>
+        <span class="site-title">Temporary Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">Welcome</p>
+        <p class="site-subtitle"></p>
       
   </div>
 
@@ -264,7 +264,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Saturnian Blog">
+      <meta itemprop="name" content="Temporary Blog">
     </span>
 
     
@@ -355,12 +355,14 @@
       
 
       
-        <p>SMTP发送邮件</p>
-<p>SMTP是发送邮件的协议，Python内置对SMTP的支持，可以发送纯文本邮件、HTML邮件以及带附件的邮件。</p>
-<p>Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件。<br><a id="more"></a></p>
-<h3 id="构造一个最简单的纯文本邮件"><a href="#构造一个最简单的纯文本邮件" class="headerlink" title="构造一个最简单的纯文本邮件"></a>构造一个最简单的纯文本邮件</h3><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">from email.mime.text import MIMEText</span><br><span class="line">msg = MIMEText(<span class="string">'hello,send by Python...'</span>,<span class="string">'plain'</span>,<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="meta">#plain纯文本,utf-8编码保证语言兼容性</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#通过SMTP发出去</span></span><br><span class="line">from_addr = input(<span class="string">'From:'</span>)</span><br><span class="line">password = input(<span class="string">'Password:'</span>)</span><br><span class="line"><span class="meta">#输入收件人地址</span></span><br><span class="line">to_addr = input(<span class="string">'To:'</span>)</span><br><span class="line"><span class="meta">#输入SMTP服务器地址</span></span><br><span class="line">smtp_server = input(<span class="string">'SMTP server:'</span>)</span><br><span class="line"></span><br><span class="line">import smtplib</span><br><span class="line"><span class="keyword">server</span> = smtplib.SMTP(smtp_server,<span class="number">25</span>)<span class="meta">#SMTP默认端口25</span></span><br><span class="line"><span class="keyword">server</span>.set_debuglevel(<span class="number">1</span>)<span class="meta">#用set_debuglevel(1)就可以打印出和SMTP服务器交互的所有信息</span></span><br><span class="line"><span class="keyword">server</span>.login(from_addr,password)</span><br><span class="line"><span class="keyword">server</span>.sendmail(from_addr,[to_addr],msg.as_string())</span><br><span class="line"><span class="keyword">server</span>.quit()</span><br></pre></td></tr></table></figure>
-<div class="note info"><p>我们编写了一个函数_format_addr()来格式化一个邮件地址。注意不能简单地传入name <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x61;&#100;&#100;&#x72;&#x40;&#101;&#120;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#x61;&#100;&#100;&#x72;&#x40;&#101;&#120;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;</a>，因为如果包含中文，需要通过Header对象进行编码。</p>
-<p>msg[‘To’]接收的是字符串而不是list，如果有多个邮件地址，用,分隔即可</p></div>
+        <p>SMTP是发送邮件的协议，Python内置对SMTP的支持，可以发送纯文本邮件、HTML邮件以及带附件的邮件。<br>Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件。<br><a id="more"></a></p>
+<h3 id="SMTP发送邮件"><a href="#SMTP发送邮件" class="headerlink" title="SMTP发送邮件"></a>SMTP发送邮件</h3><h4 id="构造一个最简单的纯文本邮件"><a href="#构造一个最简单的纯文本邮件" class="headerlink" title="构造一个最简单的纯文本邮件"></a>构造一个最简单的纯文本邮件</h4><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">from email.mime.text import MIMEText</span><br><span class="line">msg = MIMEText(<span class="string">'hello,send by Python...'</span>,<span class="string">'plain'</span>,<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="meta">#plain纯文本,utf-8编码保证语言兼容性</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#通过SMTP发出去</span></span><br><span class="line">from_addr = input(<span class="string">'From:'</span>)</span><br><span class="line">password = input(<span class="string">'Password:'</span>)</span><br><span class="line"><span class="meta">#输入收件人地址</span></span><br><span class="line">to_addr = input(<span class="string">'To:'</span>)</span><br><span class="line"><span class="meta">#输入SMTP服务器地址</span></span><br><span class="line">smtp_server = input(<span class="string">'SMTP server:'</span>)</span><br><span class="line"></span><br><span class="line">import smtplib</span><br><span class="line"><span class="keyword">server</span> = smtplib.SMTP(smtp_server,<span class="number">25</span>)<span class="meta">#SMTP默认端口25</span></span><br><span class="line"><span class="keyword">server</span>.set_debuglevel(<span class="number">1</span>)<span class="meta">#用set_debuglevel(1)就可以打印出和SMTP服务器交互的所有信息</span></span><br><span class="line"><span class="keyword">server</span>.login(from_addr,password)</span><br><span class="line"><span class="keyword">server</span>.sendmail(from_addr,[to_addr],msg.as_string())</span><br><span class="line"><span class="keyword">server</span>.quit()</span><br></pre></td></tr></table></figure>
+<div class="note info"><p>我们编写了一个函数_format_addr()来格式化一个邮件地址。注意不能简单地传入name <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x61;&#x64;&#100;&#x72;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#109;">&#x61;&#x64;&#100;&#x72;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#46;&#99;&#x6f;&#109;</a>，因为如果包含中文，需要通过Header对象进行编码。</p></div>
+<p>msg[‘To’]接收的是字符串而不是list，如果有多个邮件地址，用,分隔即可</p>
+<h4 id="发送附件"><a href="#发送附件" class="headerlink" title="发送附件"></a>发送附件</h4><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> email <span class="keyword">import</span> encoders</span><br><span class="line"><span class="keyword">from</span> email.header <span class="keyword">import</span> Header</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="keyword">from</span> email.utils <span class="keyword">import</span> parseaddr, formataddr</span><br><span class="line"><span class="keyword">from</span> email.mime.multipart <span class="keyword">import</span> MIMEMultipart</span><br><span class="line"><span class="keyword">from</span> email.mime.application <span class="keyword">import</span> MIMEApplication</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"></span><br><span class="line">def _format_addr(s):</span><br><span class="line">    name, addr = parseaddr(s)</span><br><span class="line">    return formataddr((Header(name, <span class="string">'utf-8'</span>).encode(), addr))</span><br><span class="line"></span><br><span class="line">from_addr = <span class="string">'fangzr@hust.edu.cn'</span>#input(<span class="string">'From: '</span>)</span><br><span class="line">password = <span class="string">'xxx'</span>#input(<span class="string">'Password: '</span>)</span><br><span class="line">to_addr = <span class="string">'393756200@qq.com'</span>#input(<span class="string">'To: '</span>)</span><br><span class="line">smtp_server = <span class="string">'mail.hust.edu.cn'</span>#input(<span class="string">'SMTP server: '</span>)</span><br><span class="line"></span><br><span class="line">msg = MIMEMultipart()</span><br><span class="line">msg[<span class="string">'From'</span>] = _format_addr(<span class="string">'Python爱好者 &lt;%s&gt;'</span> % from_addr)</span><br><span class="line">msg[<span class="string">'To'</span>] = _format_addr(<span class="string">'管理员 &lt;%s&gt;'</span> % to_addr)</span><br><span class="line">msg[<span class="string">'Subject'</span>] = Header(<span class="string">'来自SMTP的问候……'</span>, <span class="string">'utf-8'</span>).encode()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#添加附件就是加上一个MIMEBase，从本地读取一个照片</span><br><span class="line">mine = MIMEApplication(open(<span class="string">'C:/Users/Peter/Desktop/test.jpg'</span>,<span class="string">'rb'</span>).read())</span><br><span class="line">    #设置附件的MIME和文件名，这里是png类型</span><br><span class="line">mine.add_header(<span class="string">'Content-Disposition'</span>,<span class="string">'attachment'</span>,filename=<span class="string">'test.jpg'</span>)</span><br><span class="line">msg.attach(mine)</span><br><span class="line">#邮件正文</span><br><span class="line">msg.attach(MIMEText(<span class="string">'&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello&lt;/h1&gt;'</span> +</span><br><span class="line">    <span class="string">'&lt;p&gt;&lt;img src="cid:0"&gt;&lt;/p&gt;'</span> +</span><br><span class="line">    <span class="string">'&lt;/body&gt;&lt;/html&gt;'</span>, <span class="string">'html'</span>, <span class="string">'utf-8'</span>))</span><br><span class="line">server = smtplib.SMTP(smtp_server, <span class="number">25</span>)</span><br><span class="line">server.set_debuglevel(<span class="number">1</span>)</span><br><span class="line">server.login(from_addr, password)</span><br><span class="line">server.sendmail(from_addr, [to_addr], msg.as_string())</span><br><span class="line">server.quit()</span><br></pre></td></tr></table></figure>
+<h3 id="接收邮件"><a href="#接收邮件" class="headerlink" title="接收邮件"></a>接收邮件</h3><blockquote>
+<p>收取邮件就是编写一个MUA作为客户端，从MDA把邮件获取到用户的电脑或者手机上。收取邮件最常用的协议是POP协议，目前版本号是3，俗称POP3。<br>Python内置一个<code>poplib</code>模块，实现了<code>POP3</code>协议，可以直接用来收邮件。<br>要把POP3收取的文本变成可以阅读的邮件，还需要用email模块提供的各种类来解析原始文本，变成可阅读的邮件对象。</p>
+</blockquote>
 
       
     </div>
@@ -401,8 +403,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/26/life-2017-12-26-12month-Sentiment/" rel="prev" title="叫醒一个装睡的人">
-                叫醒一个装睡的人 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/26/life-2017-12-26-12month-Sentiment/" rel="prev" title="别叫醒一个装睡的人">
+                别叫醒一个装睡的人 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -568,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造一个最简单的纯文本邮件"><span class="nav-number">1.</span> <span class="nav-text">构造一个最简单的纯文本邮件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#SMTP发送邮件"><span class="nav-number">1.</span> <span class="nav-text">SMTP发送邮件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造一个最简单的纯文本邮件"><span class="nav-number">1.1.</span> <span class="nav-text">构造一个最简单的纯文本邮件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发送附件"><span class="nav-number">1.2.</span> <span class="nav-text">发送附件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接收邮件"><span class="nav-number">2.</span> <span class="nav-text">接收邮件</span></a></li></ol></div>
             
 
           </div>

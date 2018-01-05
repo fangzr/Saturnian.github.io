@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/14/life-2017-12-14-painting/">
+    <link itemprop="mainEntityOfPage" href="http://hust.life/2017/12/14/tech-2017-12-14-python-learn-return-func/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peter">
@@ -270,7 +270,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/14/life-2017-12-14-painting/" itemprop="url">圆脸少女们</a></h1>
+                <a class="post-title-link" href="/2017/12/14/tech-2017-12-14-python-learn-return-func/" itemprop="url">Python学习-返回函数</a></h1>
         
 
         <div class="post-meta">
@@ -305,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/绘画/" itemprop="url" rel="index">
-                    <span itemprop="name">绘画</span>
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
                   </a>
                 </span>
 
@@ -322,7 +322,7 @@
 
           
           
-             <span id="/2017/12/14/life-2017-12-14-painting/" class="leancloud_visitors" data-flag-title="圆脸少女们">
+             <span id="/2017/12/14/tech-2017-12-14-python-learn-return-func/" class="leancloud_visitors" data-flag-title="Python学习-返回函数">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -354,12 +354,12 @@
 
       
         
-          <blockquote>
-<p>我们在生活中总有一些早就应该去做却一直拖着不去做的事情,尽管这些事情已经影响了我们的生活,<br>但我们总是有一个借口:没有时间,以后再做。其实,这些想做的事,如果你马上动手去做了,你的生活<br>反而会变得豁然开朗。</p>
-</blockquote>
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def calc_sum(*args):</span><br><span class="line">    ax = 0</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(*args):</span><br><span class="line">        ax = ax + n</span><br><span class="line">    <span class="built_in">return</span> ax</span><br><span class="line"></span><br><span class="line">i=calc_sum(101)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<p>函数作为返回值，不返回求和的结果，而是返回求和的函数：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def lazy_sum(*args):</span><br><span class="line">    def sum():</span><br><span class="line">        ax = 0</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</span><br><span class="line">            ax = ax + n</span><br><span class="line">        <span class="built_in">return</span> ax</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(1,3,5,7,9)</span><br><span class="line"></span><br><span class="line">i=f()</span><br><span class="line"><span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure></p>
+<p>结果为25</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/14/life-2017-12-14-painting/#more" rel="contents">
+            <a class="btn" href="/2017/12/14/tech-2017-12-14-python-learn-return-func/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
